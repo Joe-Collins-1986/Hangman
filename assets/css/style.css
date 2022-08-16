@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-sizing: border-box;
+}
+
+body {
+    
+    background: url(../images/table.jpg) no-repeat center center;
+    background-attachment: fixed;
+    font-family: cursive, sans-serif;
+}
+
+h1 {
+    /* enter consistant font requirements */
+}
+
+li {
+    font-size: 180%;
+    font-weight: 700;
+    list-style: none;
+}
+
+p {
+    /* enter consistant font requirements */
+}
+
+/* paper structure*/
+.paper-wrapper {
+    width: 90%;
+    overflow: hidden;
+    border-radius: 5px;
+    box-shadow: 3px 1px 2px 3px rgb(70, 70, 70);
+    margin: 2rem 5%;
+
+}
+
+/* 3 outerwrappers */
+
+header {
+    height: 75px;
+    background: linear-gradient(white, white 72px,pink 74px, pink 75px);
+    display: flex;
+    flex-direction: row;
+}
+
+.paper-body { 
+    height: 538px; /* Make multipe of line height - line width and bleed (multiple of 27px with 2px reduction)*/
+    background: repeating-linear-gradient(white, white 25px,#9198e5 26px, #9198e5 27px);
+    display: flex;
+    flex-direction: row;
+}
+
+footer {
+    height: 75px;
+    background: linear-gradient(white, pink 1px,white 3px);
+    display: flex;
+    flex-direction: row;
+}
+
+/* margin and main formats */
+
+.header-margin, .body-margin, .footer-margin {
+    width: 10%;
+    border-right: 2px solid rgb(193, 192, 255);
+    position: relative;
+}
+
+.header-main, .body-main, .footer-main {
+    width: 90%;
+    margin-left: 1rem;
+    position: relative;
+}    
+
+/* margin hole punches */
+
+.holes {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.hole {
+    background: url(../images/table.jpg) no-repeat center center;
+    background-attachment: fixed;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-left: 1rem;
+}
+
+/* header */
+.header-main {
+    display: flex;
+    align-items: flex-end;
+}
+
+/* menu */
+
+.post-it {
+    height: 200px;
+    width: 200px;
+    background: linear-gradient(rgb(234, 234, 106), rgb(231, 231, 115),rgb(217, 217, 99));
+    box-shadow: 1px 2px 3px 1px rgb(70, 70, 70);
+    position: absolute;
+    transform: rotate(-5deg);
+    top: 45px;
+    right: 10%;
+}
+
+.post-it ul {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    text-align: center;
+}
+
+.paperclip img {
+    width: 60px;
+    position: absolute;
+    top: 17px;
+    right: 10%;
+}
