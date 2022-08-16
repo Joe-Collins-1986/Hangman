@@ -125,6 +125,46 @@ footer {
     position: absolute;
     top: 17px;
     right: 10%;
+
+}
+
+/*Toggle menu */
+.toggle-bar {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    display: none;
+}
+
+.toggle-bar img {
+    width: 100px;
+}
+
+.toggle-bar p {
+    position: absolute;
+    top: 50px;
+    right: 70px;
+    color: black;
+}
+
+@media (max-width: 620px) {
+    .toggle-bar {
+        display: flex;
+    }
+
+    .paperclip {
+        display: none;
+    }
+
+    .post-it {
+        /* display: none; */
+        z-index: 1;
+        transform: rotate(0deg);
+        width: 90%;
+        height: 135px;
+        left: 5%;
+        top: 107px;
+    }
 }
 
 /* Main */
