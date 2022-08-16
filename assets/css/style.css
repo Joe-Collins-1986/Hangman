@@ -100,18 +100,26 @@ footer {
 
 /* menu */
 
-.post-it {
+.post-it, .post-it-contents {
     height: 120px;
     width: 180px;
-    background: linear-gradient(rgb(234, 234, 106), rgb(231, 231, 115),rgb(217, 217, 99));
-    box-shadow: 1px 2px 3px 1px rgb(70, 70, 70);
     position: absolute;
     transform: rotate(-5deg);
     top: 45px;
     right: 10%;
 }
 
-.post-it ul {
+.post-it {
+    background: linear-gradient(rgb(234, 234, 106), rgb(231, 231, 115),rgb(217, 217, 99));
+    box-shadow: 1px 2px 3px 1px rgb(70, 70, 70);
+}
+
+.post-it-contents {
+    z-index: 1;
+
+}
+
+.post-it-contents ul {
     width: 100%;
     height: 100%;
     display: flex;
@@ -120,12 +128,15 @@ footer {
     text-align: center;
 }
 
+.post-it-contents li:hover {
+    text-decoration: underline;
+}
+
 .paperclip img {
     width: 60px;
     position: absolute;
     top: 17px;
     right: 10%;
-
 }
 
 /*Toggle menu */
@@ -140,33 +151,6 @@ footer {
     width: 100px;
 }
 
-.toggle-bar p {
-    position: absolute;
-    top: 50px;
-    right: 70px;
-    color: black;
-}
-
-@media (max-width: 620px) {
-    .toggle-bar {
-        display: flex;
-    }
-
-    .paperclip {
-        display: none;
-    }
-
-    .post-it {
-        /* display: none; */
-        z-index: 1;
-        transform: rotate(0deg);
-        width: 90%;
-        height: 135px;
-        left: 5%;
-        top: 107px;
-    }
-}
-
 /* Main */
 
 /* Sub Header */
@@ -178,4 +162,38 @@ footer {
 
 .sub-heading-element {
     width: 30%;
+}
+
+
+
+
+
+
+/* MEDIA QUERIES */
+
+@media (max-width: 620px) {
+    .toggle-bar {
+        display: flex;
+        z-index: 1;
+    }
+
+    .paperclip {
+        display: none;
+    }
+
+    .post-it, .post-it-contents {
+        display: none;
+    }
+
+    .post-it-contents.select {
+        display: flex;
+        z-index: 1;
+        background: linear-gradient(rgb(234, 234, 106), rgb(231, 231, 115),rgb(217, 217, 99));
+        box-shadow: 1px 2px 3px 1px rgb(70, 70, 70);
+        transform: rotate(0deg);
+        width: 90%;
+        height: 135px;
+        left: 5%;
+        top: 107px;
+    }
 }
