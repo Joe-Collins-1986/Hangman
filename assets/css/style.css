@@ -153,6 +153,11 @@ footer {
 
 /* Main */
 
+.body-main {
+    display: flex;
+    flex-direction: column;
+}
+
 /* Sub Header */
 .sub-heading-container {
     display: flex;
@@ -161,14 +166,22 @@ footer {
 }
 
 .sub-heading-element {
+    flex-direction: row;
     width: 30%;
 }
 
 
+/* Position word */
+
+/* Word input */
+
+/* Letter buttons */
+
+/* Canvas */
 
 
 
-
+/* ......................................................... */
 /* MEDIA QUERIES */
 
 @media (max-width: 620px) {
