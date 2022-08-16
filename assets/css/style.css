@@ -101,8 +101,8 @@ footer {
 /* menu */
 
 .post-it {
-    height: 200px;
-    width: 200px;
+    height: 120px;
+    width: 180px;
     background: linear-gradient(rgb(234, 234, 106), rgb(231, 231, 115),rgb(217, 217, 99));
     box-shadow: 1px 2px 3px 1px rgb(70, 70, 70);
     position: absolute;
@@ -125,4 +125,17 @@ footer {
     position: absolute;
     top: 17px;
     right: 10%;
+}
+
+/* Main */
+
+/* Sub Header */
+.sub-heading-container {
+    display: flex;
+    position: relative;
+    top: -4px;
+}
+
+.sub-heading-element {
+    width: 30%;
 }
