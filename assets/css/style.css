@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Handlee&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -9,7 +11,8 @@ body {
     
     background: url(../images/table.jpg) no-repeat center center;
     background-attachment: fixed;
-    font-family: cursive, sans-serif;
+    font-family: 'Handlee', cursive, sans-serif;
+    font-size: 1.4rem;
 }
 
 h1 {
@@ -170,7 +173,22 @@ footer {
     width: 30%;
 }
 
+.game-container {
+    display: flex;
+    flex-direction: row-reverse;
+    border: 5px solid red;
+}
 
+.input-section-container {
+    width: 65%;
+    border: 5px solid green;
+}
+
+
+#canvas {
+    width: 35%;
+    border: 5px solid blue;
+}
 /* Position word */
 
 /* Word input */
