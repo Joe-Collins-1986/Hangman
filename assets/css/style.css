@@ -26,12 +26,10 @@ h2 {
     font-size: 1.8rem;
     position: relative;
     top: 27px;
-    margin-bottom: 37px;
 }
 
 li {
     font-size: 2rem;
-    /* font-size: 180%; */
     font-weight: 700;
     list-style: none;
 }
@@ -179,6 +177,7 @@ footer {
     display: flex;
     position: relative;
     top: -4px;
+    margin-bottom: 45px;
 }
 
 .sub-heading-element {
@@ -237,6 +236,11 @@ footer {
     background-color: white;
     text-align: center;
     font-size: 1.8rem;
+}
+
+.alph-button:hover {
+    background-color: rgb(165, 159, 159);
+    color: white;
 }
 
 
