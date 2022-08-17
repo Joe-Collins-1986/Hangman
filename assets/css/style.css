@@ -12,21 +12,34 @@ body {
     background: url(../images/table.jpg) no-repeat center center;
     background-attachment: fixed;
     font-family: 'Handlee', cursive, sans-serif;
-    font-size: 1.4rem;
 }
 
 h1 {
     /* enter consistant font requirements */
+    font-size: 3rem;
+    position: relative;
+    top: 10px;
+}
+
+h2 {
+    /* enter consistant font requirements */
+    font-size: 1.8rem;
+    position: relative;
+    top: 27px;
+    margin-bottom: 37px;
 }
 
 li {
-    font-size: 180%;
+    font-size: 2rem;
+    /* font-size: 180%; */
     font-weight: 700;
     list-style: none;
 }
 
 p {
     /* enter consistant font requirements */
+    font-size: 1.4rem;
+    line-height: 27px;
 }
 
 /* paper structure*/
@@ -180,22 +193,47 @@ footer {
 }
 
 .input-section-container {
-    width: 65%;
+    width: 55%;
     border: 5px solid green;
 }
 
-
+/* Canvas */
 #canvas {
-    width: 35%;
+    width: 45%;
+    height: 20rem;
     border: 5px solid blue;
 }
 /* Position word */
+#word-positioning {
+    text-align: center;
+    margin-bottom: 20px;
+}
 
 /* Word input */
+#word-input {
+    height: 54px;
+    display: flex;
+    justify-content: center;
+    border: 3px solid red;
+    margin-bottom: 27px;
+}
 
 /* Letter buttons */
+#alph-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
 
-/* Canvas */
+.alph-button {
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+    border: 2px solid black;
+    background-color: white;
+    text-align: center;
+    font-size: 1.8rem;
+}
 
 
 
