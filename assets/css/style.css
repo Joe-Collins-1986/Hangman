@@ -62,7 +62,7 @@ header {
 }
 
 .paper-body { 
-    height: 538px; /* Make multipe of line height - line width and bleed (multiple of 27px with 2px reduction)*/
+    min-height: 538px; /* Make multipe of line height - line width and bleed (multiple of 27px with 2px reduction)*/
     background: repeating-linear-gradient(white, white 25px,#9198e5 26px, #9198e5 27px);
     display: flex;
     flex-direction: row;
@@ -189,20 +189,20 @@ footer {
 .game-container {
     display: flex;
     flex-direction: row-reverse;
-    border: 5px solid red;
 }
 
 .input-section-container {
     width: 55%;
-    border: 5px solid green;
 }
 
 /* Canvas */
 #canvas {
-    width: 45%;
+    width: 40%;
+    margin: 2.5%;
     height: 20rem;
-    border: 5px solid blue;
+    border: 2px black solid;
 }
+
 /* Position word */
 #word-positioning {
     text-align: center;
@@ -214,6 +214,10 @@ footer {
     height: 54px;
     display: flex;
     justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: bold;
+    letter-spacing: .8rem;
     border: 3px solid red;
     margin-bottom: 27px;
 }
