@@ -8,7 +8,7 @@ toggleBar.addEventListener("click", function() {
 
 
 /* Canvas- tutorial video (https://www.youtube.com/watch?v=Yvz_axxWG4Y&t=73s) */
-var canvas = document.getElementById("canvas1");
+var canvas = document.getElementById("canvas");
 var canvasSize = document.getElementById("size-canvas");
 const ctx = canvas.getContext("2d");
 canvas.width = canvasSize.clientWidth;
