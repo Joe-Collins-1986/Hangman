@@ -303,6 +303,10 @@ footer {
     .input-section-container {
         width: 95%;
     }
+
+    #alph-buttons {
+        margin-bottom: 20px;
+    }
 }
 
 /*........max-width 500px........ */
