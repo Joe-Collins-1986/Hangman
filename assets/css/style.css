@@ -342,8 +342,8 @@ footer {
     }
 
     .alph-button {
-        width: 30px;
-        height: 30px;
+        width: 35px;
+        height: 35px;
         font-size: 1.4rem;
     }
 }
@@ -351,8 +351,8 @@ footer {
 /*........max-width 400px........ */
 @media (max-width: 400px) {
     .alph-button {
-        width: 25px;
-        height: 25px;
+        width: 30px;
+        height: 30px;
         margin: 3px;
         font-size: 1.2rem;
     }
