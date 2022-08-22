@@ -1,3 +1,5 @@
+/* toggle menu */
+
 const toggleBar = document.getElementsByClassName("toggle-bar")[0];
 const postIt = document.getElementsByClassName("post-it-contents")[0];
 let on = true
@@ -6,10 +8,9 @@ toggleBar.addEventListener("click", function() {
     postIt.classList.toggle("select");
 });
 
-
-/* Canvas- tutorial video (https://www.youtube.com/watch?v=Yvz_axxWG4Y&t=73s) */
-var canvas = document.getElementById("canvas");
-var canvasSize = document.getElementById("size-canvas");
+/* Canvas */
+let canvas = document.getElementById("canvas");
+let canvasSize = document.getElementById("size-canvas");
 const ctx = canvas.getContext("2d");
 canvas.width = canvasSize.clientWidth;
 canvas.height = canvasSize.clientHeight;
@@ -25,6 +26,7 @@ drawBase();
     drawLeg1();
     drawLeg2();
 
+/* Canvas-rezize on resize of window */
 window.addEventListener("resize", function() {
     console.log(canvasSize.clientWidth);
     console.log(canvasSize.clientHeight);
@@ -109,3 +111,18 @@ function drawLeg2() {
     ctx.stroke();
     ctx.closePath();
 };
+
+/* word slection */
+
+let wordList = ["dog", "cat", "car", "bar", "egg", "bike", "tree", "pony", "chair", "flower", "house", "computer"]
+let selectedWord = wordList[Math.floor(Math.random() * wordList.length)];
+console.log(selectedWord);
+let emptyWord = "";
+for (let i = 0; i < selectedWord.length; i++) {
+    emptyWord = emptyWord + " _";
+}
+
+let wordInput = document.getElementById("word-input");
+wordInput.innerHTML = emptyWord;
+
+console.log(emptyWord);
