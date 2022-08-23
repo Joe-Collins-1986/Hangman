@@ -115,7 +115,7 @@ if (catagory == animals) { // must be a better way of doin this. - MENTOR
 else if (catagory == beers) {
     levelOutput = "Beers";}
 else {
-    levelOutput = "Animals";
+    levelOutput = "Cars";
 };
 let level = document.getElementById("level");
 level.innerHTML = levelOutput;
