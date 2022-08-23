@@ -15,32 +15,22 @@ const ctx = canvas.getContext("2d");
 canvas.width = canvasSize.clientWidth;
 canvas.height = canvasSize.clientHeight;
 
-drawBase();
-    drawPost();
-    drawTop();
-    drawRope();
-    drawHead();
-    drawBody();
-    drawArm1();
-    drawArm2();
-    drawLeg1();
-    drawLeg2();
+    // drawBase();
+    // drawPost();
+    // drawTop();
+    // drawRope();
+    // drawHead();
+    // drawBody();
+    // drawArm1();
+    // drawArm2();
+    // drawLeg1();
+    // drawLeg2();
 
 /* Canvas-rezize on resize of window */
 window.addEventListener("resize", function() {
     canvas.width = canvasSize.clientWidth;
     canvas.height = canvasSize.clientHeight;
-
-    drawBase();
-    drawPost();
-    drawTop();
-    drawRope();
-    drawHead();
-    drawBody();
-    drawArm1();
-    drawArm2();
-    drawLeg1();
-    drawLeg2();
+    hangmanDraw();
 });
 
 function drawBase() {
@@ -118,7 +108,7 @@ let selectedWord = wordList[Math.floor(Math.random() * wordList.length)];
 let letterCheck = [];
 let lettersGuessed= [];
 let shownWord = [];
-let wrongAnswers = 8;
+let wrongAnswers = 10;
 
 console.log(selectedWord);
 
@@ -127,7 +117,6 @@ console.log(selectedWord);
 for (let i = 0; i < selectedWord.length; i++) { 
     shownWord[i] = " _ ";
     };
-
 
     let wordOutput = document.getElementById("word-output");
     wordOutput.innerHTML = shownWord.join(" ");
@@ -142,14 +131,50 @@ function updateWord() {
             wordOutput.innerHTML = shownWord.join(" ");
     }}
     if (!selectedWord.includes(letterCheck)) {
-        wrongAnswers = wrongAnswers - 1;
+        wrongAnswers --;
         console.log(wrongAnswers);
         console.log("not a correct letter");
+        hangmanDraw();
     }
 }
 
-/* button event listener */
 
+/* hangman draw */
+function hangmanDraw() {
+    if (wrongAnswers <= 9) {
+        drawBase();
+    }
+    if (wrongAnswers <= 8) {
+        drawPost();
+    }
+    if (wrongAnswers <= 7) {
+        drawTop();
+    }
+    if (wrongAnswers <= 6) {
+        drawRope();
+    }
+    if (wrongAnswers <= 5) {
+        drawHead();
+    }
+    if (wrongAnswers <= 4) {
+        drawBody();
+    }
+    if (wrongAnswers <= 3) {
+        drawArm1();
+    }
+    if (wrongAnswers <= 2) {
+        drawArm2();
+    }
+    if (wrongAnswers <= 1) {
+        drawLeg1();
+    }
+    if (wrongAnswers <= 0) {
+        drawLeg2();
+    }
+}
+
+
+/* button event listener */
 document.addEventListener("DOMContentLoaded", function() {
     let selectedButtons = document.getElementsByTagName("button");
 
@@ -157,6 +182,7 @@ document.addEventListener("DOMContentLoaded", function() {
         i.addEventListener("click", function() {
             if (this.getAttribute("data-type") === "letter") {
                 this.style.opacity = 0.3; 
+                this.disabled = true;
                 letterCheck = this.id;
                 lettersGuessed = lettersGuessed + letterCheck;
                 updateWord()
