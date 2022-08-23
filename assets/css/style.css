@@ -14,6 +14,10 @@ body {
     font-family: 'Handlee', cursive, sans-serif;
 }
 
+button {
+    font-family: 'Handlee', cursive, sans-serif;
+}
+
 h1 {
     /* enter consistant font requirements */
     font-size: 3rem;
@@ -222,8 +226,8 @@ footer {
     margin-bottom: 20px;
 }
 
-/* Word input */
-#word-input {
+/* Word output */
+#word-output {
     height: 54px;
     display: flex;
     justify-content: center;
