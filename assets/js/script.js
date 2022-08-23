@@ -110,6 +110,7 @@ function drawLeg2() {
     ctx.closePath();
 };
 
+
 /* select random word and present as underscores */
 
 let wordList = ["dog", "cat", "car", "bar", "egg", "bike", "tree", "pony", "chair", "flower", "house", "computer"]
@@ -117,14 +118,9 @@ let selectedWord = wordList[Math.floor(Math.random() * wordList.length)];
 let letterCheck = [];
 let lettersGuessed= [];
 let shownWord = [];
+let wrongAnswers = 8;
 
 console.log(selectedWord);
-
-
-
-
-// let wordOutput = document.getElementById("word-output");
-// wordOutput.innerHTML = shownWord;
 
 
 /* underscore word */
@@ -137,17 +133,20 @@ for (let i = 0; i < selectedWord.length; i++) {
     wordOutput.innerHTML = shownWord.join(" ");
 
 
-
+/* check for letter in word and update shownWord */
 function updateWord() {
-    for (let j = 0; j < selectedWord.length; j++) {
-        if (selectedWord[j] == letterCheck) {
-            shownWord[j] = letterCheck;
+    for (let i = 0; i < selectedWord.length; i++) {
+        if (selectedWord[i] == letterCheck) {
+            shownWord[i] = letterCheck;
             let wordOutput = document.getElementById("word-output");
             wordOutput.innerHTML = shownWord.join(" ");
-        }
+    }}
+    if (!selectedWord.includes(letterCheck)) {
+        wrongAnswers = wrongAnswers - 1;
+        console.log(wrongAnswers);
+        console.log("not a correct letter");
     }
 }
-
 
 /* button event listener */
 
@@ -167,27 +166,3 @@ document.addEventListener("DOMContentLoaded", function() {
         })
     }
 });
-
-
-    
-// /* replace letters */
-// function replaceLetters() {
-//     console.log(selectedWord);
-//     console.log(lettersGuessed)
-//     console.log(lettersGuessed.length);
-//     for (let i = 0; i < selectedWord.length; i++) {
-//         console.log("a");
-//         for (let x = 0; x < lettersGuessed.length; x++) {
-//             console.log(shownWord[i]);
-//             console.log("b");
-//             if (lettersGuessed[x] === selectedWord[i]) {
-//                 shownWord[i] = lettersGuessed[x];
-
-//             }
-//         console.log(shownWord);
-//         return shownWord;
-//         }
-//     }
-// }
-
-// replaceLetters();
