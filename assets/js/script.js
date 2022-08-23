@@ -15,17 +15,6 @@ const ctx = canvas.getContext("2d");
 canvas.width = canvasSize.clientWidth;
 canvas.height = canvasSize.clientHeight;
 
-    // drawBase();
-    // drawPost();
-    // drawTop();
-    // drawRope();
-    // drawHead();
-    // drawBody();
-    // drawArm1();
-    // drawArm2();
-    // drawLeg1();
-    // drawLeg2();
-
 /* Canvas-rezize on resize of window */
 window.addEventListener("resize", function() {
     canvas.width = canvasSize.clientWidth;
@@ -103,14 +92,23 @@ function drawLeg2() {
 
 /* select random word and present as underscores */
 
-let wordList = ["dog", "cat", "car", "bar", "egg", "bike", "tree", "pony", "chair", "flower", "house", "computer"]
-let selectedWord = wordList[Math.floor(Math.random() * wordList.length)];
+// let wordList = ["dog", "cat", "car", "bar", "egg", "bike", "tree", "pony", "chair", "flower", "house", "computer"]
 let letterCheck = [];
 let lettersGuessed= [];
 let shownWord = [];
 let wrongAnswers = 10;
+let animals = ["dog", "cat", "lion", "tiger", "zebra", "kangaroo", "bear", "eagle", "duck", "snake", "panda"];
+let cars = ["audi", "bmw", "bentley", "citroen", "ferrari", "fiat", "ford", "jeep", "mazda", "mini", "skoda"];
+let beers = ["budweiser", "brewdog", "carling", "carlsberg", "corona", "coors", "guinness", "heineken", "peroni", "tiger"];
+let catagory = animals;
+let selectedWord = animals[Math.floor(Math.random() * animals.length)];
+
 
 console.log(selectedWord);
+
+/* Select and present level */
+let level = document.getElementById("level");
+level.innerHTML = catagory;
 
 
 /* underscore word */
@@ -137,7 +135,6 @@ function updateWord() {
         hangmanDraw();
     }
 }
-
 
 /* hangman draw */
 function hangmanDraw() {
@@ -172,7 +169,6 @@ function hangmanDraw() {
         drawLeg2();
     }
 }
-
 
 /* button event listener */
 document.addEventListener("DOMContentLoaded", function() {
