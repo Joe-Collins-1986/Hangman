@@ -100,15 +100,30 @@ let wrongAnswers = 10;
 let animals = ["dog", "cat", "lion", "tiger", "zebra", "kangaroo", "bear", "eagle", "duck", "snake", "panda"];
 let cars = ["audi", "bmw", "bentley", "citroen", "ferrari", "fiat", "ford", "jeep", "mazda", "mini", "skoda"];
 let beers = ["budweiser", "brewdog", "carling", "carlsberg", "corona", "coors", "guinness", "heineken", "peroni", "tiger"];
-let catagory = animals;
-let selectedWord = animals[Math.floor(Math.random() * animals.length)];
+let catagory = cars; //default
+let selectedWord = catagory[Math.floor(Math.random() * catagory.length)];
+let levelOutput = "";
+let scoreTally = 0;
+
 
 
 console.log(selectedWord);
 
-/* Select and present level */
+/* present catagory */
+if (catagory == animals) { // must be a better way of doin this. - MENTOR
+    levelOutput = "Animals";}
+else if (catagory == beers) {
+    levelOutput = "Beers";}
+else {
+    levelOutput = "Animals";
+};
 let level = document.getElementById("level");
-level.innerHTML = catagory;
+level.innerHTML = levelOutput;
+
+
+/* present score */
+let score = document.getElementById("score");
+score.innerHTML = scoreTally;
 
 
 /* underscore word */
@@ -137,7 +152,7 @@ function updateWord() {
 }
 
 /* hangman draw */
-function hangmanDraw() {
+function hangmanDraw() { // must be a better way of doin this. - MENTOR
     if (wrongAnswers <= 9) {
         drawBase();
     }
@@ -188,3 +203,7 @@ document.addEventListener("DOMContentLoaded", function() {
         })
     }
 });
+
+/* settings button event listener */
+
+/* rules button event listener */
