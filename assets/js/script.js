@@ -93,6 +93,7 @@ function drawLeg2() {
 /* select random word and present as underscores */
 
 // let wordList = ["dog", "cat", "car", "bar", "egg", "bike", "tree", "pony", "chair", "flower", "house", "computer"]
+let play = true;
 let letterCheck = [];
 let lettersGuessed= [];
 let shownWord = [];
@@ -122,7 +123,6 @@ level.innerHTML = levelOutput;
 /* present score */
 let score = document.getElementById("score");
 score.innerHTML = scoreTally;
-
 
 /* underscore word */
 for (let i = 0; i < selectedWord.length; i++) { 
@@ -206,6 +206,16 @@ document.addEventListener("DOMContentLoaded", function() {
 function winOutcome() {
     if (!shownWord.includes(" _ ")) {
         console.log("congratulations");
+        scoreTally = scoreTally + 10;
+        score.innerHTML = scoreTally;
+        let popUp = document.getElementById("pop-up");
+        popUp.style.display = "inline";
+
+        winnerText = "<b>Congratulations!!!</b> <br><br> You guessed the word <b><u>" + selectedWord.toUpperCase() + "</u></b> and your score has increased to <b><u>" + scoreTally + "</u></b>."
+        // winnerText = `Congratulations!!! You guessed the word ${selectedWord} and your score has increased to ${scoreTally}.`
+
+        let result = document.getElementById("result");
+        result.innerHTML = (winnerText);
 
     } else {
         console.log("well done you are getting closer");
@@ -213,6 +223,7 @@ function winOutcome() {
         let wordPositioning = document.getElementById("word-positioning");
         wordPositioning.innerHTML = ("Well done you are getting closer!!!");
     }
+    return scoreTally;
 }
 
 /* settings button event listener */
