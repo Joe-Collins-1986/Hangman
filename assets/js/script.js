@@ -93,7 +93,6 @@ function drawLeg2() {
 /* select random word and present as underscores */
 
 // let wordList = ["dog", "cat", "car", "bar", "egg", "bike", "tree", "pony", "chair", "flower", "house", "computer"]
-let play = true;
 let letterCheck = [];
 let shownWord = [];
 let wrongAnswers = 10;
@@ -124,12 +123,15 @@ let score = document.getElementById("score");
 score.innerHTML = scoreTally;
 
 /* underscore word */
-for (let i = 0; i < selectedWord.length; i++) { 
-    shownWord[i] = " _ ";
-    };
-
-    let wordOutput = document.getElementById("word-output");
-    wordOutput.innerHTML = shownWord.join(" ");
+function underscoreWord() {
+    for (let i = 0; i < selectedWord.length; i++) { 
+        shownWord[i] = " _ ";
+        };
+    
+        let wordOutput = document.getElementById("word-output");
+        wordOutput.innerHTML = shownWord.join(" ");
+}
+underscoreWord();
 
 
 /* check for letter in word and update shownWord */
@@ -194,8 +196,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 letterCheck = this.id;
                 updateWord()
             } else if (this.getAttribute("data-type") === "play-again") {
-                popUp.style.display = "none";
-                // CREATE A RESET FUNCTION
+                newGame(); // CREATE A RESET FUNCTION
             } else if (this.getAttribute("data-type") === "reset") {
                 window.location.reload();
             } else {
@@ -213,7 +214,6 @@ function winOutcome() {
         console.log("congratulations");
         scoreTally = scoreTally + 10;
         score.innerHTML = scoreTally;
-        // let popUp = document.getElementById("pop-up");
         popUp.style.display = "inline";
 
         winnerText = "<b>Congratulations!!!</b> <br><br> You guessed the word <b><u>" + selectedWord.toUpperCase() + "</u></b> and your score has increased to <b><u>" + scoreTally + "</u></b>."
@@ -229,6 +229,26 @@ function winOutcome() {
     }
     return scoreTally;
 }
+
+function newGame() {
+    letterCheck = [];
+    shownWord = [];
+    wrongAnswers = 10;
+    selectedWord = catagory[Math.floor(Math.random() * catagory.length)];
+    popUp.style.display = "none";
+    levelOutput = "";
+
+    ctx.clearRect(0, 0, canvas.width, canvas.height); // https://stackoverflow.com/questions/2142535/how-to-clear-the-canvas-for-redrawing
+
+    //loop through buttons and reset 
+    // if (button.getAttribute("data-type") === "letter") {
+    //     button.style.opacity = 1; 
+    //     button.disabled = false;}
+
+
+    underscoreWord();
+    console.log(selectedWord);
+};
 
 /* settings button event listener */
 
