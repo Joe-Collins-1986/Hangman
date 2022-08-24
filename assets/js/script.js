@@ -92,17 +92,19 @@ function drawLeg2() {
 
 /* select random word and present as underscores */
 
-// let wordList = ["dog", "cat", "car", "bar", "egg", "bike", "tree", "pony", "chair", "flower", "house", "computer"]
 let letterCheck = [];
 let shownWord = [];
 let wrongAnswers = 10;
 let animals = ["dog", "cat", "lion", "tiger", "zebra", "kangaroo", "bear", "eagle", "duck", "snake", "panda"];
 let cars = ["audi", "bmw", "bentley", "citroen", "ferrari", "fiat", "ford", "jeep", "mazda", "mini", "skoda"];
 let beers = ["budweiser", "brewdog", "carling", "carlsberg", "corona", "coors", "guinness", "heineken", "peroni", "tiger"];
-let catagory = cars; //default
+let catagory = animals; //default
+let levelOutput = "Animals"; //default
 let selectedWord = catagory[Math.floor(Math.random() * catagory.length)];
-let levelOutput = "";
 let scoreTally = 0;
+let winnerText = "";
+
+// CREATE SECTION FOR ALL HTML ELEMENTS
 
 console.log(selectedWord);
 
@@ -123,23 +125,24 @@ let score = document.getElementById("score");
 score.innerHTML = scoreTally;
 
 /* underscore word */
+let wordOutput = document.getElementById("word-output");
+
 function underscoreWord() {
     for (let i = 0; i < selectedWord.length; i++) { 
         shownWord[i] = " _ ";
         };
     
-        let wordOutput = document.getElementById("word-output");
         wordOutput.innerHTML = shownWord.join(" ");
 }
 underscoreWord();
 
 
 /* check for letter in word and update shownWord */
+
 function updateWord() {
     for (let i = 0; i < selectedWord.length; i++) {
         if (selectedWord[i] == letterCheck) {
             shownWord[i] = letterCheck;
-            let wordOutput = document.getElementById("word-output");
             wordOutput.innerHTML = shownWord.join(" ");
             winOutcome();
     }}
@@ -185,8 +188,9 @@ function hangmanDraw() { // must be a better way of doin this. - MENTOR
 }
 
 /* button event listener */
+let selectedButtons = document.getElementsByTagName("button");
+
 document.addEventListener("DOMContentLoaded", function() {
-    let selectedButtons = document.getElementsByTagName("button");
 
     for (i of selectedButtons) {
         i.addEventListener("click", function() {
@@ -208,6 +212,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
 /* correct guess and game won */
 let popUp = document.getElementById("pop-up");
+let result = document.getElementById("result");
+let wordPositioning = document.getElementById("word-positioning");
 
 function winOutcome() {
     if (!shownWord.includes(" _ ")) {
@@ -215,40 +221,43 @@ function winOutcome() {
         scoreTally = scoreTally + 10;
         score.innerHTML = scoreTally;
         popUp.style.display = "inline";
+        wordPositioning.innerHTML = ("Wow, you did it!!!");
 
-        winnerText = "<b>Congratulations!!!</b> <br><br> You guessed the word <b><u>" + selectedWord.toUpperCase() + "</u></b> and your score has increased to <b><u>" + scoreTally + "</u></b>."
+        winnerText = "<b>Congratulations!!!</b> <br><br> You guessed the word <b><u>" + selectedWord.toUpperCase() + "</u></b> and your score has increased to <b><u>" + scoreTally + "</u></b>." // ADD VARIABE TO BEGGINING
 
-        let result = document.getElementById("result");
         result.innerHTML = (winnerText);
 
     } else {
         console.log("well done you are getting closer");
 
-        let wordPositioning = document.getElementById("word-positioning");
         wordPositioning.innerHTML = ("Well done you are getting closer!!!");
     }
     return scoreTally;
 }
 
 function newGame() {
+
+    //remove word from word list???
+
     letterCheck = [];
     shownWord = [];
     wrongAnswers = 10;
     selectedWord = catagory[Math.floor(Math.random() * catagory.length)];
     popUp.style.display = "none";
-    levelOutput = "";
 
     ctx.clearRect(0, 0, canvas.width, canvas.height); // https://stackoverflow.com/questions/2142535/how-to-clear-the-canvas-for-redrawing
 
+    wordPositioning.innerHTML = ("Let's go again, shall we?");
+
     //loop through buttons and reset 
-    // if (button.getAttribute("data-type") === "letter") {
     //     button.style.opacity = 1; 
     //     button.disabled = false;}
-
 
     underscoreWord();
     console.log(selectedWord);
 };
+
+
 
 /* settings button event listener */
 
