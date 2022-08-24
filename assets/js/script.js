@@ -105,8 +105,6 @@ let selectedWord = catagory[Math.floor(Math.random() * catagory.length)];
 let levelOutput = "";
 let scoreTally = 0;
 
-
-
 console.log(selectedWord);
 
 /* present catagory */
@@ -142,14 +140,14 @@ function updateWord() {
             shownWord[i] = letterCheck;
             let wordOutput = document.getElementById("word-output");
             wordOutput.innerHTML = shownWord.join(" ");
+            winOutcome();
     }}
     if (!selectedWord.includes(letterCheck)) {
         wrongAnswers --;
         console.log(wrongAnswers);
         console.log("not a correct letter");
         hangmanDraw();
-    }
-}
+}};
 
 /* hangman draw */
 function hangmanDraw() { // must be a better way of doin this. - MENTOR
@@ -203,6 +201,19 @@ document.addEventListener("DOMContentLoaded", function() {
         })
     }
 });
+
+/* game won */
+function winOutcome() {
+    if (!shownWord.includes(" _ ")) {
+        console.log("congratulations");
+
+    } else {
+        console.log("well done you are getting closer");
+
+        let wordPositioning = document.getElementById("word-positioning");
+        wordPositioning.innerHTML = ("Well done you are getting closer!!!");
+    }
+}
 
 /* settings button event listener */
 
