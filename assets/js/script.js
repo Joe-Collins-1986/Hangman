@@ -195,6 +195,8 @@ document.addEventListener("DOMContentLoaded", function() {
                 letterCheck = this.id;
                 lettersGuessed = lettersGuessed + letterCheck;
                 updateWord()
+            } else if (this.getAttribute("data-type") === "reset") {
+                window.location.reload();
             } else {
                 console.log("other botton functions not built yet!!!")
             }
