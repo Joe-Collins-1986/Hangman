@@ -223,7 +223,7 @@ function winOutcome() {
         popUp.style.display = "inline";
         wordPositioning.innerHTML = ("Wow, you did it!!!");
 
-        winnerText = "<b>Congratulations!!!</b> <br><br> You guessed the word <b><u>" + selectedWord.toUpperCase() + "</u></b> and your score has increased to <b><u>" + scoreTally + "</u></b>." // ADD VARIABE TO BEGGINING
+        winnerText = "<b>Congratulations!!!</b> <br><br> You guessed the word <b><u>" + selectedWord.toUpperCase() + "</u></b> and your score has increased to <b><u>" + scoreTally + "</u></b>."
 
         result.innerHTML = (winnerText);
 
@@ -248,6 +248,13 @@ function newGame() {
     ctx.clearRect(0, 0, canvas.width, canvas.height); // https://stackoverflow.com/questions/2142535/how-to-clear-the-canvas-for-redrawing
 
     wordPositioning.innerHTML = ("Let's go again, shall we?");
+
+    let alphButtons = document.getElementsByClassName("alph-button")
+    for (i of alphButtons) {
+        console.log(i);
+        i.style.opacity = 1;
+        i.disabled = false;
+    }
 
     //loop through buttons and reset 
     //     button.style.opacity = 1; 
