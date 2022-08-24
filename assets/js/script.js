@@ -151,6 +151,7 @@ function updateWord() {
         console.log(wrongAnswers);
         console.log("not a correct letter");
         hangmanDraw();
+        loseOutcome()
 }};
 
 /* hangman draw */
@@ -228,9 +229,25 @@ function winOutcome() {
         result.innerHTML = (winnerText);
 
     } else {
-        console.log("well done you are getting closer");
-
         wordPositioning.innerHTML = ("Well done you are getting closer!!!");
+    }
+    return scoreTally;
+}
+
+function loseOutcome() {
+    if (wrongAnswers <= 0) {
+        console.log("Loss");
+        scoreTally = scoreTally - 5;
+        score.innerHTML = scoreTally;
+        popUp.style.display = "inline";
+        wordPositioning.innerHTML = ("Don't worry, you'll get it next time!!!");
+
+        loserText = "<b>Unlucky!!!</b> <br><br> The correct word was <b><u>" + selectedWord.toUpperCase() + "</u></b>. Your score has decreased to <b><u>" + scoreTally + "</u></b>."
+
+        result.innerHTML = (loserText);
+
+    } else {
+        wordPositioning.innerHTML = ("Oh, no! That's not right.");
     }
     return scoreTally;
 }
@@ -255,16 +272,9 @@ function newGame() {
         i.style.opacity = 1;
         i.disabled = false;
     }
-
-    //loop through buttons and reset 
-    //     button.style.opacity = 1; 
-    //     button.disabled = false;}
-
     underscoreWord();
     console.log(selectedWord);
 };
-
-
 
 /* settings button event listener */
 
