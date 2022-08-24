@@ -243,6 +243,7 @@ footer {
 
 /* Letter buttons */
 #alph-buttons {
+    position: relative;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -263,7 +264,29 @@ footer {
     color: white;
 }
 
+/*pop-ups */
+#win-pop-up {
+    position: absolute;
+    min-height: 100%;
+    width: 100%;
+    border: 2px solid black;
+    box-shadow: 1px 2px 3px 1px rgb(70, 70, 70);
+    background: linear-gradient(rgb(234, 234, 106), rgb(231, 231, 115),rgb(217, 217, 99));
+}
 
+.small-pin {
+    position: absolute;
+    top: -4%;
+    height: 40px;
+}
+
+#pin-right {
+    right: 2%;
+}
+
+#pin-left {
+    left: 2%;
+}
 
 /* ......................................................... */
 
