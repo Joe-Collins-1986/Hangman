@@ -95,7 +95,6 @@ function drawLeg2() {
 // let wordList = ["dog", "cat", "car", "bar", "egg", "bike", "tree", "pony", "chair", "flower", "house", "computer"]
 let play = true;
 let letterCheck = [];
-let lettersGuessed= [];
 let shownWord = [];
 let wrongAnswers = 10;
 let animals = ["dog", "cat", "lion", "tiger", "zebra", "kangaroo", "bear", "eagle", "duck", "snake", "panda"];
@@ -193,8 +192,10 @@ document.addEventListener("DOMContentLoaded", function() {
                 this.style.opacity = 0.3; 
                 this.disabled = true;
                 letterCheck = this.id;
-                lettersGuessed = lettersGuessed + letterCheck;
                 updateWord()
+            } else if (this.getAttribute("data-type") === "play-again") {
+                popUp.style.display = "none";
+                // CREATE A RESET FUNCTION
             } else if (this.getAttribute("data-type") === "reset") {
                 window.location.reload();
             } else {
@@ -204,17 +205,18 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 });
 
-/* game won */
+/* correct guess and game won */
+let popUp = document.getElementById("pop-up");
+
 function winOutcome() {
     if (!shownWord.includes(" _ ")) {
         console.log("congratulations");
         scoreTally = scoreTally + 10;
         score.innerHTML = scoreTally;
-        let popUp = document.getElementById("pop-up");
+        // let popUp = document.getElementById("pop-up");
         popUp.style.display = "inline";
 
         winnerText = "<b>Congratulations!!!</b> <br><br> You guessed the word <b><u>" + selectedWord.toUpperCase() + "</u></b> and your score has increased to <b><u>" + scoreTally + "</u></b>."
-        // winnerText = `Congratulations!!! You guessed the word ${selectedWord} and your score has increased to ${scoreTally}.`
 
         let result = document.getElementById("result");
         result.innerHTML = (winnerText);
