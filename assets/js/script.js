@@ -129,7 +129,7 @@ let wordOutput = document.getElementById("word-output");
 
 function underscoreWord() {
     for (let i = 0; i < selectedWord.length; i++) { 
-        shownWord[i] = " _ ";
+        shownWord[i] = "_";
         };
     
         wordOutput.innerHTML = shownWord.join(" ");
@@ -217,7 +217,7 @@ let result = document.getElementById("result");
 let wordPositioning = document.getElementById("word-positioning");
 
 function winOutcome() {
-    if (!shownWord.includes(" _ ")) {
+    if (!shownWord.includes("_")) {
         console.log("congratulations");
         scoreTally = scoreTally + 10;
         score.innerHTML = scoreTally;
@@ -268,7 +268,6 @@ function newGame() {
 
     let alphButtons = document.getElementsByClassName("alph-button")
     for (i of alphButtons) {
-        console.log(i);
         i.style.opacity = 1;
         i.disabled = false;
     }
