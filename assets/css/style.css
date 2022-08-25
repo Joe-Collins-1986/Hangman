@@ -189,7 +189,7 @@ footer {
     /* background: white; */
     border: 2px solid #9198e5;
     box-shadow: 1px 2px 3px 1px rgb(70, 70, 70);
-    /* display: none; */
+    display: none;
 }
 
 .rules-pin {

@@ -8,7 +8,13 @@ const rulesPostIt = document.getElementById("rules");
 toggleBar.addEventListener("click", function() {
     postIt.classList.toggle("select");
     rulesPostIt.style.display = "none";
+});
 
+const openRules = document.getElementById("openRules");
+
+openRules.addEventListener("click", function() {
+    postIt.classList.toggle("select");
+    rulesPostIt.style.display = "inline";
 });
 
 /* Canvas */
@@ -215,6 +221,8 @@ document.addEventListener("DOMContentLoaded", function() {
         })
     }
 });
+
+
 
 /* correct guess and game won */
 let popUp = document.getElementById("pop-up");
