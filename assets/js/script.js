@@ -207,8 +207,10 @@ document.addEventListener("DOMContentLoaded", function() {
                 newGame(); // CREATE A RESET FUNCTION
             } else if (this.getAttribute("data-type") === "reset") {
                 window.location.reload();
-            } else {
+            } else if (this.getAttribute("data-type") === "leaveRules") {
                 rulesPostIt.style.display = "none";
+            } else {
+                console.log("button not built yet");
             }
         })
     }
