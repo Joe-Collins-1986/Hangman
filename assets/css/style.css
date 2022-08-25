@@ -188,7 +188,8 @@ footer {
     background: linear-gradient(rgb(234, 234, 106), rgb(231, 231, 115),rgb(217, 217, 99));
     border: 2px solid #9198e5;
     box-shadow: 1px 2px 3px 1px rgb(70, 70, 70);
-    display: inline;
+    display: none;
+    padding: 1rem;
 }
 
 #rules.open {
@@ -212,6 +213,27 @@ footer {
 
 #rules li {
     font-size: 1.6rem;
+    font-weight: 500;
+}
+
+#button-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#leaveRulesButton {
+    width: 150px;
+    height: 90px;
+    font-size: 1.6rem;
+    border-radius: 10px;
+    margin-top: 20px;
+    border: 2px solid black;
+    box-shadow: 1px 2px 3px 1px rgb(70, 70, 70);
+}
+
+#leaveRulesButton:hover {
+    background-color: rgb(237, 181, 181);
 }
 
 /* Sub Header */
