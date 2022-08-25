@@ -178,16 +178,17 @@ footer {
     flex-direction: column;
 }
 
+/* Post it for rules */
 #rules {
     width: 58%;
-    height: 95%;
+    min-height: 95%;
     position: absolute;
     left: -1rem;
     z-index: 1;
     background: linear-gradient(rgb(234, 234, 106), rgb(231, 231, 115),rgb(217, 217, 99));
     border: 2px solid #9198e5;
     box-shadow: 1px 2px 3px 1px rgb(70, 70, 70);
-    display: none;
+    display: inline;
 }
 
 #rules.open {
@@ -197,6 +198,20 @@ footer {
 .rules-pin {
     position: absolute;
     height: 40px;
+}
+
+/*rules content */
+#rules-header {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+#rules-para {
+    text-align: center;
+}
+
+#rules li {
+    font-size: 1.6rem;
 }
 
 /* Sub Header */
