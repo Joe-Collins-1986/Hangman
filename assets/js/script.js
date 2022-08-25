@@ -3,9 +3,12 @@
 /* toggle menu */
 const toggleBar = document.getElementsByClassName("toggle-bar")[0];
 const postIt = document.getElementsByClassName("post-it-contents")[0];
+const rulesPostIt = document.getElementById("rules");
 
 toggleBar.addEventListener("click", function() {
     postIt.classList.toggle("select");
+    rulesPostIt.style.display = "none";
+
 });
 
 /* Canvas */
@@ -205,7 +208,7 @@ document.addEventListener("DOMContentLoaded", function() {
             } else if (this.getAttribute("data-type") === "reset") {
                 window.location.reload();
             } else {
-                console.log("other botton functions not built yet!!!")
+                rulesPostIt.style.display = "none";
             }
         })
     }
