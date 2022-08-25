@@ -224,7 +224,8 @@ document.addEventListener("DOMContentLoaded", function() {
             } else if (this.getAttribute("data-type") === "reset") {
                 window.location.reload();
             } else if (this.getAttribute("data-type") === "leaveRules") {
-                rulesPostIt.style.display = "none";
+                // rulesPostIt.style.display = "none";
+                rulesPostIt.classList.toggle("open");
             } else {
                 console.log("button not built yet");
             }
