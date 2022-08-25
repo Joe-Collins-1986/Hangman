@@ -185,11 +185,13 @@ footer {
     left: -1rem;
     z-index: 1;
     background: linear-gradient(rgb(234, 234, 106), rgb(231, 231, 115),rgb(217, 217, 99));
-    /* background: repeating-linear-gradient(white, white 25px,#9198e5 26px, #9198e5 27px); */
-    /* background: white; */
     border: 2px solid #9198e5;
     box-shadow: 1px 2px 3px 1px rgb(70, 70, 70);
     display: none;
+}
+
+#rules.open {
+    display: inline;
 }
 
 .rules-pin {

@@ -7,15 +7,24 @@ const rulesPostIt = document.getElementById("rules");
 
 toggleBar.addEventListener("click", function() {
     postIt.classList.toggle("select");
-    rulesPostIt.style.display = "none";
 });
 
+/* Rules menu open via menu */
 const openRules = document.getElementById("openRules");
 
 openRules.addEventListener("click", function() {
-    postIt.classList.toggle("select");
-    rulesPostIt.style.display = "inline";
+    // rulesPostIt.style.display = "inline";
+    rulesPostIt.classList.toggle("open");
+    // ADD RULE TO CHECK IF SETTINGS ARE OPEN AND CLOSE IF IT IS
+    if (matchMedia("(max-width: 820px)").matches) {
+        postIt.classList.toggle("select");
+      };
 });
+
+/* Settings menu open via menu */
+
+
+
 
 /* Canvas */
 let canvas = document.getElementById("canvas");
@@ -112,6 +121,7 @@ let levelOutput = "Animals"; //default
 let selectedWord = catagory[Math.floor(Math.random() * catagory.length)];
 let scoreTally = 0;
 let winnerText = "";
+let loserText = "";
 
 // CREATE SECTION FOR ALL HTML ELEMENTS
 
