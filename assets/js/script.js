@@ -9,23 +9,6 @@ toggleBar.addEventListener("click", function() {
     postIt.classList.toggle("select");
 });
 
-/* Rules menu open via menu */
-const openRules = document.getElementById("openRules");
-
-openRules.addEventListener("click", function() {
-    // rulesPostIt.style.display = "inline";
-    rulesPostIt.classList.toggle("open");
-    // ADD RULE TO CHECK IF SETTINGS ARE OPEN AND CLOSE IF IT IS
-    if (matchMedia("(max-width: 820px)").matches) {
-        postIt.classList.toggle("select");
-      };
-});
-
-/* Settings menu open via menu */
-
-
-
-
 /* Canvas */
 let canvas = document.getElementById("canvas");
 let canvasSize = document.getElementById("size-canvas");
@@ -220,11 +203,10 @@ document.addEventListener("DOMContentLoaded", function() {
                 letterCheck = this.id;
                 updateWord()
             } else if (this.getAttribute("data-type") === "play-again") {
-                newGame(); // CREATE A RESET FUNCTION
+                newGame();
             } else if (this.getAttribute("data-type") === "reset") {
                 window.location.reload();
             } else if (this.getAttribute("data-type") === "leaveRules") {
-                // rulesPostIt.style.display = "none";
                 rulesPostIt.classList.toggle("open");
             } else {
                 console.log("button not built yet");
@@ -232,8 +214,6 @@ document.addEventListener("DOMContentLoaded", function() {
         })
     }
 });
-
-
 
 /* correct guess and game won */
 let popUp = document.getElementById("pop-up");
@@ -302,3 +282,13 @@ function newGame() {
 /* settings button event listener */
 
 /* rules button event listener */
+const openRules = document.getElementById("openRules");
+
+openRules.addEventListener("click", function() {
+    // rulesPostIt.style.display = "inline";
+    rulesPostIt.classList.toggle("open");
+    // ADD RULE TO CHECK IF SETTINGS ARE OPEN AND CLOSE IF IT IS
+    if (matchMedia("(max-width: 820px)").matches) {
+        postIt.classList.toggle("select");
+      };
+});
