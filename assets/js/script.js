@@ -7,6 +7,8 @@ const rulesPostIt = document.getElementById("rules");
 
 toggleBar.addEventListener("click", function() {
     postIt.classList.toggle("select");
+    rulesPostIt.className = "rules"; // added to remove post-it when rules shows.
+
 });
 
 /* Canvas */
@@ -288,7 +290,10 @@ openRules.addEventListener("click", function() {
     // rulesPostIt.style.display = "inline";
     rulesPostIt.classList.toggle("open");
     // ADD RULE TO CHECK IF SETTINGS ARE OPEN AND CLOSE IF IT IS
-    if (matchMedia("(max-width: 820px)").matches) {
+    if (matchMedia("(min-width: 821px)").matches) {
+        postIt.className = "post-it-contents";
+      }
+    else if (matchMedia("(max-width: 820px)").matches) {
         postIt.classList.toggle("select");
       };
 });
