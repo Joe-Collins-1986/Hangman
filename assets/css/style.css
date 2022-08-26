@@ -236,9 +236,21 @@ footer {
     background-color: rgb(237, 181, 181);
 }
 
-/* Post it for settings */
+#catagory-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
 
-
+.catagoryButon {
+    width: 120px;
+    height: 60px;
+    font-size: 1.6rem;
+    border-radius: 10px;
+    margin-top: 20px;
+    border: 2px solid black;
+    box-shadow: 1px 2px 3px 1px rgb(70, 70, 70);
+}
 
 /* Sub Header */
 .sub-heading-container {
