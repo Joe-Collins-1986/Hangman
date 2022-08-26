@@ -134,8 +134,8 @@ footer {
 }
 
 .post-it-contents {
-    z-index: 3;
-
+    z-index: 4;
+    cursor: pointer; /*https://www.w3schools.com/cssref/pr_class_cursor.asp */
 }
 
 .post-it-contents ul {
@@ -156,7 +156,7 @@ footer {
     position: absolute;
     top: 17px;
     right: 10%;
-    z-index: 2;
+    z-index: 3;
 }
 
 /*Toggle menu */
@@ -184,7 +184,7 @@ footer {
     min-height: 95%;
     position: absolute;
     left: -1rem;
-    z-index: 1;
+    z-index: 2;
     background: linear-gradient(rgb(234, 234, 106), rgb(231, 231, 115),rgb(217, 217, 99));
     border: 2px solid #9198e5;
     box-shadow: 1px 2px 3px 1px rgb(70, 70, 70);
@@ -328,7 +328,7 @@ footer {
 #pop-up {
     display: none;
     position: absolute;
-    z-index: 2;
+    z-index: 1;
     min-height: 110%;
     width: 100%;
     border: 2px solid black;

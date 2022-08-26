@@ -293,7 +293,7 @@ openRules.addEventListener("click", function() {
     if (matchMedia("(min-width: 821px)").matches) {
         postIt.className = "post-it-contents";
       }
-    else if (matchMedia("(max-width: 820px)").matches) {
+      else if (matchMedia("(max-width: 820px)").matches) {
         postIt.classList.toggle("select");
       };
 });
