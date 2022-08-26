@@ -4,10 +4,12 @@
 const toggleBar = document.getElementsByClassName("toggle-bar")[0];
 const postIt = document.getElementsByClassName("post-it-contents")[0];
 const rulesPostIt = document.getElementById("rules");
+const settingsPostIt = document.getElementById("settings");
 
 toggleBar.addEventListener("click", function() {
     postIt.classList.toggle("select");
     rulesPostIt.className = "rules"; // added to remove post-it when rules shows.
+    settingsPostIt.className = "settings";
 
 });
 
@@ -210,6 +212,8 @@ document.addEventListener("DOMContentLoaded", function() {
                 window.location.reload();
             } else if (this.getAttribute("data-type") === "leaveRules") {
                 rulesPostIt.classList.toggle("open");
+            } else if (this.getAttribute("data-type") === "leaveSettings") {
+                    settingsPostIt.classList.toggle("open");
             } else {
                 console.log("button not built yet");
             }
@@ -287,8 +291,26 @@ function newGame() {
 const openRules = document.getElementById("openRules");
 
 openRules.addEventListener("click", function() {
-    // rulesPostIt.style.display = "inline";
     rulesPostIt.classList.toggle("open");
+    if (settingsPostIt.className = "open") {
+        settingsPostIt.className = "settings";
+    };
+    // ADD RULE TO CHECK IF SETTINGS ARE OPEN AND CLOSE IF IT IS
+    if (matchMedia("(min-width: 821px)").matches) {
+        postIt.className = "post-it-contents";
+      }
+      else if (matchMedia("(max-width: 820px)").matches) {
+        postIt.classList.toggle("select");
+      };
+});
+
+const openSettings = document.getElementById("openSettings");
+
+openSettings.addEventListener("click", function() {
+    settingsPostIt.classList.toggle("open");
+    if (rulesPostIt.className = "open") {
+        rulesPostIt.className = "rules";
+    };
     // ADD RULE TO CHECK IF SETTINGS ARE OPEN AND CLOSE IF IT IS
     if (matchMedia("(min-width: 821px)").matches) {
         postIt.className = "post-it-contents";

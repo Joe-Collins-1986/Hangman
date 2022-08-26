@@ -178,8 +178,8 @@ footer {
     flex-direction: column;
 }
 
-/* Post it for rules */
-#rules {
+/* Post it for rules & settings */
+#rules, #settings {
     width: 58%;
     min-height: 95%;
     position: absolute;
@@ -192,22 +192,22 @@ footer {
     padding: 1rem;
 }
 
-#rules.open {
+#rules.open, #settings.open {
     display: inline;
 }
 
-.rules-pin {
+.rules-pin, .settings-pin {
     position: absolute;
     height: 40px;
 }
 
-/*rules content */
-#rules-header {
+/*rules & settings content */
+#rules-header, #settings-header {
     text-align: center;
     margin-bottom: 35px;
 }
 
-#rules-para {
+#rules-para, #settings-para {
     text-align: center;
 }
 
@@ -222,7 +222,7 @@ footer {
     justify-content: center;
 }
 
-#leaveRulesButton {
+#leaveRulesButton, #leaveSettingsButton {
     width: 150px;
     height: 90px;
     font-size: 1.6rem;
@@ -232,9 +232,13 @@ footer {
     box-shadow: 1px 2px 3px 1px rgb(70, 70, 70);
 }
 
-#leaveRulesButton:hover {
+#leaveRulesButton:hover, #leaveSettingsButton:hover {
     background-color: rgb(237, 181, 181);
 }
+
+/* Post it for settings */
+
+
 
 /* Sub Header */
 .sub-heading-container {
@@ -403,7 +407,7 @@ footer {
         top: 107px;
     }
 
-    #rules {
+    #rules, #settings {
         width: 100%;
     }
 
