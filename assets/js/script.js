@@ -113,18 +113,25 @@ let loserText = "";
 // CREATE SECTION FOR ALL HTML ELEMENTS
 
 console.log(selectedWord);
+console.log(catagory)
 
-/* present catagory */
-if (catagory == animals) { // must be a better way of doin this. - MENTOR
-    levelOutput = "Animals";}
-else if (catagory == beers) {
-    levelOutput = "Beers";}
-else {
-    levelOutput = "Cars";
-};
+/* present catagory at start of game */
 let level = document.getElementById("level");
 level.innerHTML = levelOutput;
 
+
+
+function checkCatagory() {
+     if (catagory == animals) { // must be a better way of doin this. - MENTOR
+        levelOutput = "Animals";}
+    else if (catagory == beers) {
+        levelOutput = "Beers";}
+    else {
+        levelOutput = "Cars";
+    };
+    console.log(catagory)
+    level.innerHTML = levelOutput;
+};
 
 /* present score */
 let score = document.getElementById("score");
@@ -141,6 +148,10 @@ function underscoreWord() {
         wordOutput.innerHTML = shownWord.join(" ");
 }
 underscoreWord();
+
+
+
+
 
 
 /* check for letter in word and update shownWord */
@@ -205,7 +216,26 @@ document.addEventListener("DOMContentLoaded", function() {
                 this.style.opacity = 0.3; 
                 this.disabled = true;
                 letterCheck = this.id;
-                updateWord()
+                updateWord();
+            } else if (this.getAttribute("data-type") === "cat"){
+                settingsPostIt.className = "settings";
+                if (this.id == "beers") {
+                    catagory = beers;
+                } else if (this.id == "animals") {
+                    catagory = animals;
+                } else {
+                    catagory = cars;
+                }
+                checkCatagory();
+                activateCatButtons();
+                newGame();
+
+
+
+
+
+
+
             } else if (this.getAttribute("data-type") === "play-again") {
                 newGame();
             } else if (this.getAttribute("data-type") === "reset") {
@@ -213,7 +243,7 @@ document.addEventListener("DOMContentLoaded", function() {
             } else if (this.getAttribute("data-type") === "leaveRules") {
                 rulesPostIt.classList.toggle("open");
             } else if (this.getAttribute("data-type") === "leaveSettings") {
-                    settingsPostIt.classList.toggle("open");
+                settingsPostIt.classList.toggle("open");
             } else {
                 console.log("button not built yet");
             }
@@ -285,7 +315,6 @@ function newGame() {
     console.log(selectedWord);
 };
 
-/* settings button event listener */
 
 /* rules button event listener */
 const openRules = document.getElementById("openRules");
@@ -299,14 +328,37 @@ openRules.addEventListener("click", function() {
     if (matchMedia("(min-width: 821px)").matches) {
         postIt.className = "post-it-contents";
       }
-      else if (matchMedia("(max-width: 820px)").matches) {
+      else {
         postIt.classList.toggle("select");
       };
 });
 
-const openSettings = document.getElementById("openSettings");
 
-openSettings.addEventListener("click", function() {
+
+
+
+
+
+
+/* settings button event listener */
+const openSettings = document.getElementById("openSettings");
+const animalButton = document.getElementById("animals");
+const carsButton = document.getElementById("cars");
+const beersButton = document.getElementById("beers");
+
+openSettings.addEventListener("click", function() { // MUST BE A BETTE WAY ASK MENTOR
+    if (catagory == animals) {
+        animalButton.style.opacity = 0.3;
+        animalButton.disabled = true;
+    } else if (catagory == cars) {
+        carsButton.style.opacity = 0.3;
+        carsButton.disabled = true;
+    } else {
+        beersButton.style.opacity = 0.3;
+        beersButton.disabled = true;
+    };
+
+
     settingsPostIt.classList.toggle("open");
     if (rulesPostIt.className = "open") {
         rulesPostIt.className = "rules";
@@ -315,7 +367,27 @@ openSettings.addEventListener("click", function() {
     if (matchMedia("(min-width: 821px)").matches) {
         postIt.className = "post-it-contents";
       }
-      else if (matchMedia("(max-width: 820px)").matches) {
+      else {
         postIt.classList.toggle("select");
       };
+    
+    
 });
+
+
+
+
+
+
+
+
+/* reactivate all cat buttons */ 
+let catButtons = document.getElementsByClassName("catagoryButon");
+
+function activateCatButtons() {
+    for (i of catButtons) {
+        i.style.opacity = 1;
+        i.disabled = false;
+        console.log(i);
+    }
+}
