@@ -226,7 +226,6 @@ document.addEventListener("DOMContentLoaded", function() {
                 this.disabled = true;
                 letterCheck = this.id;
                 updateWord();
-                // hangmanDraw();
 
             } else if (this.getAttribute("data-type") === "cat"){
                 settingsPostIt.className = "settings";
