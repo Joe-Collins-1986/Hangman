@@ -104,21 +104,19 @@ let animals = ["dog", "cat", "lion", "tiger", "zebra", "bear", "eagle", "duck", 
 let cars = ["audi", "bmw", "bentley", "citroen", "ferrari", "fiat", "ford", "jeep", "mazda", "mini", "skoda"];
 let beers = ["budweiser", "brewdog", "carling", "carlsberg", "corona", "coors", "guinness", "heineken", "peroni", "tiger"];
 let catagory = animals; //default
-let levelOutput = "Animals"; //default
+let levelOutput = ""; //default
 let selectedWord = catagory[Math.floor(Math.random() * catagory.length)];
-let scoreTally = 0;
+let scoreTally = 10;
+let endGameTally = 0;
 let winnerText = "";
 let loserText = "";
 
 // CREATE SECTION FOR ALL HTML ELEMENTS
 
 console.log(selectedWord);
-console.log(catagory)
 
 /* present catagory at start of game */
-let level = document.getElementById("level");
-level.innerHTML = levelOutput;
-
+checkCatagory();
 
 
 function checkCatagory() {
@@ -135,7 +133,7 @@ function checkCatagory() {
 
 /* present score */
 let score = document.getElementById("score");
-score.innerHTML = scoreTally;
+score.innerHTML = endGameTally;
 
 /* underscore word */
 let wordOutput = document.getElementById("word-output");
@@ -148,10 +146,6 @@ function underscoreWord() {
         wordOutput.innerHTML = shownWord.join(" ");
 }
 underscoreWord();
-
-
-
-
 
 
 /* check for letter in word and update shownWord */
@@ -168,41 +162,55 @@ function updateWord() {
         console.log(wrongAnswers);
         console.log("not a correct letter");
         hangmanDraw();
-        loseOutcome()
+        loseOutcome();
 }};
 
 /* hangman draw */
 function hangmanDraw() { // must be a better way of doin this. - MENTOR
+    if (wrongAnswers == 10) {
+        scoreTally = 10;
+    }
     if (wrongAnswers <= 9) {
         drawBase();
+        scoreTally = 9;
     }
     if (wrongAnswers <= 8) {
         drawPost();
+        scoreTally = 8;
     }
     if (wrongAnswers <= 7) {
         drawTop();
+        scoreTally = 7;
     }
     if (wrongAnswers <= 6) {
         drawRope();
+        scoreTally = 6;
     }
     if (wrongAnswers <= 5) {
         drawHead();
+        scoreTally = 5;
     }
     if (wrongAnswers <= 4) {
         drawBody();
+        scoreTally = 4;
     }
     if (wrongAnswers <= 3) {
         drawArm1();
+        scoreTally = 3;
     }
     if (wrongAnswers <= 2) {
         drawArm2();
+        scoreTally = 2;
     }
     if (wrongAnswers <= 1) {
         drawLeg1();
+        scoreTally = 1;
     }
     if (wrongAnswers <= 0) {
         drawLeg2();
+        scoreTally = -5;
     }
+    return scoreTally;
 }
 
 /* button event listener */
@@ -217,6 +225,8 @@ document.addEventListener("DOMContentLoaded", function() {
                 this.disabled = true;
                 letterCheck = this.id;
                 updateWord();
+                hangmanDraw();
+
             } else if (this.getAttribute("data-type") === "cat"){
                 settingsPostIt.className = "settings";
                 if (this.id == "beers") {
@@ -230,20 +240,18 @@ document.addEventListener("DOMContentLoaded", function() {
                 activateCatButtons();
                 newGame();
 
-
-
-
-
-
-
             } else if (this.getAttribute("data-type") === "play-again") {
                 newGame();
+
             } else if (this.getAttribute("data-type") === "reset") {
                 window.location.reload();
+
             } else if (this.getAttribute("data-type") === "leaveRules") {
                 rulesPostIt.classList.toggle("open");
+                
             } else if (this.getAttribute("data-type") === "leaveSettings") {
                 settingsPostIt.classList.toggle("open");
+
             } else {
                 console.log("button not built yet");
             }
@@ -259,12 +267,12 @@ let wordPositioning = document.getElementById("word-positioning");
 function winOutcome() {
     if (!shownWord.includes("_")) {
         console.log("congratulations");
-        scoreTally = scoreTally + 10;
-        score.innerHTML = scoreTally;
+        endGameTally = endGameTally + scoreTally;
+        score.innerHTML = endGameTally;
         popUp.style.display = "inline";
         wordPositioning.innerHTML = ("Wow, you did it!!!");
 
-        winnerText = "<b>Congratulations!!!</b> <br><br> You guessed the word <b><u>" + selectedWord.toUpperCase() + "</u></b> and your score has increased to <b><u>" + scoreTally + "</u></b>."
+        winnerText = "<b>Congratulations!!!</b> <br><br> You guessed the word <b><u>" + selectedWord.toUpperCase() + "</u></b> and your score has increased by <b><u>" + scoreTally + "</u></b>."
 
         result.innerHTML = (winnerText);
 
@@ -277,12 +285,12 @@ function winOutcome() {
 function loseOutcome() {
     if (wrongAnswers <= 0) {
         console.log("Loss");
-        scoreTally = scoreTally - 5;
-        score.innerHTML = scoreTally;
+        endGameTally = endGameTally + scoreTally;
+        score.innerHTML = endGameTally;
         popUp.style.display = "inline";
         wordPositioning.innerHTML = ("Don't worry, you'll get it next time!!!");
 
-        loserText = "<b>Unlucky!!!</b> <br><br> The correct word was <b><u>" + selectedWord.toUpperCase() + "</u></b>. Your score has decreased to <b><u>" + scoreTally + "</u></b>."
+        loserText = "<b>Unlucky!!!</b> <br><br> The correct word was <b><u>" + selectedWord.toUpperCase() + "</u></b>. Your score has decreased by <b><u>" + scoreTally + "</u></b>."
 
         result.innerHTML = (loserText);
 
@@ -324,6 +332,7 @@ openRules.addEventListener("click", function() {
     if (settingsPostIt.className = "open") {
         settingsPostIt.className = "settings";
     };
+
     // ADD RULE TO CHECK IF SETTINGS ARE OPEN AND CLOSE IF IT IS
     if (matchMedia("(min-width: 821px)").matches) {
         postIt.className = "post-it-contents";
@@ -332,13 +341,6 @@ openRules.addEventListener("click", function() {
         postIt.classList.toggle("select");
       };
 });
-
-
-
-
-
-
-
 
 /* settings button event listener */
 const openSettings = document.getElementById("openSettings");
