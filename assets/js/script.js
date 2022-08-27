@@ -155,6 +155,7 @@ function updateWord() {
         if (selectedWord[i] == letterCheck) {
             shownWord[i] = letterCheck;
             wordOutput.innerHTML = shownWord.join(" ");
+            hangmanDraw();
             winOutcome();
     }}
     if (!selectedWord.includes(letterCheck)) {
@@ -225,7 +226,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 this.disabled = true;
                 letterCheck = this.id;
                 updateWord();
-                hangmanDraw();
+                // hangmanDraw();
 
             } else if (this.getAttribute("data-type") === "cat"){
                 settingsPostIt.className = "settings";
@@ -375,13 +376,6 @@ openSettings.addEventListener("click", function() { // MUST BE A BETTE WAY ASK M
     
     
 });
-
-
-
-
-
-
-
 
 /* reactivate all cat buttons */ 
 let catButtons = document.getElementsByClassName("catagoryButon");
