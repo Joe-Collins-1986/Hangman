@@ -111,14 +111,34 @@ let endGameTally = 0;
 let winnerText = "";
 let loserText = "";
 
-// CREATE SECTION FOR ALL HTML ELEMENTS
+// CREATE SECTION FOR ALL HTML ELEMENTS ID's
+const score = document.getElementById("score");
+const wordOutput = document.getElementById("word-output");
+const popUp = document.getElementById("pop-up");
+const result = document.getElementById("result");
+const wordPositioning = document.getElementById("word-positioning");
+const openRules = document.getElementById("openRules");
+const openSettings = document.getElementById("openSettings");
+const animalButton = document.getElementById("animals");
+const carsButton = document.getElementById("cars");
+const beersButton = document.getElementById("beers");
+
+// CREATE SECTION FOR ALL HTML ELEMENTS CLASSNAME's
+const catButtons = document.getElementsByClassName("catagoryButon");
+
+// CREATE SECTION FOR ALL HTML ELEMENTS TAGNAMES's
+const selectedButtons = document.getElementsByTagName("button");
+
 
 console.log(selectedWord);
 
-/* present catagory at start of game */
+/* present info at start of game */
 checkCatagory();
+underscoreWord();
+score.innerHTML = endGameTally;
 
 
+/********* FUNCTIONS **********/
 function checkCatagory() {
      if (catagory == animals) { // must be a better way of doin this. - MENTOR
         levelOutput = "Animals";}
@@ -131,25 +151,15 @@ function checkCatagory() {
     level.innerHTML = levelOutput;
 };
 
-/* present score */
-let score = document.getElementById("score");
-score.innerHTML = endGameTally;
-
-/* underscore word */
-let wordOutput = document.getElementById("word-output");
-
 function underscoreWord() {
     for (let i = 0; i < selectedWord.length; i++) { 
         shownWord[i] = "_";
         };
     
         wordOutput.innerHTML = shownWord.join(" ");
-}
-underscoreWord();
-
+};
 
 /* check for letter in word and update shownWord */
-
 function updateWord() {
     for (let i = 0; i < selectedWord.length; i++) {
         if (selectedWord[i] == letterCheck) {
@@ -212,58 +222,9 @@ function hangmanDraw() { // must be a better way of doin this. - MENTOR
         scoreTally = -5;
     }
     return scoreTally;
-}
-
-/* button event listener */
-let selectedButtons = document.getElementsByTagName("button");
-
-document.addEventListener("DOMContentLoaded", function() {
-
-    for (i of selectedButtons) {
-        i.addEventListener("click", function() {
-            if (this.getAttribute("data-type") === "letter") {
-                this.style.opacity = 0.3; 
-                this.disabled = true;
-                letterCheck = this.id;
-                updateWord();
-
-            } else if (this.getAttribute("data-type") === "cat"){
-                settingsPostIt.className = "settings";
-                if (this.id == "beers") {
-                    catagory = beers;
-                } else if (this.id == "animals") {
-                    catagory = animals;
-                } else {
-                    catagory = cars;
-                }
-                checkCatagory();
-                activateCatButtons();
-                newGame();
-
-            } else if (this.getAttribute("data-type") === "play-again") {
-                newGame();
-
-            } else if (this.getAttribute("data-type") === "reset") {
-                window.location.reload();
-
-            } else if (this.getAttribute("data-type") === "leaveRules") {
-                rulesPostIt.classList.toggle("open");
-                
-            } else if (this.getAttribute("data-type") === "leaveSettings") {
-                settingsPostIt.classList.toggle("open");
-
-            } else {
-                console.log("button not built yet");
-            }
-        })
-    }
-});
+};
 
 /* correct guess and game won */
-let popUp = document.getElementById("pop-up");
-let result = document.getElementById("result");
-let wordPositioning = document.getElementById("word-positioning");
-
 function winOutcome() {
     if (!shownWord.includes("_")) {
         console.log("congratulations");
@@ -323,10 +284,61 @@ function newGame() {
     console.log(selectedWord);
 };
 
+/* reactivate all cat buttons */ 
+function activateCatButtons() {
+    for (i of catButtons) {
+        i.style.opacity = 1;
+        i.disabled = false;
+        console.log(i);
+    }
+};
+
+
+/********* BUTTON EVENT LISTENER **********/
+/* button event listener */
+document.addEventListener("DOMContentLoaded", function() {
+
+    for (i of selectedButtons) {
+        i.addEventListener("click", function() {
+            if (this.getAttribute("data-type") === "letter") {
+                this.style.opacity = 0.3; 
+                this.disabled = true;
+                letterCheck = this.id;
+                updateWord();
+
+            } else if (this.getAttribute("data-type") === "cat"){
+                settingsPostIt.className = "settings";
+                if (this.id == "beers") {
+                    catagory = beers;
+                } else if (this.id == "animals") {
+                    catagory = animals;
+                } else {
+                    catagory = cars;
+                }
+                checkCatagory();
+                activateCatButtons();
+                newGame();
+
+            } else if (this.getAttribute("data-type") === "play-again") {
+                newGame();
+
+            } else if (this.getAttribute("data-type") === "reset") {
+                window.location.reload();
+
+            } else if (this.getAttribute("data-type") === "leaveRules") {
+                rulesPostIt.classList.toggle("open");
+                
+            } else if (this.getAttribute("data-type") === "leaveSettings") {
+                settingsPostIt.classList.toggle("open");
+
+            } else {
+                console.log("button not built yet");
+            }
+        })
+    }
+});
 
 /* rules button event listener */
-const openRules = document.getElementById("openRules");
-
 openRules.addEventListener("click", function() {
     rulesPostIt.classList.toggle("open");
     if (settingsPostIt.className = "open") {
@@ -343,11 +355,6 @@ openRules.addEventListener("click", function() {
 });
 
 /* settings button event listener */
-const openSettings = document.getElementById("openSettings");
-const animalButton = document.getElementById("animals");
-const carsButton = document.getElementById("cars");
-const beersButton = document.getElementById("beers");
-
 openSettings.addEventListener("click", function() { // MUST BE A BETTE WAY ASK MENTOR
     if (catagory == animals) {
         animalButton.style.opacity = 0.3;
@@ -372,17 +379,4 @@ openSettings.addEventListener("click", function() { // MUST BE A BETTE WAY ASK M
       else {
         postIt.classList.toggle("select");
       };
-    
-    
 });
-
-/* reactivate all cat buttons */ 
-let catButtons = document.getElementsByClassName("catagoryButon");
-
-function activateCatButtons() {
-    for (i of catButtons) {
-        i.style.opacity = 1;
-        i.disabled = false;
-        console.log(i);
-    }
-}
