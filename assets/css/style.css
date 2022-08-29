@@ -301,6 +301,8 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
+
+    position: relative;
 }
 
 #size-canvas {
@@ -331,12 +333,11 @@ footer {
 
 /* Letter buttons */
 #alph-buttons {
-    position: relative;
+    /* position: relative; */
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     padding-bottom: 100px;
-    margin-bottom: 27px;
 }
 
 .alph-button {
@@ -362,8 +363,6 @@ footer {
     z-index: 1;
     height: 100%;
     width: 100%;
-    border: 2px solid black;
-    box-shadow: 1px 2px 3px 1px rgb(70, 70, 70);
     background: linear-gradient(rgb(234, 234, 106), rgb(231, 231, 115),rgb(217, 217, 99));
 }
 
@@ -375,8 +374,8 @@ footer {
 }
 
 #pop-up h2 {
-        text-align: center;
-        margin-bottom: 35px;
+    text-align: center;
+    margin-bottom: 35px;
 }
 
 #pop-up p {
