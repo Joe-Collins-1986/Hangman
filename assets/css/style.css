@@ -274,6 +274,7 @@ footer {
 .sub-heading-element {
     flex-direction: row;
     width: 30%;
+    text-align: center;
 }
 
 #word-positioning {
@@ -457,10 +458,6 @@ footer {
         width: 100%;
     }
 
-    .sub-heading-element {
-        text-align: center;
-    }
-
     /* sub-heading layout */
 
     .sub-heading-container {
@@ -487,10 +484,6 @@ footer {
     .input-section-container {
         width: 95%;
     }
-
-    /* #alph-buttons {
-        margin-bottom: 15%;
-    } */
 }
 
 /*........max-width 500px........ */
