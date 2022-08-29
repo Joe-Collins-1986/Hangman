@@ -333,7 +333,6 @@ footer {
 
 /* Letter buttons */
 #alph-buttons {
-    /* position: relative; */
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -398,6 +397,11 @@ footer {
     border: 2px solid black;
     background-color: white;
     font-size: 1.2rem;
+    border-radius: 10px;
+}
+
+#reset-buttons button:hover {
+    background-color: rgb(237, 181, 181);
 }
 
 .small-pin {
