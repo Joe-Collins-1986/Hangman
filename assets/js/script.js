@@ -20,14 +20,15 @@
     let selectedWord = catagory[Math.floor(Math.random() * catagory.length)];
     let scoreTally = 10;
     let endGameTally = 0;
-    let winnerText = "";
-    let loserText = "";
+    let resultHeaderText = "";
+    let resultText = "";
 
     // CREATE SECTION FOR ALL HTML ELEMENTS ID's
     const score = document.getElementById("score");
     const wordOutput = document.getElementById("word-output");
     const popUp = document.getElementById("pop-up");
     const result = document.getElementById("result");
+    const resultHeader = document.getElementById("result-header");
     const wordPositioning = document.getElementById("word-positioning");
     const openRules = document.getElementById("openRules");
     const openSettings = document.getElementById("openSettings");
@@ -217,9 +218,11 @@
             popUp.style.display = "inline";
             wordPositioning.innerHTML = ("Wow, you did it!!!");
 
-            winnerText = "<b>Congratulations!!!</b> <br><br> You guessed the word <b><u>" + selectedWord.toUpperCase() + "</u></b> and your score has increased by <b><u>" + scoreTally + "</u></b>."
+            resultHeaderText = "Congratulations!!!";
+            resultText = "You guessed the word <b><u>" + selectedWord.toUpperCase() + "</u></b> and your score has increased by <b><u>" + scoreTally + "</u></b>."
 
-            result.innerHTML = (winnerText);
+            resultHeader.innerHTML = (resultHeaderText);
+            result.innerHTML = (resultText);
 
         } else {
             wordPositioning.innerHTML = ("Well done you are getting closer!!!");
@@ -234,9 +237,11 @@
             popUp.style.display = "inline";
             wordPositioning.innerHTML = ("Don't worry, you'll get it next time!!!");
 
-            loserText = "<b>Unlucky!!!</b> <br><br> The correct word was <b><u>" + selectedWord.toUpperCase() + "</u></b>. Your score has decreased by <b><u>" + scoreTally + "</u></b>."
+            resultHeaderText = "Unlucky!!!";
+            resultText = "The correct word was <b><u>" + selectedWord.toUpperCase() + "</u></b>. Your score has decreased by <b><u>" + scoreTally + "</u></b>."
 
-            result.innerHTML = (loserText);
+            resultHeader.innerHTML = (resultHeaderText);
+            result.innerHTML = (resultText);
 
         } else {
             wordPositioning.innerHTML = ("Oh, no! That's not right.");
