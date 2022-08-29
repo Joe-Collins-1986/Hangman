@@ -216,10 +216,15 @@ footer {
     text-align: center;
 }
 
+#rules p {
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
 #rules li {
     font-size: 1.2rem;
     font-weight: 500;
-    margin-left: 1rem;
+    margin: 10px 0 10px 15px;
 }
 
 #button-container {
@@ -229,8 +234,8 @@ footer {
 }
 
 #leaveRulesButton, #leaveSettingsButton {
-    width: 150px;
-    height: 90px;
+    width: 180px;
+    height: 60px;
     font-size: 1.6rem;
     border-radius: 10px;
     margin-top: 20px;
