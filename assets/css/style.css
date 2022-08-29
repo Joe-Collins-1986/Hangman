@@ -32,12 +32,6 @@ h2 {
     top: 27px;
 }
 
-li {
-    font-size: 2rem;
-    font-weight: 700;
-    list-style: none;
-}
-
 p {
     /* enter consistant font requirements */
     font-size: 1.6rem;
@@ -147,6 +141,12 @@ footer {
     text-align: center;
 }
 
+.post-it-contents li {
+    font-size: 2rem;
+    font-weight: 700;
+    list-style: none;
+}
+
 .post-it-contents li:hover {
     text-decoration: underline;
 }
@@ -181,7 +181,7 @@ footer {
 /* Post it for rules & settings */
 #rules, #settings {
     width: 58%;
-    min-height: 95%;
+    height: 95%;
     position: absolute;
     left: -1rem;
     z-index: 2;
@@ -190,6 +190,11 @@ footer {
     box-shadow: 1px 2px 3px 1px rgb(70, 70, 70);
     display: none;
     padding: 1rem;
+}
+
+#rules {
+    overflow: scroll;
+    overflow-x: hidden;
 }
 
 #rules.open, #settings.open {
@@ -212,8 +217,9 @@ footer {
 }
 
 #rules li {
-    font-size: 1.6rem;
+    font-size: 1.2rem;
     font-weight: 500;
+    margin-left: 1rem;
 }
 
 #button-container {
