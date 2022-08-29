@@ -14,7 +14,7 @@
     let wrongAnswers = 10;
     let animals = ["dog", "cat", "lion", "tiger", "zebra", "bear", "eagle", "duck", "snake", "panda", "badger", "baboon", "beaver", "bobcat", "cougar", "coyote", "donkey", "ferret", "gopher", "impala", "jackal", "jaguar", "monkey", "possum", "rabbit", "turtle", "mouse", "sheep", "whale", "sloth", "viper", "gecko", "raven", "trout", "boar", "goat", "hare", "lynx", "orca", "wolf", "elk", "fox", "ape", "yak", "bat", "owl"];
     let cars = ["alfa", "audi", "bmw", "fiat", "ford", "jeep", "mazda", "mini", "skoda", "golf", "polo", "saab", "seat", "astra", "civic", "dodge", "honda", "lexus", "micra", "pinto", "prius", "rover", "volvo", "yaris", "austin", "beetle", "camero", "chevvy", "datsun", "lancer", "morgan", "nissan", "passat", "subaru", "suzuki", "toyota"];
-    let beers = ["budweiser", "brewdog", "carling", "carlsberg", "corona", "coors", "guinness", "heineken", "peroni", "tiger"];
+    let countries = ["chad", "cuba", "fiji", "iran", "iraq", "laos", "mali", "niue", "oman", "peru", "togo", "benin", "egypt", "gabon", "ghana", "kenya", "libya", "niger", "sudan", "china", "india", "japan", "nepal", "qatar", "syria", "yemen", "nauru", "palau", "samoa", "tonga", "italy", "malta", "spain", "angola", "belize", "bhutan", "brazil", "brunei", "canada", "cyprus", "france", "gambia", "greece", "guinea", "guyana", "israel", "jordan", "kosovo", "kuwait", "latvia", "malawi", "mexico", "monaco", "norway", "panama", "poland", "russia", "rwanda", "serbia", "sweden", "taiwan", "turkey", "tuvalu", "uganda", "zambia"];
     let catagory = animals; //default
     let levelOutput = ""; //default
     let selectedWord = catagory[Math.floor(Math.random() * catagory.length)];
@@ -33,7 +33,7 @@
     const openSettings = document.getElementById("openSettings");
     const animalButton = document.getElementById("animals");
     const carsButton = document.getElementById("cars");
-    const beersButton = document.getElementById("beers");
+    const countriesButton = document.getElementById("countries");
 
     // CREATE SECTION FOR ALL HTML ELEMENTS CLASSNAME's
     const catButtons = document.getElementsByClassName("catagoryButon");
@@ -61,8 +61,8 @@
     function checkCatagory() {
         if (catagory == animals) { // must be a better way of doin this. - MENTOR
             levelOutput = "Animals";}
-        else if (catagory == beers) {
-            levelOutput = "Beers";}
+        else if (catagory == countries) {
+            levelOutput = "Countries";}
         else {
             levelOutput = "Cars";
         };
@@ -305,8 +305,8 @@
 
                 } else if (this.getAttribute("data-type") === "cat"){
                     settingsPostIt.className = "settings";
-                    if (this.id == "beers") {
-                        catagory = beers;
+                    if (this.id == "countries") {
+                        catagory = countries;
                     } else if (this.id == "animals") {
                         catagory = animals;
                     } else {
@@ -358,8 +358,8 @@
             carsButton.style.opacity = 0.3;
             carsButton.disabled = true;
         } else {
-            beersButton.style.opacity = 0.3;
-            beersButton.disabled = true;
+            countriesButton.style.opacity = 0.3;
+            countriesButton.disabled = true;
         };
 
         settingsPostIt.classList.toggle("open");
