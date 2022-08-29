@@ -531,7 +531,7 @@ footer {
 
 /*........max-width 350px........ */
 
-@media (max-width: 400px) {
+@media (max-width: 350px) {
     #word-output {
         font-size: 1.4rem;
         font-weight: 900;
