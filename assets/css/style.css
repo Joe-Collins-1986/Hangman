@@ -553,6 +553,17 @@ footer {
     #alph-buttons {
         padding-bottom: 100px;
     };
+
+
+    #pop-up h2 {
+        margin-bottom: 20px;
+    }
+
+    #pop-up p {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
 }
 
 /*........max-width 350px........ */
