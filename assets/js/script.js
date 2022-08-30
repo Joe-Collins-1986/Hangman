@@ -40,6 +40,7 @@
     const catButtons = document.getElementsByClassName("catagoryButon");
 
     // CREATE SECTION FOR ALL HTML ELEMENTS TAGNAMES's
+    let alphButtons = document.getElementsByClassName("alph-button")
     const selectedButtons = document.getElementsByTagName("button");
 
     /* Canvas */
@@ -218,6 +219,7 @@
             popUp.style.display = "inline";
             wordPositioning.innerHTML = ("Wow, you did it!!!");
 
+            disableAllAlphaButtons();
             resultHeaderText = "Congratulations!!!";
             resultText = "You guessed the word <b><u>" + selectedWord.toUpperCase() + "</u></b> and your score has increased by <b><u>" + scoreTally + "</u></b>."
 
@@ -237,6 +239,7 @@
             popUp.style.display = "inline";
             wordPositioning.innerHTML = ("Don't worry, you'll get it next time!!!");
 
+            disableAllAlphaButtons();
             resultHeaderText = "Unlucky!!!";
             resultText = "The correct word was <b><u>" + selectedWord.toUpperCase() + "</u></b>. Your score has decreased by <b><u>" + scoreTally + "</u></b>."
 
@@ -262,13 +265,18 @@
 
         wordPositioning.innerHTML = ("Let's go again, shall we?");
 
-        let alphButtons = document.getElementsByClassName("alph-button")
         for (i of alphButtons) {
             i.style.opacity = 1;
             i.disabled = false;
-        }
+        };
         underscoreWord();
         console.log(selectedWord); // REMOVE AFTER TESTING
+    };
+
+    function disableAllAlphaButtons() {
+        for (i of alphButtons) {
+            i.disabled = true;
+        };
     };
 
     /* reactivate all cat buttons */ 
