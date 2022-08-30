@@ -36,12 +36,18 @@
     const carsButton = document.getElementById("cars");
     const countriesButton = document.getElementById("countries");
 
+
     // CREATE SECTION FOR ALL HTML ELEMENTS CLASSNAME's
     const catButtons = document.getElementsByClassName("catagoryButon");
 
     // CREATE SECTION FOR ALL HTML ELEMENTS TAGNAMES's
-    let alphButtons = document.getElementsByClassName("alph-button")
+    let alphButtons = document.getElementsByClassName("alph-button");
     const selectedButtons = document.getElementsByTagName("button");
+
+    const penSound = document.getElementById("penSound");
+    const winSound = document.getElementById("winSound");
+    const loseSound = document.getElementById("loseSound");
+    // const audio = document.querySelector("audio");
 
     /* Canvas */
     let canvas = document.getElementById("canvas");
@@ -98,6 +104,7 @@
     /* draw hangman parts */
     function drawBase() {
         ctx.fillRect(canvas.width * 0.2, canvas.height * 0.9, canvas.width * 0.6, 5);
+
     };
 
     function drawPost() {
@@ -220,6 +227,7 @@
             wordPositioning.innerHTML = ("Wow, you did it!!!");
 
             disableAllAlphaButtons();
+            winSound.play();
             resultHeaderText = "Congratulations!!!";
             resultText = "You guessed the word <b><u>" + selectedWord.toUpperCase() + "</u></b> and your score has increased by <b><u>" + scoreTally + "</u></b>."
 
@@ -240,6 +248,7 @@
             wordPositioning.innerHTML = ("Don't worry, you'll get it next time!!!");
 
             disableAllAlphaButtons();
+            loseSound.play();
             resultHeaderText = "Unlucky!!!";
             resultText = "The correct word was <b><u>" + selectedWord.toUpperCase() + "</u></b>. Your score has decreased by <b><u>" + scoreTally + "</u></b>."
 
@@ -248,6 +257,7 @@
 
         } else {
             wordPositioning.innerHTML = ("Oh, no! That's not right.");
+            penSound.play();
         }
         return scoreTally;
     }
@@ -289,8 +299,6 @@
 
 
     /********* EVENT LISTENERS **********/
-    /* button event listener */
-
     /* toggle bar button event listener */
     toggleBar.addEventListener("click", function() {
         postIt.classList.toggle("select");
@@ -341,7 +349,10 @@
                 } else if (this.getAttribute("data-type") === "leaveSettings") {
                     settingsPostIt.classList.toggle("open");
 
+                // } else if (this.getAttribute("data-type") === "muteButton") {
+                //     muteButton();   
                 }
+                
             })
         }
     });
@@ -388,4 +399,5 @@
             postIt.classList.toggle("select");
         };
     });
+    
 }()); 
