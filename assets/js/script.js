@@ -3,7 +3,8 @@
 // STYLE SETTINGS BETTER FOR SMALL SCREEN
 // ADD FOOTER
 // ADD ARIA LABLEING
-// ADD FUNCTION DISCRIPTION 
+// OPTION TO REMOVE LAST WORD FROM LIST???
+// OPTION TO ANIMATE HANGMAN CANVAS TO LOOK MORE LIKE DRAWING???
 
 
 /**
@@ -27,7 +28,7 @@
     let cars = ["alfa", "audi", "bmw", "fiat", "ford", "jeep", "mazda", "mini", "skoda", "golf", "polo", "saab", "seat", "astra", "civic", "dodge", "honda", "lexus", "micra", "pinto", "prius", "rover", "volvo", "yaris", "austin", "beetle", "camero", "chevvy", "datsun", "lancer", "morgan", "nissan", "passat", "subaru", "suzuki", "toyota"];
     let countries = ["chad", "cuba", "fiji", "iran", "iraq", "laos", "mali", "niue", "oman", "peru", "togo", "benin", "egypt", "gabon", "ghana", "kenya", "libya", "niger", "sudan", "china", "india", "japan", "nepal", "qatar", "syria", "yemen", "nauru", "palau", "samoa", "tonga", "italy", "malta", "spain", "angola", "belize", "bhutan", "brazil", "brunei", "canada", "cyprus", "france", "gambia", "greece", "guinea", "guyana", "israel", "jordan", "kosovo", "kuwait", "latvia", "malawi", "mexico", "monaco", "norway", "panama", "poland", "russia", "rwanda", "serbia", "sweden", "taiwan", "turkey", "tuvalu", "uganda", "zambia"];
     let catagory = animals; //default
-    let levelOutput = ""; //default
+    let levelOutput = "";
     let selectedWord = catagory[Math.floor(Math.random() * catagory.length)];
     let scoreTally = 10;
     let endGameTally = 0;
