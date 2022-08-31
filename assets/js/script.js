@@ -1,5 +1,17 @@
 
-(function() { // USED TO REMOVE GLOBAL VARIABLES - https://www.youtube.com/watch?v=_4V4yUxGng8
+// FIX FLAVICON
+// STYLE SETTINGS BETTER FOR SMALL SCREEN
+// ADD FOOTER
+// ADD ARIA LABLEING
+// ADD FUNCTION DISCRIPTION 
+
+
+/**
+* Wrap game in function to avoid global variables.
+* This function will initiallise with the loading of the page.
+* Tutorial use to understand methods of limiting global variables used - https://www.youtube.com/watch?v=_4V4yUxGng8
+*/
+(function() {
 
     /* toggle menu variables */
     const toggleBar = document.getElementsByClassName("toggle-bar")[0];
@@ -7,8 +19,7 @@
     const rulesPostIt = document.getElementById("rules");
     const settingsPostIt = document.getElementById("settings");
 
-    /* select random word and present as underscores */
-
+    /* game variables - inital states */
     let letterCheck = [];
     let shownWord = [];
     let wrongAnswers = 10;
@@ -35,11 +46,13 @@
     const animalButton = document.getElementById("animals");
     const carsButton = document.getElementById("cars");
     const countriesButton = document.getElementById("countries");
+
+    // CREATE SECTION FOR ALL HTML ELEMENTS CLASS's
     const catButtons = document.getElementsByClassName("catagoryButon");
     const alphButtons = document.getElementsByClassName("alph-button");
     const selectedButtons = document.getElementsByTagName("button");
 
-    /* sounds */
+    /* SOUND EFFECTS */
     const penSound = document.getElementById("penSound");
     const winSound = document.getElementById("winSound");
     const loseSound = document.getElementById("loseSound");
@@ -47,14 +60,14 @@
     const soundEffects = document.getElementsByClassName("soundEffects");
     const toggleMute = document.getElementById("muteButton");
 
-    /* Canvas */
+    /* CANVAS */
     let canvas = document.getElementById("canvas");
     let canvasSize = document.getElementById("size-canvas");
     const ctx = canvas.getContext("2d");
     canvas.width = canvasSize.clientWidth;
     canvas.height = canvasSize.clientHeight;
 
-    /* present info at start of game */
+    /* PRESENT INFO AT START OF THE GAME */
     console.log(selectedWord); // REMOVE AFTER TESTING
     checkCatagory();
     underscoreWord();
@@ -63,7 +76,9 @@
 
     /********* FUNCTIONS **********/
 
-    /* validate catagory and push to inner html */
+    /**
+     * Validates the catagory/topic current selected and pushes it to inner html
+    */
     function checkCatagory() {
         if (catagory == animals) { // must be a better way of doin this. - MENTOR
             levelOutput = "Animals";}
@@ -75,7 +90,10 @@
         level.innerHTML = levelOutput;
     };
 
-    /* present underscores for letters in shownWord */
+    /**
+    * Present underscores for letters in shownWord and push to inner
+    * HTML at the innitialisation of the game
+    */
     function underscoreWord() {
         for (let i = 0; i < selectedWord.length; i++) { 
             shownWord[i] = "_";
@@ -84,7 +102,10 @@
             wordOutput.innerHTML = shownWord.join(" ");
     };
 
-    /* check for letter in word and update shownWord */
+    /**
+    * Check for letter in word and update shownWord.
+    * Run required outcomes dependant on if letter is located.
+    */
     function updateWord() {
         for (let i = 0; i < selectedWord.length; i++) {
             if (selectedWord[i] == letterCheck) {
@@ -99,30 +120,47 @@
             loseOutcome();
     }};
 
-    /* draw hangman parts */
+    /* Functions for drawing hangman parts */
+    /**
+    * Draw hangman base (part1)
+    */
     function drawBase() {
         ctx.fillRect(canvas.width * 0.2, canvas.height * 0.9, canvas.width * 0.6, 5);
-
     };
 
+    /**
+    * Draw hangman post (part2)
+    */
     function drawPost() {
         ctx.fillRect(canvas.width * 0.6, canvas.height * 0.1, 5, canvas.height * 0.8);
     };
 
+    /**
+    * Draw hangman top-post (part3)
+    */
     function drawTop() {
         ctx.fillRect(canvas.width * 0.4, canvas.height * 0.1, canvas.width * 0.2, 5);
     };
 
+    /**
+    * Draw hangman rope (part4)
+    */
     function drawRope() {
         ctx.fillRect(canvas.width * 0.4, canvas.height * 0.1, 2, canvas.height * 0.2);
     };
 
+    /**
+    * Draw hangman head (part5)
+    */
     function drawHead() {
         ctx.beginPath();
         ctx.arc(canvas.width * 0.4, canvas.height * 0.3, 10, 0, Math.PI * 2);
         ctx.fill();
     };
 
+    /**
+    * Draw hangman body (part6)
+    */
     function drawBody() {
         ctx.beginPath();
         ctx.moveTo(canvas.width * 0.4, canvas.height * 0.3);
@@ -132,6 +170,9 @@
         ctx.closePath();
     };
 
+    /**
+    * Draw hangman arm1 (part7)
+    */
     function drawArm1() {
         ctx.beginPath();
         ctx.moveTo(canvas.width * 0.4, canvas.height * 0.4);
@@ -141,6 +182,9 @@
         ctx.closePath();
     };
 
+    /**
+    * Draw hangman arm2 (part8)
+    */
     function drawArm2() {
         ctx.beginPath();
         ctx.moveTo(canvas.width * 0.4, canvas.height * 0.4);
@@ -150,6 +194,9 @@
         ctx.closePath();
     };
 
+    /**
+    * Draw hangman leg1 (part9)
+    */
     function drawLeg1() {
         ctx.beginPath();
         ctx.moveTo(canvas.width * 0.4, canvas.height * 0.6);
@@ -159,6 +206,9 @@
         ctx.closePath();
     };
 
+    /**
+    * Draw hangman leg2 (part10)
+    */
     function drawLeg2() {
         ctx.beginPath();
         ctx.moveTo(canvas.width * 0.4, canvas.height * 0.6);
@@ -168,7 +218,11 @@
         ctx.closePath();
     };
 
-    /* evaluate hangman */
+    /**
+    * Evaluate hangman,
+    * update drawing,
+    * update score tally
+    */
     function hangmanDraw() { // must be a better way of doin this. - MENTOR
         if (wrongAnswers == 10) {
             scoreTally = 10;
@@ -216,7 +270,9 @@
         return scoreTally;
     };
 
-    /* correct guess and game won */
+    /**
+    * function for correct guesses and calling the appropriate functions for game won
+    */
     function winOutcome() {
         if (!shownWord.includes("_")) {
             endGameTally = endGameTally + scoreTally;
@@ -239,6 +295,9 @@
         return scoreTally;
     }
 
+    /**
+    * function for incorrect guesses and calling the appropriate functions for game lost
+    */
     function loseOutcome() {
         if (wrongAnswers <= 0) {
             endGameTally = endGameTally + scoreTally;
@@ -261,8 +320,10 @@
         return scoreTally;
     }
 
+    /**
+    * Sets up a new game whilst retaining the score from previous games
+    */
     function newGame() {
-
         //remove word from word list???
         letterCheck = [];
         shownWord = [];
@@ -282,13 +343,18 @@
         console.log(selectedWord); // REMOVE AFTER TESTING
     };
 
+    /**
+    * Disable all aphabet buttons on game completion so they can't impact score
+    */
     function disableAllAlphaButtons() {
         for (i of alphButtons) {
             i.disabled = true;
         };
     };
 
-    /* reactivate all cat buttons */ 
+    /**
+    * Reactivate all catagory buttons to set up for next time setings is opened
+    */
     function activateCatButtons() {
         for (i of catButtons) {
             i.style.opacity = 1;
@@ -296,6 +362,9 @@
         }
     };
 
+    /**
+    * Turns on or off all sound effects
+    */
     function muteButton() {
         for (i of soundEffects) {
             if (i.muted == false) {
@@ -311,6 +380,7 @@
 
 
     /********* EVENT LISTENERS **********/
+    
     /* toggle bar button event listener */
     toggleBar.addEventListener("click", function() {
         postIt.classList.toggle("select");
@@ -325,7 +395,7 @@
         hangmanDraw();
     });
 
-    /* button event listener */
+    /* game buttons event listener */
     document.addEventListener("DOMContentLoaded", function() {
 
         for (i of selectedButtons) {
@@ -369,7 +439,7 @@
         }
     });
 
-    /* rules button event listener */
+    /* rules event listener */
     openRules.addEventListener("click", function() {
         rulesPostIt.classList.toggle("open");
         if (settingsPostIt.className = "open") {
