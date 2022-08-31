@@ -45,7 +45,7 @@
     const winSound = document.getElementById("winSound");
     const loseSound = document.getElementById("loseSound");
     const soundEffects = document.getElementsByClassName("soundEffects");
-    // const audio = document.querySelector("audio");
+    const toggleMute = document.getElementById("muteButton");
 
     /* Canvas */
     let canvas = document.getElementById("canvas");
@@ -299,8 +299,11 @@
         for (i of soundEffects) {
             if (i.muted == false) {
                 i.muted = true
+                toggleMute.innerHTML = "Sound Off";
+
             } else {
-                i.muted = false
+                i.muted = false;
+                toggleMute.innerHTML = "Sound On";
             };
         };
     };
