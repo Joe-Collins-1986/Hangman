@@ -192,7 +192,7 @@ footer {
     padding: 1rem;
 }
 
-#rules {
+#rules, #settings {
     overflow: scroll;
     overflow-x: hidden;
 }
@@ -227,10 +227,38 @@ footer {
     margin: 10px 0 10px 15px;
 }
 
-#button-container {
+.button-container {
     width: 100%;
     display: flex;
     justify-content: center;
+}
+
+#catagory-container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-bottom: 20px;
+}
+
+.catagoryButon, #muteButton {
+    width: 120px;
+    height: 60px;
+    font-size: 1.6rem;
+    border-radius: 10px;
+    margin: 20px 20px 0 20px;
+    border: 2px solid black;
+    box-shadow: 1px 2px 3px 1px rgb(70, 70, 70);
+}
+
+#muteButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.catagoryButon:hover, #muteButton:hover {
+    background-color: rgb(237, 181, 181);
 }
 
 #leaveRulesButton, #leaveSettingsButton {
@@ -247,26 +275,6 @@ footer {
     background-color: rgb(237, 181, 181);
 }
 
-#catagory-container {
-    width: 100%;
-    display: flex;
-    justify-content: space-evenly;
-    margin-bottom: 20px;
-}
-
-.catagoryButon, #muteButton {
-    width: 120px;
-    height: 60px;
-    font-size: 1.6rem;
-    border-radius: 10px;
-    margin-top: 20px;
-    border: 2px solid black;
-    box-shadow: 1px 2px 3px 1px rgb(70, 70, 70);
-}
-
-.catagoryButon:hover, #muteButton:hover {
-    background-color: rgb(237, 181, 181);
-}
 
 /* Sub Header */
 .sub-heading-container {
