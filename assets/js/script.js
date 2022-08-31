@@ -370,11 +370,11 @@
         for (i of soundEffects) {
             if (i.muted == false) {
                 i.muted = true
-                toggleMute.innerHTML = "Sound Off";
+                toggleMute.innerHTML = `<i class="fa-solid fa-volume-xmark"></i>`;
 
             } else {
                 i.muted = false;
-                toggleMute.innerHTML = "Sound On";
+                toggleMute.innerHTML = `<i class="fa-solid fa-volume-high"></i>`;
             };
         };
     };
