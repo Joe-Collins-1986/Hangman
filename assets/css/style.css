@@ -431,6 +431,36 @@ footer {
     left: 2%;
 }
 
+.footer-main {
+    display: flex;
+}
+
+.footer-main h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    top: 0;
+    transform: rotate(-5deg);
+}
+
+.footer-icon-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30%;
+}
+
+.footer-main li {
+    list-style: none;
+}
+
+.footer-main a {
+    font-size: 1.1rem;
+    text-decoration: none;
+    color: black;
+}
+
 /* ......................................................... */
 
 /* MEDIA QUERIES
@@ -501,6 +531,14 @@ footer {
         width: 95%;
     }
 }
+
+/*........max-width 550px........ */
+@media (max-width: 550px) {
+    .footer-main h2 {
+        display: none;
+    }
+}
+
 
 /*........max-width 500px........ */
 @media (max-width: 500px) {
