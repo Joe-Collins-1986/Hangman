@@ -36,17 +36,15 @@
     const carsButton = document.getElementById("cars");
     const countriesButton = document.getElementById("countries");
 
-
-    // CREATE SECTION FOR ALL HTML ELEMENTS CLASSNAME's
     const catButtons = document.getElementsByClassName("catagoryButon");
 
-    // CREATE SECTION FOR ALL HTML ELEMENTS TAGNAMES's
     let alphButtons = document.getElementsByClassName("alph-button");
     const selectedButtons = document.getElementsByTagName("button");
 
     const penSound = document.getElementById("penSound");
     const winSound = document.getElementById("winSound");
     const loseSound = document.getElementById("loseSound");
+    const soundEffects = document.getElementsByClassName("soundEffects");
     // const audio = document.querySelector("audio");
 
     /* Canvas */
@@ -297,6 +295,16 @@
         }
     };
 
+    function muteButton() {
+        for (i of soundEffects) {
+            if (i.muted == false) {
+                i.muted = true
+            } else {
+                i.muted = false
+            };
+        };
+    };
+
 
     /********* EVENT LISTENERS **********/
     /* toggle bar button event listener */
@@ -349,8 +357,8 @@
                 } else if (this.getAttribute("data-type") === "leaveSettings") {
                     settingsPostIt.classList.toggle("open");
 
-                // } else if (this.getAttribute("data-type") === "muteButton") {
-                //     muteButton();   
+                } else if (this.getAttribute("data-type") === "soundToggle") {
+                    muteButton();   
                 }
                 
             })
@@ -399,5 +407,5 @@
             postIt.classList.toggle("select");
         };
     });
-    
+
 }()); 
