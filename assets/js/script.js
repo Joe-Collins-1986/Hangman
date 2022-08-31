@@ -35,15 +35,15 @@
     const animalButton = document.getElementById("animals");
     const carsButton = document.getElementById("cars");
     const countriesButton = document.getElementById("countries");
-
     const catButtons = document.getElementsByClassName("catagoryButon");
-
-    let alphButtons = document.getElementsByClassName("alph-button");
+    const alphButtons = document.getElementsByClassName("alph-button");
     const selectedButtons = document.getElementsByTagName("button");
 
+    /* sounds */
     const penSound = document.getElementById("penSound");
     const winSound = document.getElementById("winSound");
     const loseSound = document.getElementById("loseSound");
+    const ding = document.getElementById("ding");
     const soundEffects = document.getElementsByClassName("soundEffects");
     const toggleMute = document.getElementById("muteButton");
 
@@ -234,6 +234,7 @@
 
         } else {
             wordPositioning.innerHTML = ("Well done you are getting closer!!!");
+            ding.play();
         }
         return scoreTally;
     }
