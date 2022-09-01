@@ -42,6 +42,7 @@
     const wordPositioning = document.getElementById("word-positioning");
     const openRules = document.getElementById("openRules");
     const openSettings = document.getElementById("openSettings");
+    const resetButtons = document.getElementById("reset-buttons");
     const animalButton = document.getElementById("animals");
     const carsButton = document.getElementById("cars");
     const countriesButton = document.getElementById("countries");
@@ -386,7 +387,9 @@
         };
     };
 
-    /* Remove last word */
+    /**
+    * Remove last word from array
+    */
     function removeWord() {
         console.log(catagory);
 
@@ -396,7 +399,16 @@
         console.log(catagory.length)
     };
 
-
+    /**
+    * Hide reset buttons when catagory complete
+    */
+    function hideReset() {
+        if (catagory.length == 0) {
+            resetButtons.style.display = "none";
+        } else {
+            resetButtons.style.display = "flex";
+        };
+    }
 
 
     /********* EVENT LISTENERS **********/
@@ -479,13 +491,13 @@
 
     /* settings event listener */
     openSettings.addEventListener("click", function() { // MUST BE A BETTE WAY ASK MENTOR
-        if (catagory == animals) {
+        if (catagory == animals || animals.length == 0) {
             animalButton.style.opacity = 0.3;
             animalButton.disabled = true;
-        } else if (catagory == cars) {
+        } if (catagory == cars || cars.length == 0) {
             carsButton.style.opacity = 0.3;
             carsButton.disabled = true;
-        } else {
+        } if (catagory == countries || countries.length == 0) {
             countriesButton.style.opacity = 0.3;
             countriesButton.disabled = true;
         };
@@ -504,16 +516,5 @@
         };
 
     });
-
-    function hideReset() {
-        const resetButtons = document.getElementById("reset-buttons")
-    // IF CATAGORY ARRAY EQUALS 0
-        if (catagory.length == 0) {
-            resetButtons.style.display = "none";
-        } else {
-            resetButtons.style.display = "flex";
-        };
-    }
-
 
 }()); 
