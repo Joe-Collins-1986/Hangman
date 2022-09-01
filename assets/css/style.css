@@ -81,9 +81,12 @@ footer {
 
 .header-main, .body-main, .footer-main {
     width: 90%;
-    margin-left: 1rem;
     position: relative;
-}    
+}
+
+.header-main, .body-main {
+    margin-left: 1rem;    
+}
 
 /* margin hole punches */
 
@@ -555,6 +558,21 @@ footer {
 @media (max-width: 550px) {
     .footer-main h2 {
         display: none;
+    }
+
+    .footer-icon-container {
+        width: 100%;
+    }
+
+    .footer-icon-container ul {
+        display: flex;
+        width: 100%;
+        justify-content: space-evenly;
+    }
+
+    .footer-icon-container li {
+        margin: 0 10px;
+        text-align: center;
     }
 }
 
