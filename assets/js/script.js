@@ -1,7 +1,5 @@
 
-// OPTIONAL - TO REMOVE LAST WORD FROM LIST
-// REQUIRED IF ABOVE - MESSAGE TO SAY TOPIC COMPLETE IF ARRAY EMPTY
-// OPTIONAL - KEYBOARD KEY INPUT
+// REPLACE SOUND ICON WITH IMAGES
 
 
 /**
@@ -390,12 +388,8 @@
     * Remove last word from array
     */
     function removeWord() {
-        console.log(catagory);
-
         let remove = catagory.indexOf(selectedWord);
         catagory.splice(remove, 1);
-        console.log(catagory);
-        console.log(catagory.length)
     };
 
     /**
