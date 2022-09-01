@@ -7,189 +7,187 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <meta name="Description" content="Hangman game">
     <meta name="keywords" content="hangman, game, bored, fun, fun game, play, play game, online hangman, online game">
-
     <link rel="icon" href="favicon.ico">
     <title>Hangman</title>
 </head>
+
 <body>
-
-</div>
-    <div class="menu">
-        <a class="toggle-bar" href="#">
-            <img src="assets/images/pinPaper.png" alt="menu bar shown as pin">
-        </a>
-        <div class="post-it"></div>
-    
-        <div class="paperclip">
-            <img src="assets/images/paperclip.png" alt="">
-        </div>
-
-        <div class="post-it-contents">
-            <ul>
-                <li id="openRules">Rules</li>
-                <li id="openSettings">Settings</li>
-            </ul>
-        </div>
     </div>
-
-    <div class="paper-wrapper">
-        <header>
-            <div class="header-margin"></div>
-            <div class="header-main">
-                <h1>Hangman</h1>
-            </div>
-        </header>
-
-        <section class="paper-body">
-            <div class="body-margin">
-                <div class="holes">
-                    <div class="hole"></div>
-                    <div class="hole"></div>
-                    <div class="hole"></div>
-                    <div class="hole"></div>
-                </div>
+        <div class="menu">
+            <a class="toggle-bar" href="#" aria-label="Icon to open menu">
+                <img src="assets/images/pinPaper.png" alt="Menu bar shown as a small piece of paper with a questionmark pinned to the main page">
+            </a>
+            <div class="post-it"></div>
+        
+            <div class="paperclip">
+                <img src="assets/images/paperclip.png" alt="Image of a paperclip holding the menu to the page">
             </div>
 
-            <div class="body-main">
-                <div id="rules">
-                    <img class="rules-pin" id="pin-right" src="assets/images/smallPin.png" alt="image of a small pin giving the impresion of holding the paper in the top right">
-                    <img class="rules-pin" id="pin-left" src="assets/images/smallPin.png" alt="image of a small pin giving the impresion of holding the paper in the top left">
-                    <h2 id="rules-header">Rules</h2>
-                    <p id="rules-para">Welcome to the game of Hangman. These rules are very simple.</p>
-                    <br>
-                    <ul>
-                        <li>The game will present you with a hidden word in the form of underscores (one underscore for each letter in the word).</li>
-                        <li>Guess the letters you believe may be in the word.</li>
-                        <li>If you guess right the letter will appear, if you are wrong part of the hangman will be drawn.</li>
-                        <li>There are 10 parts to the hangman, therefore you are allowed up to 9 incorrect letters when guessing the word.</li>
-                        <li>If you guess the word before the hangman is complete you win and be awarded points. The number of points awarded is dependent on how many letters you get wrong. If you guess the word without any mistakes you get 10 points, each incorrect answer reduces your score by 1 point.</li>
-                        <li>If you fail to guess the word before the hangman is complete you lose and will have 5 points deducted from your overall score.</li>
-                        <li>You can change the category by going to settings and selecting a different option.</li>
-                        <li>Now the most important rule. Have fun!!!</li>
+            <div class="post-it-contents">
+                <ul>
+                    <li id="openRules" aria-label="Select to open rules tab">Rules</li>
+                    <li id="openSettings" aria-label="Select to open settings tab">Settings</li>
+                </ul>
+            </div>
+        </div>
 
-                    </ul>
-                    <div id="button-container">
-                        <button data-type="leaveRules" id="leaveRulesButton">Leave Rules</button>
-                    </div>
+        <div class="paper-wrapper">
+            <header>
+                <div class="header-margin"></div>
+                <div class="header-main">
+                    <h1>Hangman</h1>
                 </div>
-                <div id="settings">
-                    <img class="settings-pin" id="pin-right" src="assets/images/smallPin.png" alt="image of a small pin giving the impresion of holding the paper in the top right">
-                    <img class="settings-pin" id="pin-left" src="assets/images/smallPin.png" alt="image of a small pin giving the impresion of holding the paper in the top left">
-                    <h2 id="settings-header">Settings</h2>
-                    <p id="settings-para">Select the category you wish to play from the below options: <br> <br> Don't worry you will retain your score from the category you have been playing.</p>
-                    <div id="catagory-container">
-                        <button data-type="cat" class="catagoryButon" id="animals">Animals</button>
-                        <button data-type="cat" class="catagoryButon" id="cars">Cars</button>
-                        <button data-type="cat" class="catagoryButon" id="countries">Countries</button>
-                    </div>
-                    <p id="settings-para">Toggle the game sound effects using the button below.</p>
-                    <div class="button-container">
-                        <button data-type="soundToggle" id="muteButton"><i class="fa-solid fa-volume-xmark"></i></button>
-                    </div>
+            </header>
 
-                    <div class="button-container">
-                        <button data-type="leaveSettings" id="leaveSettingsButton">Leave Settings</button>
+            <section class="paper-body">
+                <div class="body-margin">
+                    <div class="holes">
+                        <div class="hole"></div>
+                        <div class="hole"></div>
+                        <div class="hole"></div>
+                        <div class="hole"></div>
                     </div>
                 </div>
-                <div class="sub-heading-container">
-                    <div class="sub-heading-element">
-                        <h2>Topic: <span id="level">xxx</span></h2>
+
+                <div class="body-main">
+                    <div id="rules">
+                        <img class="rules-pin" id="pin-right" src="assets/images/smallPin.png" alt="image of a small pin giving the impresion of holding the paper in the top right">
+                        <img class="rules-pin" id="pin-left" src="assets/images/smallPin.png" alt="image of a small pin giving the impresion of holding the paper in the top left">
+                        <h2 id="rules-header">Rules</h2>
+                        <p id="rules-para">Welcome to the game of Hangman. These rules are very simple.</p>
+                        <br>
+                        <ul>
+                            <li>The game will present you with a hidden word in the form of underscores (one underscore for each letter in the word).</li>
+                            <li>Guess the letters you believe may be in the word.</li>
+                            <li>If you guess right the letter will appear, if you are wrong part of the hangman will be drawn.</li>
+                            <li>There are 10 parts to the hangman, therefore you are allowed up to 9 incorrect letters when guessing the word.</li>
+                            <li>If you guess the word before the hangman is complete you win and be awarded points. The number of points awarded is dependent on how many letters you get wrong. If you guess the word without any mistakes you get 10 points, each incorrect answer reduces your score by 1 point.</li>
+                            <li>If you fail to guess the word before the hangman is complete you lose and will have 5 points deducted from your overall score.</li>
+                            <li>You can change the category by going to settings and selecting a different option.</li>
+                            <li>Now the most important rule. Have fun!!!</li>
+                        </ul>
+                        <div id="button-container">
+                            <button data-type="leaveRules" id="leaveRulesButton">Leave Rules</button>
+                        </div>
                     </div>
-                    <div class="sub-heading-element">
-                        <h2>Score: <span id ="score">xxx</span></h2>
+                    <div id="settings">
+                        <img class="settings-pin" id="pin-right" src="assets/images/smallPin.png" alt="image of a small pin giving the impresion of holding the paper in the top right">
+                        <img class="settings-pin" id="pin-left" src="assets/images/smallPin.png" alt="image of a small pin giving the impresion of holding the paper in the top left">
+                        <h2 id="settings-header">Settings</h2>
+                        <p id="settings-para">Select the category you wish to play from the below options: <br> <br> Don't worry you will retain your score from the category you have been playing.</p>
+                        <div id="catagory-container">
+                            <button data-type="cat" class="catagoryButon" id="animals">Animals</button>
+                            <button data-type="cat" class="catagoryButon" id="cars">Cars</button>
+                            <button data-type="cat" class="catagoryButon" id="countries">Countries</button>
+                        </div>
+                        <p id="settings-para">Toggle the game sound effects using the button below.</p>
+                        <div class="button-container">
+                            <button data-type="soundToggle" id="muteButton"><i class="fa-solid fa-volume-xmark"></i></button>
+                        </div>
+
+                        <div class="button-container">
+                            <button data-type="leaveSettings" id="leaveSettingsButton">Leave Settings</button>
+                        </div>
                     </div>
-                </div>
-                <div class="game-container">
-                    <div id="canvas-container">
-                        <div id="pop-up">
-                                <div id="pop-up-contents-container">
-                                        <img class="small-pin" id="pin-right" src="assets/images/smallPin.png" alt="image of a small pin giving the impresion of holding the paper in the top right">
-                                        <img class="small-pin" id="pin-left" src="assets/images/smallPin.png" alt="image of a small pin giving the impresion of holding the paper in the top left">
-                                        <h2 id="result-header"></h2>
-                                        <p id="result"></p>
-                                        <div id="reset-buttons">
-                                            <button data-type="play-again">Play Again</button>
-                                            <button data-type="reset">Reset</button>
-                                        </div>
+                    <div class="sub-heading-container">
+                        <div class="sub-heading-element">
+                            <h2>Topic: <span id="level">xxx</span></h2>
+                        </div>
+                        <div class="sub-heading-element">
+                            <h2>Score: <span id ="score">xxx</span></h2>
+                        </div>
+                    </div>
+                    <div class="game-container">
+                        <div id="canvas-container">
+                            <div id="pop-up">
+                                    <div id="pop-up-contents-container">
+                                            <img class="small-pin" id="pin-right" src="assets/images/smallPin.png" alt="image of a small pin giving the impresion of holding the paper in the top right">
+                                            <img class="small-pin" id="pin-left" src="assets/images/smallPin.png" alt="image of a small pin giving the impresion of holding the paper in the top left">
+                                            <h2 id="result-header"></h2>
+                                            <p id="result"></p>
+                                            <div id="reset-buttons">
+                                                <button data-type="play-again">Play Again</button>
+                                                <button data-type="reset">Reset</button>
+                                            </div>
+                                    </div>
                                 </div>
+                            <div id="size-canvas">
+                                <canvas id="canvas"></canvas>
                             </div>
-                        <div id="size-canvas">
-                            <canvas id="canvas"></canvas>
+                            
                         </div>
-                        
-                    </div>
-                    <div class="input-section-container">
-                        <div>
-                            <p id="word-positioning">Guess the word!</p>
-                        </div>
-                        <div id="word-output"></div>
-                        <div id="alph-buttons">
-                            <button data-type="letter" class="alph-button" id="a">a</button>
-                            <button data-type="letter" class="alph-button" id="b">b</button>
-                            <button data-type="letter" class="alph-button" id="c">c</button>
-                            <button data-type="letter" class="alph-button" id="d">d</button>
-                            <button data-type="letter" class="alph-button" id="e">e</button>
-                            <button data-type="letter" class="alph-button" id="f">f</button>
-                            <button data-type="letter" class="alph-button" id="g">g</button>
-                            <button data-type="letter" class="alph-button" id="h">h</button>
-                            <button data-type="letter" class="alph-button" id="i">i</button>
-                            <button data-type="letter" class="alph-button" id="j">j</button>
-                            <button data-type="letter" class="alph-button" id="k">k</button>
-                            <button data-type="letter" class="alph-button" id="l">l</button>
-                            <button data-type="letter" class="alph-button" id="m">m</button>
-                            <button data-type="letter" class="alph-button" id="n">n</button>
-                            <button data-type="letter" class="alph-button" id="o">o</button>
-                            <button data-type="letter" class="alph-button" id="p">p</button>
-                            <button data-type="letter" class="alph-button" id="q">q</button>
-                            <button data-type="letter" class="alph-button" id="r">r</button>
-                            <button data-type="letter" class="alph-button" id="s">s</button>
-                            <button data-type="letter" class="alph-button" id="t">t</button>
-                            <button data-type="letter" class="alph-button" id="u">u</button>
-                            <button data-type="letter" class="alph-button" id="v">v</button>
-                            <button data-type="letter" class="alph-button" id="w">w</button>
-                            <button data-type="letter" class="alph-button" id="x">x</button>
-                            <button data-type="letter" class="alph-button" id="y">y</button>
-                            <button data-type="letter" class="alph-button" id="z">z</button>
+                        <div class="input-section-container">
+                            <div>
+                                <p id="word-positioning">Guess the word!</p>
+                            </div>
+                            <div id="word-output"></div>
+                            <div id="alph-buttons">
+                                <button data-type="letter" class="alph-button" id="a">a</button>
+                                <button data-type="letter" class="alph-button" id="b">b</button>
+                                <button data-type="letter" class="alph-button" id="c">c</button>
+                                <button data-type="letter" class="alph-button" id="d">d</button>
+                                <button data-type="letter" class="alph-button" id="e">e</button>
+                                <button data-type="letter" class="alph-button" id="f">f</button>
+                                <button data-type="letter" class="alph-button" id="g">g</button>
+                                <button data-type="letter" class="alph-button" id="h">h</button>
+                                <button data-type="letter" class="alph-button" id="i">i</button>
+                                <button data-type="letter" class="alph-button" id="j">j</button>
+                                <button data-type="letter" class="alph-button" id="k">k</button>
+                                <button data-type="letter" class="alph-button" id="l">l</button>
+                                <button data-type="letter" class="alph-button" id="m">m</button>
+                                <button data-type="letter" class="alph-button" id="n">n</button>
+                                <button data-type="letter" class="alph-button" id="o">o</button>
+                                <button data-type="letter" class="alph-button" id="p">p</button>
+                                <button data-type="letter" class="alph-button" id="q">q</button>
+                                <button data-type="letter" class="alph-button" id="r">r</button>
+                                <button data-type="letter" class="alph-button" id="s">s</button>
+                                <button data-type="letter" class="alph-button" id="t">t</button>
+                                <button data-type="letter" class="alph-button" id="u">u</button>
+                                <button data-type="letter" class="alph-button" id="v">v</button>
+                                <button data-type="letter" class="alph-button" id="w">w</button>
+                                <button data-type="letter" class="alph-button" id="x">x</button>
+                                <button data-type="letter" class="alph-button" id="y">y</button>
+                                <button data-type="letter" class="alph-button" id="z">z</button>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <footer>
-            <div class="footer-margin">
-                <div id="footer-margin-container">
-                    <ul>
-                        <li>phone plumber</li>
-                        <li>order delivery</li>
-                        <li>call Sharon</li>
-                    </ul>
-                    <img src="assets/images/doodle.png" alt="doodle of mountains, purely asthetic">
+            <footer>
+                <div class="footer-margin">
+                    <div id="footer-margin-container">
+                        <ul>
+                            <li>phone plumber</li>
+                            <li>order delivery</li>
+                            <li>call Sharon</li>
+                        </ul>
+                        <img src="assets/images/doodle.png" alt="doodle of mountains, purely asthetic">
+                    </div>
                 </div>
-            </div>
 
-            <div class="footer-main">
-                <h2>Follow us on social media</h2>
-                <div class="footer-icon-container">
-                    <ul>
-                        <li><a href="https://www.facebook.com/" target="_blank" rel="noopener"
-                            aria-label="Visit our Facebook page (opens in a new tab)"><i class="fa-brands fa-facebook"></i> Facebook</a></li>
-                        <li><a href="https://www.twitter.com" target="_blank" rel="noopener"
-                            aria-label="Visit our Twitter page (opens in a new tab)"><i class="fa-brands fa-twitter"></i> Twitter</a></li>
-                        <li><a href="https://www.instagram.com" target="_blank" rel="noopener"
-                            aria-label="Visit our Instagram page (opens in a new tab)"><i class="fa-brands fa-instagram"></i> Instagram</a></li>
-                    </ul>
+                <div class="footer-main">
+                    <h2>Follow us on social media</h2>
+                    <div class="footer-icon-container">
+                        <ul>
+                            <li><a href="https://www.facebook.com/" target="_blank" rel="noopener"
+                                aria-label="Visit our Facebook page (opens in a new tab)"><i class="fa-brands fa-facebook"></i> Facebook</a></li>
+                            <li><a href="https://www.twitter.com" target="_blank" rel="noopener"
+                                aria-label="Visit our Twitter page (opens in a new tab)"><i class="fa-brands fa-twitter"></i> Twitter</a></li>
+                            <li><a href="https://www.instagram.com" target="_blank" rel="noopener"
+                                aria-label="Visit our Instagram page (opens in a new tab)"><i class="fa-brands fa-instagram"></i> Instagram</a></li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
-        </footer> 
-    </div>
-    <audio class="soundEffects" id="winSound" src="assets/sounds/clap.mp3" muted="true"></audio>
-    <audio class="soundEffects" id="loseSound" src="assets/sounds/loseSound.mp3" muted="true"></audio>
-    <audio class="soundEffects" id="penSound" src="assets/sounds/pencilSound.mp3" muted="true"></audio>
-    <audio class="soundEffects" id="ding" src="assets/sounds/ding.mp3" muted="true"></audio>
-    <script src="assets/js/script.js"></script>
-    
-    <!-- font awesome script  -->
-    <script src="https://kit.fontawesome.com/5c52ef23bc.js" crossorigin="anonymous"></script>
+            </footer> 
+        </div>
+        <audio class="soundEffects" id="winSound" src="assets/sounds/clap.mp3" muted="true" aria-label="Sound of clapping when player wins"></audio>
+        <audio class="soundEffects" id="loseSound" src="assets/sounds/loseSound.mp3" muted="true" aria-label="Sound that plays when player loses"></audio>
+        <audio class="soundEffects" id="penSound" src="assets/sounds/pencilSound.mp3" muted="true" aria-label="Sound of a pen drawing the hangman played when the player guesses an incorrect letter"></audio>
+        <audio class="soundEffects" id="ding" src="assets/sounds/ding.mp3" muted="true" aria-label="Sound that plays when player guesses a correct letter"></audio>
+        <script src="assets/js/script.js"></script>
+        
+        <!-- font awesome script  -->
+        <script src="https://kit.fontawesome.com/5c52ef23bc.js" crossorigin="anonymous"></script>
 </body>
 </html>
