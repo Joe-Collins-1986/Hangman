@@ -1,9 +1,6 @@
 
-// STYLE SETTINGS BETTER FOR SMALL SCREEN
-// PROOF RULES AND SETTINGS CONTENT
-// ADD FOOTER
-// ADD ARIA LABLEING
 // OPTIONAL - TO REMOVE LAST WORD FROM LIST
+// REQUIRED IF ABOVE - MESSAGE TO SAY TOPIC COMPLETE IF ARRAY EMPTY
 // OPTIONAL - KEYBOARD KEY INPUT
 
 
@@ -24,7 +21,8 @@
     let letterCheck = [];
     let shownWord = [];
     let wrongAnswers = 10;
-    let animals = ["dog", "cat", "lion", "tiger", "zebra", "bear", "eagle", "duck", "snake", "panda", "badger", "baboon", "beaver", "bobcat", "cougar", "coyote", "donkey", "ferret", "gopher", "impala", "jackal", "jaguar", "monkey", "possum", "rabbit", "turtle", "mouse", "sheep", "whale", "sloth", "viper", "gecko", "raven", "trout", "boar", "goat", "hare", "lynx", "orca", "wolf", "elk", "fox", "ape", "yak", "bat", "owl"];
+    // let animals = ["dog", "cat", "lion", "tiger", "zebra", "bear", "eagle", "duck", "snake", "panda", "badger", "baboon", "beaver", "bobcat", "cougar", "coyote", "donkey", "ferret", "gopher", "impala", "jackal", "jaguar", "monkey", "possum", "rabbit", "turtle", "mouse", "sheep", "whale", "sloth", "viper", "gecko", "raven", "trout", "boar", "goat", "hare", "lynx", "orca", "wolf", "elk", "fox", "ape", "yak", "bat", "owl"];
+    let animals = ["dog", "cat", "lion", "tiger"];
     let cars = ["alfa", "audi", "bmw", "fiat", "ford", "jeep", "mazda", "mini", "skoda", "golf", "polo", "saab", "seat", "astra", "civic", "dodge", "honda", "lexus", "micra", "pinto", "prius", "rover", "volvo", "yaris", "austin", "beetle", "camero", "chevvy", "datsun", "lancer", "morgan", "nissan", "passat", "subaru", "suzuki", "toyota"];
     let countries = ["chad", "cuba", "fiji", "iran", "iraq", "laos", "mali", "niue", "oman", "peru", "togo", "benin", "egypt", "gabon", "ghana", "kenya", "libya", "niger", "sudan", "china", "india", "japan", "nepal", "qatar", "syria", "yemen", "nauru", "palau", "samoa", "tonga", "italy", "malta", "spain", "angola", "belize", "bhutan", "brazil", "brunei", "canada", "cyprus", "france", "gambia", "greece", "guinea", "guyana", "israel", "jordan", "kosovo", "kuwait", "latvia", "malawi", "mexico", "monaco", "norway", "panama", "poland", "russia", "rwanda", "serbia", "sweden", "taiwan", "turkey", "tuvalu", "uganda", "zambia"];
     let catagory = animals; //default
@@ -326,22 +324,33 @@
     */
     function newGame() {
         //remove word from word list???
-        letterCheck = [];
-        shownWord = [];
-        wrongAnswers = 10;
-        selectedWord = catagory[Math.floor(Math.random() * catagory.length)];
-        popUp.style.display = "none";
+        removeWord();
 
-        ctx.clearRect(0, 0, canvas.width, canvas.height); // https://stackoverflow.com/questions/2142535/how-to-clear-the-canvas-for-redrawing
+        if(catagory.length >=1) {
+            letterCheck = [];
+            shownWord = [];
+            wrongAnswers = 10;
+            selectedWord = catagory[Math.floor(Math.random() * catagory.length)];
+            popUp.style.display = "none";
 
-        wordPositioning.innerHTML = ("Let's go again, shall we?");
+            ctx.clearRect(0, 0, canvas.width, canvas.height); // https://stackoverflow.com/questions/2142535/how-to-clear-the-canvas-for-redrawing
 
-        for (i of alphButtons) {
-            i.style.opacity = 1;
-            i.disabled = false;
-        };
-        underscoreWord();
-        console.log(selectedWord); // REMOVE AFTER TESTING
+            wordPositioning.innerHTML = ("Let's go again, shall we?");
+
+            for (i of alphButtons) {
+                i.style.opacity = 1;
+                i.disabled = false;
+            };
+            underscoreWord();
+            console.log(selectedWord); // REMOVE AFTER TESTING
+        } else {
+            resultHeaderText = "Wow!";
+            resultText = "You have completed all the options in this catagory. If you wish to continue go to settings to pick another topic"
+
+            resultHeader.innerHTML = (resultHeaderText);
+            result.innerHTML = (resultText);
+        }
+
     };
 
     /**
@@ -378,6 +387,18 @@
             };
         };
     };
+
+    /* Remove last word */
+    function removeWord() {
+        console.log(catagory);
+
+        let remove = catagory.indexOf(selectedWord);
+        catagory.splice(remove, 1);
+        console.log(catagory);
+        console.log(catagory.length)
+    };
+
+
 
 
     /********* EVENT LISTENERS **********/
