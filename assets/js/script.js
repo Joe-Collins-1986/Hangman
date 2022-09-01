@@ -323,9 +323,6 @@
     * Sets up a new game whilst retaining the score from previous games
     */
     function newGame() {
-        //remove word from word list???
-        removeWord();
-
         if(catagory.length >=1) {
             letterCheck = [];
             shownWord = [];
@@ -343,9 +340,10 @@
             };
             underscoreWord();
             console.log(selectedWord); // REMOVE AFTER TESTING
+            hideReset();
         } else {
             resultHeaderText = "Wow!";
-            resultText = "You have completed all the options in this catagory. If you wish to continue go to settings to pick another topic"
+            resultText = "Great Job. <br> You have completed all the options in this catagory. If you wish to continue go to settings to pick another topic."
 
             resultHeader.innerHTML = (resultHeaderText);
             result.innerHTML = (resultText);
@@ -442,6 +440,8 @@
                     newGame();
 
                 } else if (this.getAttribute("data-type") === "play-again") {
+                    removeWord();
+                    hideReset();
                     newGame();
 
                 } else if (this.getAttribute("data-type") === "reset") {
@@ -502,6 +502,18 @@
         else {
             postIt.classList.toggle("select");
         };
+
     });
+
+    function hideReset() {
+        const resetButtons = document.getElementById("reset-buttons")
+    // IF CATAGORY ARRAY EQUALS 0
+        if (catagory.length == 0) {
+            resetButtons.style.display = "none";
+        } else {
+            resetButtons.style.display = "flex";
+        };
+    }
+
 
 }()); 
