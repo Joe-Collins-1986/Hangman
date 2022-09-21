@@ -1,25 +1,16 @@
 # ***** REQUIRES UPDATE *******
 
 
-# Muscle Map Website
-[View the live project here.](https://joe-collins-1986.github.io/muscle-map/)
+# Hangman Website
+[View the live project here.](https://joe-collins-1986.github.io/Hangman/)
 
-(**Note:** this is a fictitious client generated for the purpose of developing this project to test my HTML and CSS essentials.)
+(**Note:** this is a fictitious client generated for the purpose of developing this project to test my HTML, CSS and javascript essentials.)
 
-This website has been designed to provide users with a high-level overview of which exercises can be used to train specific muscle groups. They will then be able to use these exercises to create a workout plan targeted to their number of available training days.
+This website has been designed to provide users with simple yet fun Hangman game to play when bored. It hs been created with a number of different topics whch can be accessed via the the settings section of the website.
 
 # Responsive Review
-![Responsive Review](assets/readme-assets/1.responsive/home-responsive.png)
-
-## Responsive review of all website pages:
-- [Home](https://ui.dev/amiresponsive?url=https://joe-collins-1986.github.io/muscle-map/index.html)
-- [Chest](https://ui.dev/amiresponsive?url=https://joe-collins-1986.github.io/muscle-map/chest.html)
-- [Back](https://ui.dev/amiresponsive?url=https://joe-collins-1986.github.io/muscle-map/back.html)
-- [Shoulders](https://ui.dev/amiresponsive?url=https://joe-collins-1986.github.io/muscle-map/shoulders.html)
-- [Legs](https://ui.dev/amiresponsive?url=https://joe-collins-1986.github.io/muscle-map/legs.html)
-- [Abs](https://ui.dev/amiresponsive?url=https://joe-collins-1986.github.io/muscle-map/abs.html)
-- [Plan](https://ui.dev/amiresponsive?url=https://joe-collins-1986.github.io/muscle-map/plan.html)
-- [Contact](https://ui.dev/amiresponsive?url=https://joe-collins-1986.github.io/muscle-map/contact.html)
+![Responsive Review](assets/readme-assets/responsive-review/hangmanResponsiveReview.png)
+## [Am I Responsive (link to website)](https://ui.dev/amiresponsive?url=https://joe-collins-1986.github.io/Hangman/)
 
 # User Experience (UX)
 ## Website Objectives
