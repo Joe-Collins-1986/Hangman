@@ -1,67 +1,71 @@
 # ***** REQUIRES UPDATE *******
 
 
-# Hangman Website
+# Hangman Website Overview
 [View the live project here.](https://joe-collins-1986.github.io/Hangman/)
 
 (**Note:** this is a fictitious client generated for the purpose of developing this project to test my HTML, CSS and javascript essentials.)
 
 This website has been designed to provide users with simple yet fun Hangman game to play when bored. It hs been created with a number of different topics whch can be accessed via the the settings section of the website.
 
+The client requesting this webite is using this as the first step in creating a site that will house a number of games and puzzles which he will later look to monitize through the use of advertisements.
+
+
 # Responsive Review
+
+## Am I Responsive? [*(link to repsonsive review website)*](https://ui.dev/amiresponsive?url=https://joe-collins-1986.github.io/Hangman/)
 ![Responsive Review](assets/readme-assets/responsive-review/hangmanResponsiveReview.png)
-## [Am I Responsive (link to website)](https://ui.dev/amiresponsive?url=https://joe-collins-1986.github.io/Hangman/)
+
 
 # User Experience (UX)
 ## Website Objectives
 
    #### **Client Goals**
-   The client is a personal trainer and gym owner.
-   1. Develop brand recognition for his logo and brand colours.
-   2. Set up a website to generate traffic which will:
-      - drive additional gym attendance.
-      - provide a contact for his personal training.
-   3. Engage with new and first-time gym-goers by providing a simple breakdown of which exercises target each muscle. 
-   4. Engage with new and first-time gym-goers by providing a breakdown of the differences between compound exercises and isolation exercises with a link to further reading.
-   5. Link exercises to YouTube instruction videos. (This will later be replaced with videos the client will generate personally.)
+   The wants a simple and engaging game that is easy to use and will result in users returing to the site. 
+   1. Sleek yet simple UX design.
+   2. Easy to use functionality.
+   3. Responsive for any device size to encourage mobile use as well as desktop use.
+   4. Links to the clients social network accounts to enhance their online presence.
+   5. Addictive gameplay to encourage return clients and drive positive word of mouth to encourage new users.
    
    #### **Client Future Goals**
    Wishes which will later be developed to incorporate:
-   - Sale of Muscle Map merchandise.
-   - Advertisement opportunities.
-   - Building a sales platform to connect personal trainers to client’s dependant on specialisation.
+   - Additional words and topics to be added to the hangman game.
+   - Allow for scores to be recorded and stored into a leaderboard.
+   - Additional games and puzzles added to the site.
+   - Generate advertisement revenue through the site.
 
    #### **First-Time Visitor Goals**
-   1. Acknowledge clear and memorable branding.
+   1. Immediatly engaged by UX design.
    2. Understand the purpose of the site.
-   3. Simple intuitive navigation.
-   4. Easy access to external links provided on the website.
-   5. Intuative contact form and links to social media.
-   6. Receive gym location.
-   7. Gain a basic understanding of the exercises demonstrated and how and why they are used.
-   8. Readable and asthetically pleasing on all devices.
-   9. Be able to create a basic training plan.
+   3. Simple intuitive menu navigation.
+   4. Intuative contact form and links to social media.
+   5. Readable and asthetically pleasing on all devices.
 
    #### **Returning Visitor Goals**
-   1. Revisit to access instructional links.
-   2. Revisit to access social media links.
-   3. Revisit to create or update training plan.
-   4. Revisit to request personal training after being introduced to the fundamentals.
-   5. Revisit to locate gym.
+   1. Revisit to replay game to try differnt topics.
+   2. Revisit to replay game to beat previous score.
+   3. Revisit to locate social media link to client.
 
 ## Design
 
   #### **Colour Scheme**
-  Provided by client to match logo.
+  Client wished the game to feel as though it was written on a piece of paper. Therefore main colours where kept simple with black and white.
    - Main colours: 
-      - #FA7C07 (Orange)
-      - #004AAD (Blue)
+      - #000000 (Black)
+      - #FFFFFF (White)
 
-   - Colours use to offset text:
-      - #F5F5F5 (Off-White)
-      - #494949 (Grey with Slight Opacity) 
+   To add a bit of simple colour to the main page margin lines gernerated through repeating linear gradients used some lighter colours found of papper note pads.
+   - Margin lines on page:
+      - #ffc0cb (Pink) (This colour will also to be used in for the required button hover animation to keep deisgn consitancy) 
+      - #9198E5 (Maximum Blue Purple)
 
-![Colour Palette](assets/readme-assets/2.UX/colour-picker.png)
+   To make sure the menu content stands out this will be set in a new colour. This will be set it a light yellow to mirror a post-it note
+   - Menu colour:
+      - #E7E773 (Straw) (This colour will be tweaked slightly using linear gradients to give a more real, 3d faded effect.) 
+
+
+![Colour Palette](assets/readme-assets/design/hangman-colours.png)
 
   #### **Typography**
   - Header Titles -'Roboto Slab', serif
