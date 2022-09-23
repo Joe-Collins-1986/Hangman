@@ -9,13 +9,14 @@
 This website has been designed to provide users with simple yet fun Hangman game to play when bored. It hs been created with a number of different topics whch can be accessed via the the settings section of the website.
 
 The client requesting this webite is using this as the first step in creating a site that will house a number of games and puzzles which he will later look to monitize through the use of advertisements.
+___
 
 
 # Responsive Review
 
 ## Am I Responsive? [*(link to repsonsive review website)*](https://ui.dev/amiresponsive?url=https://joe-collins-1986.github.io/Hangman/)
 ![Responsive Review](assets/readme-assets/responsive-review/hangmanResponsiveReview.png)
-
+___
 
 # User Experience (UX)
 ## Website Objectives
@@ -47,6 +48,8 @@ The client requesting this webite is using this as the first step in creating a 
    2. Revisit to replay game to beat previous score.
    3. Revisit to locate social media link to client.
 
+___
+
 ## Design
 
   #### **Colour Scheme**
@@ -68,18 +71,27 @@ The client requesting this webite is using this as the first step in creating a 
 ![Colour Palette](assets/readme-assets/design/hangman-colours.png)
 
   #### **Typography**
-  - Header Titles -'Roboto Slab', serif
-  - CTA - Arial, Helvetica, sans-serif
-  - Header, Footer, Standard Content -'Times New Roman', Times, serif
+  For the typography the client wanted an easy to read text which looked handwritten. The ballance was to locate a font that gave this impression whilst still being clearly legible even on a small screen.
+  - Font applied with backup options: 'Handlee', cursive, sans-serif
 
   #### **Imagery**
-  - Until the client can provide their own pictures the images will be taken from Unsplash. 
-  
-  These images have been selected to be:
-   - Dynamic
-   - Pair well with branding colour
-   - Appropriate orientation for the space
-   - Appropriate to page content
+  The images used for development of this website were taken from Unsplash and Font Awesome. These were selected fo be minimalist and not detract from the main content wich was styled through CSS to meet the clients specifications.
+   - Image for the backgound wood effect (jon-moore-5fIoyoKlz7A-unsplash.jpg).
+   - Image of the mountain doodle which shows on large screen viewings (nicolas-pinilla-GcDr6ZIzbIw-unsplash.jpg).
+   - Pins and paperclips where edited in photoshop from unsplash images.
+   - the flavicon icon presented on the web tab was taken from Font Awesome (f43c).
+
+   #### **Audio**
+   Audio was selected on this project to enhance the user experience but as per best practice guidelines was defaulted to mute> This can be toggled on via the settings menu. <br>
+   The audio was selected from youtube clips which provided provided agreement for free usage. In several instances the audio clips where modified using Audacity to shorten them or remove background noise.
+   - Backgound music (opted not to apply this as it was likely to become menotonous and there would have been licencing issues to obtaining engaging music tracks).
+   - Sound on correct answer (https://www.youtube.com/watch?v=403gX7TnhTQ)
+   - Sound on incorrect answer (https://www.youtube.com/watch?v=RZEsfS1rGyY) - modified using Audacity
+   - Sound on getting word correct (https://www.youtube.com/watch?v=ytjxf9YNJ-0) - modified using Audacity
+   - Sound on getting word correct (https://www.youtube.com/watch?v=na-a3lLB13Q&t=16s) - modified using Audacity
+
+
+___
 
 ## Structure Non-Linear Plane
 ![Structure Non-Linear Plane](assets/readme-assets/2.UX/Structure-non-linear.png)
