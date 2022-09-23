@@ -1,16 +1,20 @@
 # ***** REQUIRES UPDATE *******
 
+# Table Of Contents
+- [Hangman Website Overview](#hangman-website-overview)
+- [Responsive Review](#responsive-review)
+
 
 # Hangman Website Overview
-[View the live project here.](https://joe-collins-1986.github.io/Hangman/)
+## View the live project [here](https://joe-collins-1986.github.io/Hangman/)
 
-(**Note:** this is a fictitious client generated for the purpose of developing this project to test my HTML, CSS and javascript essentials.)
-
+<br>
+(**Note:** this is a fictitious client generated for the purpose of developing this project to test my HTML, CSS and javascript essentials.)<br>
 This website has been designed to provide users with simple yet fun Hangman game to play when bored. It hs been created with a number of different topics whch can be accessed via the the settings section of the website.
 
 The client requesting this webite is using this as the first step in creating a site that will house a number of games and puzzles which he will later look to monitize through the use of advertisements.
-___
 
+___
 
 # Responsive Review
 
@@ -90,16 +94,15 @@ ___
    - Sound on getting word correct (https://www.youtube.com/watch?v=ytjxf9YNJ-0) - modified using Audacity
    - Sound on getting word correct (https://www.youtube.com/watch?v=na-a3lLB13Q&t=16s) - modified using Audacity
 
-
 ___
 
 ## Structure Non-Linear Plane
-![Structure Non-Linear Plane](assets/readme-assets/2.UX/Structure-non-linear.png)
+The entire website will be housed on a single index page. The menu navigation , change of topics and win/lose outcomes will be facilitated through the use of javascript animating relevent sections.
 
 ## Wireframes
-- [Skeleton Plane](https://www.figma.com/file/QUILIZygurngxMKsDxOrIE/Muscle-Map-(Skeleton)?node-id=5%3A230)
+- [Skeleton Plane](https://www.figma.com/file/a9GzO1BVIhSaGTQPYAINzx/hangman-wireframe-(Skeleton)?node-id=0%3A1)
 
-- [Surface Plane](https://www.figma.com/file/M4Emuqqc618HWPX28fgZHk/Muscle-Map-(Surface)?node-id=5%3A182)
+- [Surface Plane](https://www.figma.com/file/9w1TswEvWfI4N8Fek3Gocf/hangman-wireframe?node-id=0%3A1)
 
 **NOTE:** The structure and wireframes are only to act as a concept and are subject to change as the website development evolves in collaboration with the client.
 
