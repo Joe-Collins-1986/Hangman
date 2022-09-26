@@ -1,62 +1,99 @@
-# ***** REQUIRES UPDATE *******
 
 # Table Of Contents
 - [Hangman Website Overview](#hangman-website-overview)
 - [Responsive Review](#responsive-review)
-
-
-# Hangman Website Overview
-## View the live project [here](https://joe-collins-1986.github.io/Hangman/)
+- [User Experience (UX)](#user-experience-ux)
+- [Further Development](#further-development)
+- [Technologies Used](#technologies-used)
+- [Testing](#testing)
+- [Depolyment](#deployment)
+- [Credits](#credits)
 
 <br>
-(**Note:** this is a fictitious client generated for the purpose of developing this project to test my HTML, CSS and javascript essentials.)<br>
-This website has been designed to provide users with simple yet fun Hangman game to play when bored. It hs been created with a number of different topics whch can be accessed via the the settings section of the website.
 
-The client requesting this webite is using this as the first step in creating a site that will house a number of games and puzzles which he will later look to monitize through the use of advertisements.
+# Hangman Website Overview
+   ## Live project [*(link to live project)*](https://joe-collins-1986.github.io/Hangman/)
 
+   (**Note:** this is a fictitious client generated for the purpose of developing this project to test my HTML, CSS and javascript essentials.)
+   <br><br>
+   This website has been designed to provide users with simple yet fun Hangman game to play when bored. It hs been created with a number of different topics whch can be accessed via the the settings section of the website.
+   <br><br>
+   The client requesting this webite is using this as the first step in creating a site that will house a number of games and puzzles which he will later look to monitize through the use of advertisements.
+   <br><br><br>
 ___
 
 # Responsive Review
 
-## Am I Responsive? [*(link to repsonsive review website)*](https://ui.dev/amiresponsive?url=https://joe-collins-1986.github.io/Hangman/)
-![Responsive Review](assets/readme-assets/responsive-review/hangmanResponsiveReview.png)
+   ## Am I Responsive? [*(link to repsonsive review website)*](https://ui.dev/amiresponsive?url=https://joe-collins-1986.github.io/Hangman/)
+   ![Responsive Review](assets/readme-assets/responsive-review/hangmanResponsiveReview.png)
+   <br><br><br>
 ___
 
 # User Experience (UX)
-## Website Objectives
 
-   #### **Client Goals**
+   <details>
+      <summary style="font-size:21px">Website Objectives</summary>
+
+   <br>
+   <details>
+      <summary style="font-weight:bold">Client Goals</summary>
+
    The wants a simple and engaging game that is easy to use and will result in users returing to the site. 
-   1. Sleek yet simple UX design.
-   2. Easy to use functionality.
-   3. Responsive for any device size to encourage mobile use as well as desktop use.
-   4. Links to the clients social network accounts to enhance their online presence.
-   5. Addictive gameplay to encourage return clients and drive positive word of mouth to encourage new users.
+   * Sleek yet simple UX design.
+   * Easy to use functionality.
+   * Responsive for any device size to encourage mobile use as well as desktop use.
+   * Links to the clients social network accounts to enhance their online presence.
+   * Addictive gameplay to encourage return clients and drive positive word of mouth to encourage new users.
+   </details>
+
+   ---
+
+   <details>
+      <summary style="font-weight:bold">Client Future Goals</summary>
    
-   #### **Client Future Goals**
    Wishes which will later be developed to incorporate:
-   - Additional words and topics to be added to the hangman game.
-   - Allow for scores to be recorded and stored into a leaderboard.
-   - Additional games and puzzles added to the site.
-   - Generate advertisement revenue through the site.
+   * Additional words and topics to be added to the hangman game.
+   * Allow for scores to be recorded and stored into a leaderboard.
+   * Additional games and puzzles added to the site.
+   * Generate advertisement revenue through the site.
 
-   #### **First-Time Visitor Goals**
-   1. Immediatly engaged by UX design.
-   2. Understand the purpose of the site.
-   3. Simple intuitive menu navigation.
-   4. Intuative contact form and links to social media.
-   5. Readable and asthetically pleasing on all devices.
+   </details>
 
-   #### **Returning Visitor Goals**
-   1. Revisit to replay game to try differnt topics.
-   2. Revisit to replay game to beat previous score.
-   3. Revisit to locate social media link to client.
+   ---
 
-___
+   <details>
+      <summary style="font-weight:bold">First-Time Visitor Goals</summary>
 
-## Design
+   * Immediatly engaged by UX design.
+   * Understand the purpose of the site.
+   * Simple intuitive menu navigation.
+   * Intuative contact form and links to social media.
+   * Readable and asthetically pleasing on all devices.
 
-  #### **Colour Scheme**
+   </details>
+
+   ---
+
+   <details>
+      <summary style="font-weight:bold">Returning Visitor Goals</summary>
+   
+   * Revisit to replay game to try differnt topics.
+   * Revisit to replay game to beat previous score.
+   * Revisit to locate social media link to client.
+
+   </details>
+
+   </details>
+
+   ---
+
+<details>
+      <summary style="font-size:21px">Website Design</summary>
+
+  <br>
+  <details>
+      <summary style="font-weight:bold">Colour Scheme</summary>
+
   Client wished the game to feel as though it was written on a piece of paper. Therefore main colours where kept simple with black and white.
    - Main colours: 
       - #000000 (Black)
@@ -72,20 +109,38 @@ ___
       - #E7E773 (Straw) (This colour will be tweaked slightly using linear gradients to give a more real, 3d faded effect.) 
 
 
-![Colour Palette](assets/readme-assets/design/hangman-colours.png)
+   ![Colour Palette](assets/readme-assets/design/hangman-colours.png)
 
-  #### **Typography**
+   </details>
+
+   ---
+
+  <details>
+      <summary style="font-weight:bold">Typography</summary>
+
   For the typography the client wanted an easy to read text which looked handwritten. The ballance was to locate a font that gave this impression whilst still being clearly legible even on a small screen.
   - Font applied with backup options: 'Handlee', cursive, sans-serif
 
-  #### **Imagery**
-  The images used for development of this website were taken from Unsplash and Font Awesome. These were selected fo be minimalist and not detract from the main content wich was styled through CSS to meet the clients specifications.
+  </details>
+
+   ---
+
+  <details>
+      <summary style="font-weight:bold">Imagery</summary>
+
+  The images used for development of this website were taken from Unsplash and Font Awesome. These were selected to be minimalist and not detract from the main content wich was styled through CSS to meet the clients specifications.
    - Image for the backgound wood effect (jon-moore-5fIoyoKlz7A-unsplash.jpg).
    - Image of the mountain doodle which shows on large screen viewings (nicolas-pinilla-GcDr6ZIzbIw-unsplash.jpg).
    - Pins and paperclips where edited in photoshop from unsplash images.
    - the flavicon icon presented on the web tab was taken from Font Awesome (f43c).
 
-   #### **Audio**
+   </details>
+
+   ---
+
+   <details>
+      <summary style="font-weight:bold">Audio</summary>
+
    Audio was selected on this project to enhance the user experience but as per best practice guidelines was defaulted to mute> This can be toggled on via the settings menu. <br>
    The audio was selected from youtube clips which provided provided agreement for free usage. In several instances the audio clips where modified using Audacity to shorten them or remove background noise.
    - Backgound music (opted not to apply this as it was likely to become menotonous and there would have been licencing issues to obtaining engaging music tracks).
@@ -94,20 +149,43 @@ ___
    - Sound on getting word correct (https://www.youtube.com/watch?v=ytjxf9YNJ-0) - modified using Audacity
    - Sound on getting word correct (https://www.youtube.com/watch?v=na-a3lLB13Q&t=16s) - modified using Audacity
 
-___
+   </details>
 
-## Structure Non-Linear Plane
-The entire website will be housed on a single index page. The menu navigation , change of topics and win/lose outcomes will be facilitated through the use of javascript animating relevent sections.
+   </details>
 
-## Wireframes
+   ---
+
+<details>
+      <summary style="font-size:21px">Structure Non-Linear Plane</summary>
+
+<br>
+The entire website will be housed on a single index page. The menu navigation, change of topics and win/lose outcomes will be facilitated through the use of javascript animating relevent sections.
+
+</details>
+
+---
+
+<details>
+      <summary style="font-size:21px">Wireframes</summary>
+
+<br>
+
 - [Skeleton Plane](https://www.figma.com/file/a9GzO1BVIhSaGTQPYAINzx/hangman-wireframe-(Skeleton)?node-id=0%3A1)
 
 - [Surface Plane](https://www.figma.com/file/9w1TswEvWfI4N8Fek3Gocf/hangman-wireframe?node-id=0%3A1)
 
 **NOTE:** The structure and wireframes are only to act as a concept and are subject to change as the website development evolves in collaboration with the client.
 
-## Features
-![Feature Mind Map](assets/readme-assets/2.UX/Features.png)
+</details>
+
+---
+
+<details>
+      <summary style="font-size:21px">Features</summary>
+
+<br>
+
+![Feature Mind Map](assets/readme-assets/features/mindmap%20-%20hangman.png)
 The above provides an inital mind map into what features might be appropriate for the website given the clients specifications.
 
 ### All Pages
@@ -163,6 +241,10 @@ The above provides an inital mind map into what features might be appropriate fo
 * Map:
    - Embed Google Map.
    - Set random location to act as gym location.
+
+</details>
+
+---
 
 # Further Development
 * Add automation of exercise plan based of information entered by visitor.
