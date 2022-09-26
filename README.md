@@ -188,9 +188,21 @@ The entire website will be housed on a single index page. The menu navigation, c
 ![Feature Mind Map](assets/readme-assets/features/mindmap%20-%20hangman.png)
 The above provides an inital mind map into what features might be appropriate for the website given the clients specifications.
 
-### All Pages
-* Web-tab:
-   - Add icon to tab.
+### Features Breakdown
+* Present Word:
+   At the commencement of the game there is a function to locate a random word from a list (dependent on topic selected) and present as underscores:
+
+      function underscoreWord() {
+         for (let i = 0; i < selectedWord.length; i++) { 
+               shownWord[i] = "_";
+               };
+         
+               wordOutput.innerHTML = shownWord.join(" ");
+         };
+   
+   ![Start of game](assets/readme-assets/features/present-word/blank-word.png)
+
+   
 * Logo:
    - Link up logo to direct to index page.
 * Navbar:
