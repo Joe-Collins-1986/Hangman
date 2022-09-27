@@ -513,25 +513,58 @@ Each section below will detail their specific function. Code blocks used to deta
       * **REVIEW - Gym location is detailed as part of the contact page.**
 
 ## Further Testing
-* Tested across Google Chrome and Safari browsers.
+* Tested across Google Chrome, Safari, Microsoft Edge, Fire Fox browsers on both Mac and Windows.
 * Viewed on a variety of devices using Web Developer Tools as well as several live desktop, iPad and mobile devices. 
 * Each page tested by developer and friends to ensure functionality worked as expected.
 * Issued to Slack community to review and feedback on.
 
-## Bugs
-  * Navigation bar had too much content to display neatly.
-      - Resolved by utilising a YouTube tutorial on how to create and add JavaScript to create a hamburger menu for small screens.
-  * Wanted the hero image on the home page not to be pushed down by the hamburger menu.
-      - Resolved by setting the hero image and hero text to absolute values and moving the hero image back on the z-axis.
-  * On publication to Git Pages the internal links did not work.
-      - Resolved by setting them to relative paths and also removing the / from the front of the path.
-  * After fixing the position of the footer I found that the content would disappear underneath it.
-      - Resolved issue by producing a spacing div at the bottom of each page equal to the size of the footer ensuring the page moved down and essential content remained visable.
-  * Had issue with re-using IDs.
-      - Converted IDs to classes to be able to re-utilise accross pages for efficiency.
-  * Images downloaded from Unsplash were very large and caused issues with the performance of the page when I used Lighthouse to evaluate them.
-      - Reduced image sizes on each page to improve performance.
+<details>
+   <summary style="font-size:21px">Bugs</summary>
 
+   <br>
+
+   <details>
+      <summary style="font-weight:bold">HTML</summary>
+
+   ### Warnings
+   Following the HTML validation the following warnings were identified and addressed.
+
+   ![HTML Warnings](assets/readme-assets/Bugs/html/html-warinings.png)
+
+   #### **Resolutions**
+   **Points 1 - 2:**
+   These were initially implemented as li items acting a menu option directing to additional content. However, removed aria-label following best practice due to no href.
+
+   **Points 3 - 7:**
+   All ID first occurrences were addressed by changing duplicate IDs to classes.
+
+   **Points 8:**
+   Placed empty quotes into h2 space to remove error. This header is produced by js.
+
+   ### Errors
+   Following the HTML validation the following errors were identified and addressed.
+
+   ![HTML Warnings](assets/readme-assets/Bugs/html/html-errors.png)
+
+   #### **Resolutions**
+   **Point 1:**
+   Delete stray div tag.
+
+   **Points 2 - 6:**
+   - Replace IDs with Classes and update CSS to .element as opposed to #element.
+   - Checked ID was not used in js.
+   - Removed duplicate class syntax e.g .class="settings-pin" class="pin-right". This was changed to class=”settings-pin pin-right”.
+
+   **Points 7 - 10:**
+   Mute is defaulted as true so no need to specify. Therefore reomoved = “true”.
+
+
+   ### Development Bugs
+
+   </details>
+
+
+</details>
 
 
 ## Key Learns
