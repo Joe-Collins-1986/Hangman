@@ -409,28 +409,43 @@ Each section below will detail their specific function. Code blocks used to deta
 * Retain scores using back-end development to provide a scoreboard for users.
 * Add additional games.
 * Add advertisements to site to generate revenue.
+<br><br><br>
 
 # Technologies Used
-## Languages Used
+
+<details>
+      <summary style="font-size:21px">Languages Used</summary>
+
    - HTML
    - CSS
    - JavaScript
 
-## Frameworks, Libraries & Programs Used
-1. Google Fonts:
+   ___
+
+</details>
+
+<details>
+      <summary style="font-size:21px">Frameworks, Libraries & Programs Used</summary>
+
+   1. Google Fonts:
    - Used to obtain appropriate fonts to use in website not held as standard.
-2. Font Awesome:
+   2. Font Awesome:
    - Used to obtain several icons used to improve the visuals of the website.
-3. Git:
+   3. Git:
    - Used for version control and to Push to GitHub.
-4. GitHub:
+   4. GitHub:
    - Used to store and share the code as well as publish to live website.
-6. Figma:
+   6. Figma:
    - Used to plan out website format.
-7. Web Developer:
-   - Used to analyse HTML, CSS and JavaScript output and correct where required.
-8. Canvas:
-   - Used to draw the hangman on js.
+   7. Web Developer:
+      - Used to analyse HTML, CSS and JavaScript output and correct where required.
+   8. Canvas:
+      - Used to draw the hangman on js.
+   
+   ___
+
+</details>
+<br><br><br>
 
 # Testing
  ## HTML Validator Results: 
