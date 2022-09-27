@@ -1,3 +1,16 @@
+To Do:
+1. add subheadings to TOC
+2. proof readme doc
+3. spacing between sections
+4. revisit client goals
+5. development bugs (use commits)
+6. check an ansered errros with mentor including "Error with Permissions-Policy header: Origin trial controlled feature not enabled: 'interest-cohort'."
+7. Key Learns
+8. credits - reference all sources
+9. remove console log
+10. tidy js
+
+
 
 # Table Of Contents
 - [Hangman Website Overview](#hangman-website-overview)
@@ -31,10 +44,8 @@ ___
 
 # User Experience (UX)
 
-   <details>
-      <summary style="font-size:21px">Website Objectives</summary>
+   ## Website Objectives
 
-   <br>
    <details>
       <summary style="font-weight:bold">Client Goals</summary>
 
@@ -83,14 +94,10 @@ ___
 
    </details>
 
-   </details>
-
    ---
 
-<details>
-      <summary style="font-size:21px">Website Design</summary>
+   ## Website Design
 
-  <br>
   <details>
       <summary style="font-weight:bold">Colour Scheme</summary>
 
@@ -151,50 +158,36 @@ ___
 
    </details>
 
-   </details>
-
    ---
 
-<details>
-      <summary style="font-size:21px">Structure Non-Linear Plane</summary>
-
-<br>
-The entire website will be housed on a single index page. The menu navigation, change of topics and win/lose outcomes will be facilitated through the use of javascript animating relevent sections.
-
-</details>
+   ## Structure Non-Linear Plane
+   The entire website will be housed on a single index page. The menu navigation, change of topics and win/lose outcomes will be facilitated through the use of javascript animating relevent sections.
 
 ---
 
-<details>
-      <summary style="font-size:21px">Wireframes</summary>
+   ## Wireframes
 
-<br>
+   - [Skeleton Plane](https://www.figma.com/file/a9GzO1BVIhSaGTQPYAINzx/hangman-wireframe-(Skeleton)?node-id=0%3A1)
 
-- [Skeleton Plane](https://www.figma.com/file/a9GzO1BVIhSaGTQPYAINzx/hangman-wireframe-(Skeleton)?node-id=0%3A1)
+   - [Surface Plane](https://www.figma.com/file/9w1TswEvWfI4N8Fek3Gocf/hangman-wireframe?node-id=0%3A1)
 
-- [Surface Plane](https://www.figma.com/file/9w1TswEvWfI4N8Fek3Gocf/hangman-wireframe?node-id=0%3A1)
-
-**NOTE:** The structure and wireframes are only to act as a concept and are subject to change as the website development evolves in collaboration with the client.
-
-</details>
+   **NOTE:** The structure and wireframes are only to act as a concept and are subject to change as the website development evolves in collaboration with the client.
 
 ---
 
-<details>
-      <summary style="font-size:21px">Features</summary>
+   ## Features
 
-<br>
 
-![Feature Mind Map](assets/readme-assets/features/mindmap%20-%20hangman.png)
-The above provides an inital mind map into what features might be appropriate for the website given the clients specifications.
+   ![Feature Mind Map](assets/readme-assets/features/mindmap%20-%20hangman.png)
+   The above provides an inital mind map into what features might be appropriate for the website given the clients specifications.
 
-### Features Breakdown
+   ### Features Breakdown
 
-Each section below will detail their specific function. Code blocks used to detail how the function was applied will not include lines of code not relevent to the function being discussed. To view the code in full please review the JS file.
-<br>
+   Each section below will detail their specific function. Code blocks used to detail how the function was applied will not include lines of code not relevent to the function being discussed. To view the code in full please review the JS file.
+   <br>
 
 <details>
-   <summary style="font-weight:bold">Ramdom Word</summary>
+   <summary style="font-weight:bold">Random Word</summary>
 <br>
 
    #### Random word selected form list
@@ -511,16 +504,13 @@ Each section below will detail their specific function. Code blocks used to deta
    5. Revisit to locate gym.
       * **REVIEW - Gym location is detailed as part of the contact page.**
 
-## Further Testing
-* Tested across Google Chrome, Safari, Microsoft Edge, Fire Fox browsers on both Mac and Windows.
-* Viewed on a variety of devices using Web Developer Tools as well as several live desktop, iPad and mobile devices. 
-* Each page tested by developer and friends to ensure functionality worked as expected.
-* Issued to Slack community to review and feedback on.
+   ## Further Testing
+   * Tested across Google Chrome, Safari, Microsoft Edge, Fire Fox browsers on both Mac and Windows.
+   * Viewed on a variety of devices using Web Developer Tools as well as several live desktop, iPad and mobile devices. 
+   * Each page tested by developer and friends to ensure functionality worked as expected.
+   * Issued to Slack community to review and feedback on.
 
-<details>
-   <summary style="font-size:21px">Bugs</summary>
-
-   <br>
+   ## Bugs
 
    <details>
       <summary style="font-weight:bold">HTML</summary>
@@ -574,9 +564,6 @@ Each section below will detail their specific function. Code blocks used to deta
 
    ---
 
-
-   ### Development Bugs
-
    </details>
 
    <details>
@@ -600,9 +587,6 @@ Each section below will detail their specific function. Code blocks used to deta
 
    ---
 
-   ### Development Bugs
-
-   
    </details>
 
    <details>
