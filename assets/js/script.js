@@ -108,7 +108,7 @@
             if (selectedWord[i] == letterCheck) {
                 shownWord[i] = letterCheck;
                 wordOutput.innerHTML = shownWord.join(" ");
-                // hangmanDraw();
+                hangmanDraw();
                 winOutcome();
         }}
         if (!selectedWord.includes(letterCheck)) {

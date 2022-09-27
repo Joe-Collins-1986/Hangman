@@ -189,72 +189,45 @@ The entire website will be housed on a single index page. The menu navigation, c
 The above provides an inital mind map into what features might be appropriate for the website given the clients specifications.
 
 ### Features Breakdown
-* Present Word:
-   At the commencement of the game there is a function to locate a random word from a list (dependent on topic selected) and present as underscores:
 
-      function underscoreWord() {
-         for (let i = 0; i < selectedWord.length; i++) { 
-               shownWord[i] = "_";
-               };
-         
-               wordOutput.innerHTML = shownWord.join(" ");
-         };
+Each section below will detail their specific function. Code blocks used to detail how the function was applied will not include lines of code not relevent to the function being discussed. To view the code in full please review the JS file.
+<br>
+
+<details>
+      <summary style="font-weight:bold">Present Word</summary>
+<br>
    
+   #### Empty Word
+   At the commencement of the game there is a function to locate a random word from a list (dependent on topic selected) and present as underscores.
+
    ![Start of game](assets/readme-assets/features/present-word/blank-word.png)
+   <br>
 
+   ---
+
+   #### Guessed Letter
+   If the user's guess is in the randomly selected word the letter will appear as well as encouraging words on the screen.
+
+   ![Start of game](assets/readme-assets/features/present-word/correct%20guess.png)
+   <br>
    
-* Logo:
-   - Link up logo to direct to index page.
-* Navbar:
-   - Link to other pages.
-   - Add hover colour change to anchor links.
-   - Create Hamburger menu (use JavaScript code from instructional video, see credits for author).
-* Call To Action (CTA):
-   - Hover colour change.
-   - Set 2 colours dependant on background colour.
-   - Link to plan page.
-* Footer:
-   - Fix location on page to promote social media and drive traffic to gym and personal training.
-   - Anchor links functional to external sites. (Not linked up to specific accounts due to this being a fictional client).
-   - Responsive to all device sizes.
+   ---
 
-### Index Page
-* Hero image & content:
-   - Set absolute position to not be pushed down by hamburger menu.
-   - Zoom animation.
-
-### Exercise/Muscle Pages
-* Title and header image:
-   - Responsive, rearrange to be appropriate to screen size.
-* External links:
-   - Link to appropriate section of external website using the websites appropriate ID as determined using Web Developer.
-* Link to YouTube:
-   - Open YouTube as external link. No requirement to embed and mute as the video will be the sole reason to watch instructional video.
-   - Open all external links on separate tab and add aria-labels to detail their purpose.
-
-### Plan Page
-* Title and header image:
-   - Animate arrow icons in the title to flash upon opening page to help direct users below the header image.
-   - Image zoom animation.
-* Content cards:
-   - Add hover colour change to enhance readability and make page more dynamic.
-* Tables:
-   - Add borders for readability.
-   - Make responsive to screen size.
-
-### Contact Page
-* Form:
-   - Validate inputs.
-   - Push data on submission (data not used).
-   - Assign data values.
-   - Make radio buttons responsive to small screen.
-   - Add completion page.
+   #### Guessed Incorrect Letter
+   If the user's guess is not in the randomly selected word the underscore will remain as well words informing the user the answer is incorrect.
    
-* Map:
-   - Embed Google Map.
-   - Set random location to act as gym location.
+   It will also result in a hangman element being drawn and the potential winning score being reduced (this ill be explained in moore detail in the hangman and score functions section):
+
+   ![Start of game](assets/readme-assets/features/present-word/incorrect%20guess.png)
+   <br>
+   
+   ---
+   </details>
+
+
 
 </details>
+<br><br><br>
 
 ---
 
@@ -266,7 +239,7 @@ The above provides an inital mind map into what features might be appropriate fo
 ## Languages Used
    - HTML
    - CSS
-   - JavaScript (taken directly from a YouTube tutorial as I have not yet covered JavaScript - YouTube channel referenced in credits section)
+   - JavaScript
 
 ## Frameworks, Libraries & Programs Used
 1. Google Fonts:
@@ -285,13 +258,7 @@ The above provides an inital mind map into what features might be appropriate fo
 # Testing
  ## HTML Validator Results: 
    - [Home](https://validator.w3.org/nu/?doc=https%3A%2F%2Fjoe-collins-1986.github.io%2Fmuscle-map%2Findex.html)
-   - [Chest](https://validator.w3.org/nu/?doc=https%3A%2F%2Fjoe-collins-1986.github.io%2Fmuscle-map%2Fchest.html)
-   - [Back](https://validator.w3.org/nu/?doc=https%3A%2F%2Fjoe-collins-1986.github.io%2Fmuscle-map%2Fback.html)
-   - [Shoulders](https://validator.w3.org/nu/?doc=https%3A%2F%2Fjoe-collins-1986.github.io%2Fmuscle-map%2Fshoulders.html)
-   - [Legs](https://validator.w3.org/nu/?doc=https%3A%2F%2Fjoe-collins-1986.github.io%2Fmuscle-map%2Flegs.html)
-   - [Abs](https://validator.w3.org/nu/?doc=https%3A%2F%2Fjoe-collins-1986.github.io%2Fmuscle-map%2Fabs.html)
-   - [Plan](https://validator.w3.org/nu/?doc=https%3A%2F%2Fjoe-collins-1986.github.io%2Fmuscle-map%2Fplan.html)
-   - [Contact](https://validator.w3.org/nu/?doc=https%3A%2F%2Fjoe-collins-1986.github.io%2Fmuscle-map%2Fcontact.html)
+
 
  ## CSS Validator Results
    - [CSS validator results](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fjoe-collins-1986.github.io%2Fmuscle-map%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
@@ -300,13 +267,6 @@ The above provides an inital mind map into what features might be appropriate fo
 ![Accessibility Review](assets/readme-assets/3.testing/home.png)
 
    - [Home](assets/readme-assets/3.testing/home-sum.png)
-   - [Chest](assets/readme-assets/3.testing/chest-sum.png)
-   - [Back](assets/readme-assets/3.testing/back-sum.png)
-   - [Shoulders](assets/readme-assets/3.testing/shoulders-sum.png)
-   - [Legs](assets/readme-assets/3.testing/legs-sum.png)
-   - [Abs](assets/readme-assets/3.testing/abs-sum.png)
-   - [Plan](assets/readme-assets/3.testing/plan-sum.png)
-   - [Contact](assets/readme-assets/3.testing/contact-sum.png)
 
 ## Testing User Stories from User Experience (UX) Section
 #### **Client Goals**
