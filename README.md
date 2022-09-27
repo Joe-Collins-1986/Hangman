@@ -334,6 +334,20 @@ Each section below will detail their specific function. Code blocks used to deta
 </details>
 
 <details>
+   <summary style="font-weight:bold">Social Media Links</summary>
+<br>
+
+   #### Present links to social media platforms
+   The links provided will take the user to the social media platforms but not to active accounts. This is because the client is fictional and does not have real accounts.
+
+   ![Start of game](assets/readme-assets/features/social-media/social-media.png)
+   <br>
+
+   ---
+
+</details>
+
+<details>
    <summary style="font-weight:bold">AAA</summary>
 <br>
 
