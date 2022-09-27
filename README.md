@@ -453,12 +453,11 @@ Each section below will detail their specific function. Code blocks used to deta
 
 
  ## CSS Validator Results
-   - [CSS validator results](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fjoe-collins-1986.github.io%2Fmuscle-map%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
+   - [CSS validator results](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fjoe-collins-1986.github.io%2FHangman%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
 
  ## Lighthouse Accessibility Results:
-![Accessibility Review](assets/readme-assets/3.testing/home.png)
+![Accessibility Review](assets/readme-assets/accessibility/Accessibility.png)
 
-   - [Home](assets/readme-assets/3.testing/home-sum.png)
 
 ## Testing User Stories from User Experience (UX) Section
 #### **Client Goals**
@@ -582,8 +581,42 @@ Each section below will detail their specific function. Code blocks used to deta
 
    
    </details>
-   
 
+   <details>
+      <summary style="font-weight:bold">JS</summary>
+
+   ### Errors
+   Following the JS validation the following errors were identified and addressed.
+
+   **Points - define variables:**
+   ![HTML Warnings](assets/readme-assets/Bugs/js/define%20variable.png)
+
+   Errors resolved by declaring i in the relevent for loops.
+
+   **Points - template literal syntax:**
+   ![HTML Warnings](assets/readme-assets/Bugs/js/esversion.png)
+
+   Cause by use of Font Awsome. no detriment to usage. Site functioning as expected, left unresolved.
+
+   **Points - functions declared within loops referencing an outer scoped variable:**
+   ![HTML Warnings](assets/readme-assets/Bugs/js/functions%20declared%20within%20loops.png)
+
+   Utilising outer scoped variables. No issues caused by this and maintainance is acceptable so left unresolved.
+
+   **Points - expected a conditional expression and instead saw an assignment.:**
+   ![HTML Warnings](assets/readme-assets/Bugs/js/conditional%20not%20assignment.png)
+
+   Functions built with if statements, with no else option. No errors occuring as a result therefore left as is.
+
+   **Points - level not defined.:**
+   ![HTML Warnings](assets/readme-assets/Bugs/js/level%20not%20defined.png)
+
+   HTML ID not defined as a variable. Created a variable for this and stored as level.
+
+   **Points - 	'i' is not defined.:**
+   ![HTML Warnings](assets/readme-assets/Bugs/js/i%20not%20defined.png)
+
+   Declare i as a variable.
 
 </details>
 

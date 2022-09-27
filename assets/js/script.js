@@ -32,6 +32,7 @@
 
     // CREATE SECTION FOR ALL HTML ELEMENTS ID's
     const score = document.getElementById("score");
+    const level = document.getElementById("level");
     const wordOutput = document.getElementById("word-output");
     const popUp = document.getElementById("pop-up");
     const result = document.getElementById("result");
@@ -332,7 +333,7 @@
 
             wordPositioning.innerHTML = ("Let's go again, shall we?");
 
-            for (i of alphButtons) {
+            for (let i of alphButtons) {
                 i.style.opacity = 1;
                 i.disabled = false;
             }
@@ -353,7 +354,7 @@
     * Disable all aphabet buttons on game completion so they can't impact score
     */
     function disableAllAlphaButtons() {
-        for (i of alphButtons) {
+        for (let i of alphButtons) {
             i.disabled = true;
         }
     }
@@ -362,7 +363,7 @@
     * Reactivate all catagory buttons to set up for next time setings is opened
     */
     function activateCatButtons() {
-        for (i of catButtons) {
+        for (let i of catButtons) {
             i.style.opacity = 1;
             i.disabled = false;
         }
@@ -372,7 +373,7 @@
     * Turns on or off all sound effects
     */
     function muteButton() {
-        for (i of soundEffects) {
+        for (let i of soundEffects) {
             if (i.muted == false) {
                 i.muted = true;
                 toggleMute.innerHTML = `<i class="fa-solid fa-volume-xmark"></i>`;
@@ -423,7 +424,7 @@
     /* game buttons event listener */
     document.addEventListener("DOMContentLoaded", function() {
 
-        for (i of selectedButtons) {
+        for (let i of selectedButtons) {
             i.addEventListener("click", function() {
                 if (this.getAttribute("data-type") === "letter") {
                     this.style.opacity = 0.3; 
