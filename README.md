@@ -199,9 +199,10 @@ Each section below will detail their specific function. Code blocks used to deta
 
    #### Random word selected form list
    There will be 3 lists in this game:
-    - animals
-    - cars
-    - countries
+
+    1. animals
+    2. cars
+    3. countries
    
    Dependant on the topic selected the reandom word will be taken form the appropriate list. 
    
@@ -392,9 +393,6 @@ Each section below will detail their specific function. Code blocks used to deta
    The links provided will take the user to the social media platforms but not to active accounts. This is because the client is fictional and does not have real accounts.
 
    ![Start of game](assets/readme-assets/features/social-media/social-media.png)
-   <br>
-
-   ---
 
 </details>
 
@@ -404,8 +402,13 @@ Each section below will detail their specific function. Code blocks used to deta
 ---
 
 # Further Development
-* Add automation of exercise plan based of information entered by visitor.
-* Add E-commerce for sale of Muscle Map merchandise.
+* Add additonal catagories to the hangman game.
+* Use web-scrapping to generate full word lists for future catagories.
+* Add optional timer to game.
+* Provide language options to game.
+* Retain scores using back-end development to provide a scoreboard for users.
+* Add additional games.
+* Add advertisements to site to generate revenue.
 
 # Technologies Used
 ## Languages Used
@@ -426,6 +429,8 @@ Each section below will detail their specific function. Code blocks used to deta
    - Used to plan out website format.
 7. Web Developer:
    - Used to analyse HTML, CSS and JavaScript output and correct where required.
+8. Canvas:
+   - Used to draw the hangman on js.
 
 # Testing
  ## HTML Validator Results: 
@@ -520,15 +525,13 @@ Each section below will detail their specific function. Code blocks used to deta
 
 # Deployment
 ## Set up Local GitHub Repository
-1. Go to my GitHub.
-2. Select the + icon in the top right corner and select new repository.
-3. Provide repository name and description.
-4. Select Add Readme File.
-5. Select Create Repository.
+1. Go to https://github.com/Code-Institute-Org/gitpod-full-template.
+2. Select use this template.
+3. Add repository name within my GitHub. (This will generate a repository in my Git Hub with the appropriate files.)
 
 ## Repository Framework
 1. Select the repository on GitHub and open with Gitpod (green button).
-2. Create required html pages.
+2. Create required html page.
 3. Create assets folder.
 4. Within assets folder create css folder, images folder, js folder & readme-assets folder.
 5. Add required files to folders including style.css, images, script.js, etc.
@@ -546,14 +549,14 @@ Each section below will detail their specific function. Code blocks used to deta
 
 ## GitHub Pages
 Deploy in GitHub Pages:
-1. Log in to my GitHub and go to my Muscle-Map repository.
+1. Log in to my GitHub and go to my appropriate repository.
 2. Access settings.
 3. Under 'Code and Automation' go to pages.
 4. Leave the source as Deploy from Branch.
 5. Set Branch to Main.
 6. Save.
 7. Give GitHub a few minutes and the live URL is provided at the top of the GutHub Pages section of settings.
-8. Any Git Pushes from the terminal whilst working on the Muscle-Map repository using Gitpod will now update in this live site.
+8. Any Git Pushes from the terminal whilst working on the repository using Gitpod will now update in this live site.
 
 # Credits
 ## Content
