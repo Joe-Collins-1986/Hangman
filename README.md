@@ -194,6 +194,25 @@ Each section below will detail their specific function. Code blocks used to deta
 <br>
 
 <details>
+   <summary style="font-weight:bold">Ramdom Word</summary>
+<br>
+
+   #### Random word selected form list
+   There will be 3 lists in this game:
+    - animals
+    - cars
+    - countries
+   
+   Dependant on the topic selected the reandom word will be taken form the appropriate list. 
+   
+   If the user selects play again the word will be removed from the list so that it can not be duplicated.
+   <br>
+
+   ---
+
+</details>
+
+<details>
       <summary style="font-weight:bold">Present Word</summary>
 <br>
    
@@ -334,13 +353,31 @@ Each section below will detail their specific function. Code blocks used to deta
 </details>
 
 <details>
-   <summary style="font-weight:bold">Social Media Links</summary>
+   <summary style="font-weight:bold">Score</summary>
 <br>
 
-   #### Present links to social media platforms
-   The links provided will take the user to the social media platforms but not to active accounts. This is because the client is fictional and does not have real accounts.
+   #### Score increase
+   Set to increase the score dependant on how many incorrect answers the user makes.
 
-   ![Start of game](assets/readme-assets/features/social-media/social-media.png)
+   Potential score starts at 10 each game and reduces by 1 for each incorrect letter guessed.
+
+   ![Start of game](assets/readme-assets/features/score/increase%20score.png)
+   <br>
+
+   ---
+
+   #### Score decrease
+   If the user does not guess the word in 10 attempts then their score will reduce by 5 points. This has the potential to take the users overall score into a negative figure.
+
+   ![Start of game](assets/readme-assets/features/score/lose-5-points.png)
+   <br>
+
+   ---
+
+   #### Score accumulation
+   If the user opts to play again their score will be retained from the previous games witht he new score being added.
+
+   ![Start of game](assets/readme-assets/features/score/accumulate%20score.png)
    <br>
 
    ---
@@ -348,13 +385,13 @@ Each section below will detail their specific function. Code blocks used to deta
 </details>
 
 <details>
-   <summary style="font-weight:bold">AAA</summary>
+   <summary style="font-weight:bold">Social Media Links</summary>
 <br>
 
-   #### aaa
-   aaa
+   #### Present links to social media platforms
+   The links provided will take the user to the social media platforms but not to active accounts. This is because the client is fictional and does not have real accounts.
 
-   ![Start of game](assets/readme-assets/features)
+   ![Start of game](assets/readme-assets/features/social-media/social-media.png)
    <br>
 
    ---
@@ -388,7 +425,7 @@ Each section below will detail their specific function. Code blocks used to deta
 6. Figma:
    - Used to plan out website format.
 7. Web Developer:
-   - Used to analyse HTML and CSS output and correct where required.
+   - Used to analyse HTML, CSS and JavaScript output and correct where required.
 
 # Testing
  ## HTML Validator Results: 
