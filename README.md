@@ -222,9 +222,130 @@ Each section below will detail their specific function. Code blocks used to deta
    <br>
    
    ---
-   </details>
+ </details>
 
+<details>
+   <summary style="font-weight:bold">Select Letters</summary>
+<br>
 
+   #### Letters selected are checked against word
+   The letter selected will be checked agaist the randomised word to see if it appears. If it does it will run success outcomes if it does not it will run fail outcomes. It will also update the presented word on the screen to incorporate correctly guessed letters.
+   <br>
+
+   ---
+
+   #### Letters fade after use
+   After a letter is selected it will fade and be deaactivated.
+
+   ![Start of game](assets/readme-assets/features/select-letters/faded-letters.png)
+   <br>
+
+   ---
+
+   #### On game completion deactivate all letters
+   After the game is won or lost no letter buttons will be active. This is to stop any further amendments tot he score. <br>
+   The letters will not fade, they will just be deactivated.
+   <br>
+
+   ---
+
+ </details>
+ 
+<details>
+   <summary style="font-weight:bold">Hangman Drawing</summary>
+<br>
+
+   #### Incorrect answers draw hangman element
+   On incorrect guess a hangman element will be drawn. This is done using canvas in js.
+
+   ![Start of game](assets/readme-assets/features/hangman-drawing/hangman-elements.png)
+   <br>
+
+   ---
+
+   #### On game completion hangman section will be replaced with outcome
+   The div holding the hangman image will also be used to detail if the user has won or lost on game completion.
+
+   ![Start of game](assets/readme-assets/features/hangman-drawing/win.png)
+   <br>
+
+   ---
+   ![Start of game](assets/readme-assets/features/hangman-drawing/lose.png)
+   <br>
+
+   If reset is selected the webpage will refresh which will reset all variable and the game will start again at a score of 0.
+
+   If play again is selected the required variable will be resent in js leaving the score to accumulate.
+   <br>
+
+   ---
+
+</details>
+
+<details>
+   <summary style="font-weight:bold">Rules</summary>
+<br>
+
+   #### Rules held on index page
+   The rules content will be kept on the same page at the rest of the web content. This is to ensure the score is retained as backend data storage is not in use for this project.
+
+   A scroll feature was added to the rules to post-it to keep the sizing consistant.
+
+   ![Start of game](assets/readme-assets/features/rules/rules-top.png)
+   <br>
+
+   ![Start of game](assets/readme-assets/features/rules/rules-bottom.png)
+   <br>
+
+   ---
+
+</details>
+
+<details>
+   <summary style="font-weight:bold">Settings</summary>
+<br>
+
+   #### Settings held on index page
+   The settings content will be kept on the same page at the rest of the web content. This is to ensure the score is retained as backend data storage is not in use for this project.
+
+   A scroll feature was added to the settings to post-it to keep the sizing consistant. This will only appear if required on small screens.
+
+   ![Start of game](assets/readme-assets/features/settings/settings.png)
+   <br>
+
+   ---
+
+   #### Allow change in topic
+   Within settings it will be possible to change the topic. This will change the list the randomised word is selected from and will also present the currents topic onto the html page.
+
+   (See screenshot above)
+   <br>
+
+   ---
+
+   #### Allow change in topic
+   Within settings it will be possible to toggle the audio on and off. As per best practice this will be set to mute as default.
+
+   (See screenshot above)
+   <br>
+
+   ---
+
+</details>
+
+<details>
+   <summary style="font-weight:bold">AAA</summary>
+<br>
+
+   #### aaa
+   aaa
+
+   ![Start of game](assets/readme-assets/features)
+   <br>
+
+   ---
+
+</details>
 
 </details>
 <br><br><br>
