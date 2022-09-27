@@ -212,7 +212,7 @@ footer {
     margin-bottom: 35px;
 }
 
-#rules-para, #settings-para {
+#rules-para, .settings-para {
     text-align: center;
 }
 
@@ -423,11 +423,11 @@ footer {
     height: 40px;
 }
 
-#pin-right {
+.pin-right {
     right: 2%;
 }
 
-#pin-left {
+.pin-left {
     left: 2%;
 }
 
