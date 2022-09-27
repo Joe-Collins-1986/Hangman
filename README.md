@@ -530,32 +530,49 @@ Each section below will detail their specific function. Code blocks used to deta
 
    ![HTML Warnings](assets/readme-assets/Bugs/html/html-warinings.png)
 
+
+   ---
+
    #### **Resolutions**
    **Points 1 - 2:**
    These were initially implemented as li items acting a menu option directing to additional content. However, removed aria-label following best practice due to no href.
 
+   ---
+
    **Points 3 - 7:**
    All ID first occurrences were addressed by changing duplicate IDs to classes.
 
+   ---
+
    **Points 8:**
    Placed empty quotes into h2 space to remove error. This header is produced by js.
+
+   ---
 
    ### Errors
    Following the HTML validation the following errors were identified and addressed.
 
    ![HTML Warnings](assets/readme-assets/Bugs/html/html-errors.png)
 
+   ---
+
    #### **Resolutions**
    **Point 1:**
    Delete stray div tag.
+
+   ---
 
    **Points 2 - 6:**
    - Replace IDs with Classes and update CSS to .element as opposed to #element.
    - Checked ID was not used in js.
    - Removed duplicate class syntax e.g .class="settings-pin" class="pin-right". This was changed to class=”settings-pin pin-right”.
 
+   ---
+
    **Points 7 - 10:**
    Mute is defaulted as true so no need to specify. Therefore reomoved = “true”.
+
+   ---
 
 
    ### Development Bugs
@@ -570,12 +587,18 @@ Each section below will detail their specific function. Code blocks used to deta
 
    ![HTML Warnings](assets/readme-assets/Bugs/css/css-errors.png)
 
+   ---
+
    **Points 1 - 2:**
    Removed unnessesary semi-colon.
+
+   ---
 
    **Warining Provided:** 'Imported style sheets are not checked in direct input and file upload modes'.
 
    **Stack Overflow Response to Warning:** You're just trying to validate your CSS file using the W3C validator, and it's letting you know that it's not going to validate the imported style sheet (Google's). It's not an error, just some information for you.
+
+   ---
 
    ### Development Bugs
 
@@ -588,32 +611,42 @@ Each section below will detail their specific function. Code blocks used to deta
    ### Errors
    Following the JS validation the following errors were identified and addressed.
 
-   **Points - define variables:**
+   **Points - define variables:** <br>
    ![HTML Warnings](assets/readme-assets/Bugs/js/define%20variable.png)
 
    Errors resolved by declaring i in the relevent for loops.
 
-   **Points - template literal syntax:**
+   ---
+
+   **Points - template literal syntax:** <br>
    ![HTML Warnings](assets/readme-assets/Bugs/js/esversion.png)
 
    Cause by use of Font Awsome. no detriment to usage. Site functioning as expected, left unresolved.
 
-   **Points - functions declared within loops referencing an outer scoped variable:**
+   ---
+
+   **Points - functions declared within loops referencing an outer scoped variable:** <br>
    ![HTML Warnings](assets/readme-assets/Bugs/js/functions%20declared%20within%20loops.png)
 
    Utilising outer scoped variables. No issues caused by this and maintainance is acceptable so left unresolved.
 
-   **Points - expected a conditional expression and instead saw an assignment.:**
+   ---
+
+   **Points - expected a conditional expression and instead saw an assignment.:** <br>
    ![HTML Warnings](assets/readme-assets/Bugs/js/conditional%20not%20assignment.png)
 
    Functions built with if statements, with no else option. No errors occuring as a result therefore left as is.
 
-   **Points - level not defined.:**
+   ---
+
+   **Points - level not defined.:** <br>
    ![HTML Warnings](assets/readme-assets/Bugs/js/level%20not%20defined.png)
 
    HTML ID not defined as a variable. Created a variable for this and stored as level.
 
-   **Points - 	'i' is not defined.:**
+   ---
+
+   **Points - 	'i' is not defined.:** <br>
    ![HTML Warnings](assets/readme-assets/Bugs/js/i%20not%20defined.png)
 
    Declare i as a variable.
