@@ -83,9 +83,9 @@
             levelOutput = "Countries";}
         else {
             levelOutput = "Cars";
-        };
+        }
         level.innerHTML = levelOutput;
-    };
+    }
 
     /**
     * Present underscores for letters in shownWord and push to inner
@@ -94,10 +94,10 @@
     function underscoreWord() {
         for (let i = 0; i < selectedWord.length; i++) { 
             shownWord[i] = "_";
-            };
+            }
         
             wordOutput.innerHTML = shownWord.join(" ");
-    };
+    }
 
     /**
     * Check for letter in word and update shownWord.
@@ -115,7 +115,7 @@
             wrongAnswers --;
             hangmanDraw();
             loseOutcome();
-    }};
+    }}
 
     /* Functions for drawing hangman parts */
     /**
@@ -123,28 +123,28 @@
     */
     function drawBase() {
         ctx.fillRect(canvas.width * 0.2, canvas.height * 0.9, canvas.width * 0.6, 5);
-    };
+    }
 
     /**
     * Draw hangman post (part2)
     */
     function drawPost() {
         ctx.fillRect(canvas.width * 0.6, canvas.height * 0.1, 5, canvas.height * 0.8);
-    };
+    }
 
     /**
     * Draw hangman top-post (part3)
     */
     function drawTop() {
         ctx.fillRect(canvas.width * 0.4, canvas.height * 0.1, canvas.width * 0.2, 5);
-    };
+    }
 
     /**
     * Draw hangman rope (part4)
     */
     function drawRope() {
         ctx.fillRect(canvas.width * 0.4, canvas.height * 0.1, 2, canvas.height * 0.2);
-    };
+    }
 
     /**
     * Draw hangman head (part5)
@@ -153,7 +153,7 @@
         ctx.beginPath();
         ctx.arc(canvas.width * 0.4, canvas.height * 0.3, 10, 0, Math.PI * 2);
         ctx.fill();
-    };
+    }
 
     /**
     * Draw hangman body (part6)
@@ -165,7 +165,7 @@
         ctx.lineWidth = 5;
         ctx.stroke();
         ctx.closePath();
-    };
+    }
 
     /**
     * Draw hangman arm1 (part7)
@@ -177,7 +177,7 @@
         ctx.lineWidth = 5;
         ctx.stroke();
         ctx.closePath();
-    };
+    }
 
     /**
     * Draw hangman arm2 (part8)
@@ -189,7 +189,7 @@
         ctx.lineWidth = 5;
         ctx.stroke();
         ctx.closePath();
-    };
+    }
 
     /**
     * Draw hangman leg1 (part9)
@@ -197,11 +197,11 @@
     function drawLeg1() {
         ctx.beginPath();
         ctx.moveTo(canvas.width * 0.4, canvas.height * 0.6);
-        ctx.lineTo(canvas.width * 0.45, canvas.height * 0.75) 
+        ctx.lineTo(canvas.width * 0.45, canvas.height * 0.75);
         ctx.lineWidth = 5;
         ctx.stroke();
         ctx.closePath();
-    };
+    }
 
     /**
     * Draw hangman leg2 (part10)
@@ -213,7 +213,7 @@
         ctx.lineWidth = 5;
         ctx.stroke();
         ctx.closePath();
-    };
+    }
 
     /**
     * Evaluate hangman,
@@ -265,7 +265,7 @@
             scoreTally = -5;
         }
         return scoreTally;
-    };
+    }
 
     /**
     * function for correct guesses and calling the appropriate functions for game won
@@ -280,7 +280,7 @@
             disableAllAlphaButtons();
             winSound.play();
             resultHeaderText = "Congratulations!!!";
-            resultText = "You guessed the word <b><u>" + selectedWord.toUpperCase() + "</u></b> and your score has increased by <b><u>" + scoreTally + "</u></b>."
+            resultText = "You guessed the word <b><u>" + selectedWord.toUpperCase() + "</u></b> and your score has increased by <b><u>" + scoreTally + "</u></b>.";
 
             resultHeader.innerHTML = (resultHeaderText);
             result.innerHTML = (resultText);
@@ -305,7 +305,7 @@
             disableAllAlphaButtons();
             loseSound.play();
             resultHeaderText = "Unlucky!!!";
-            resultText = "The correct word was <b><u>" + selectedWord.toUpperCase() + "</u></b>. Your score has decreased by <b><u>" + scoreTally + "</u></b>."
+            resultText = "The correct word was <b><u>" + selectedWord.toUpperCase() + "</u></b>. Your score has decreased by <b><u>" + scoreTally + "</u></b>.";
 
             resultHeader.innerHTML = (resultHeaderText);
             result.innerHTML = (resultText);
@@ -335,19 +335,19 @@
             for (i of alphButtons) {
                 i.style.opacity = 1;
                 i.disabled = false;
-            };
+            }
             underscoreWord();
             console.log(selectedWord); // REMOVE AFTER TESTING
             hideReset();
         } else {
             resultHeaderText = "Wow!";
-            resultText = "Great Job. <br> You have completed all the options in this catagory. If you wish to continue go to settings to pick another topic."
+            resultText = "Great Job. <br> You have completed all the options in this catagory. If you wish to continue go to settings to pick another topic.";
 
             resultHeader.innerHTML = (resultHeaderText);
             result.innerHTML = (resultText);
         }
 
-    };
+    }
 
     /**
     * Disable all aphabet buttons on game completion so they can't impact score
@@ -355,8 +355,8 @@
     function disableAllAlphaButtons() {
         for (i of alphButtons) {
             i.disabled = true;
-        };
-    };
+        }
+    }
 
     /**
     * Reactivate all catagory buttons to set up for next time setings is opened
@@ -366,7 +366,7 @@
             i.style.opacity = 1;
             i.disabled = false;
         }
-    };
+    }
 
     /**
     * Turns on or off all sound effects
@@ -374,15 +374,15 @@
     function muteButton() {
         for (i of soundEffects) {
             if (i.muted == false) {
-                i.muted = true
+                i.muted = true;
                 toggleMute.innerHTML = `<i class="fa-solid fa-volume-xmark"></i>`;
 
             } else {
                 i.muted = false;
                 toggleMute.innerHTML = `<i class="fa-solid fa-volume-high"></i>`;
-            };
-        };
-    };
+            }
+        }
+    }
 
     /**
     * Remove last word from array
@@ -390,7 +390,7 @@
     function removeWord() {
         let remove = catagory.indexOf(selectedWord);
         catagory.splice(remove, 1);
-    };
+    }
 
     /**
     * Hide reset buttons when catagory complete
@@ -400,7 +400,7 @@
             resetButtons.style.display = "none";
         } else {
             resetButtons.style.display = "flex";
-        };
+        }
     }
 
 
@@ -462,7 +462,7 @@
                     muteButton();   
                 }
                 
-            })
+            });
         }
     });
 
@@ -471,7 +471,7 @@
         rulesPostIt.classList.toggle("open");
         if (settingsPostIt.className = "open") {
             settingsPostIt.className = "settings";
-        };
+        }
 
         // ADD RULE TO CHECK IF SETTINGS ARE OPEN AND CLOSE IF IT IS
         if (matchMedia("(min-width: 821px)").matches) {
@@ -479,7 +479,7 @@
         }
         else {
             postIt.classList.toggle("select");
-        };
+        }
     });
 
     /* settings event listener */
@@ -493,12 +493,12 @@
         } if (catagory == countries || countries.length == 0) {
             countriesButton.style.opacity = 0.3;
             countriesButton.disabled = true;
-        };
+        }
 
         settingsPostIt.classList.toggle("open");
         if (rulesPostIt.className = "open") {
             rulesPostIt.className = "rules";
-        };
+        }
 
         // ADD RULE TO CHECK IF SETTINGS ARE OPEN AND CLOSE IF IT IS
         if (matchMedia("(min-width: 821px)").matches) {
@@ -506,7 +506,7 @@
         }
         else {
             postIt.classList.toggle("select");
-        };
+        }
 
     });
 
