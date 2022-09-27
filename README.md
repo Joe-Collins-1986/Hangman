@@ -563,6 +563,27 @@ Each section below will detail their specific function. Code blocks used to deta
 
    </details>
 
+   <details>
+      <summary style="font-weight:bold">CSS</summary>
+
+   ### Warnings & Errors
+   Following the CSS validation the following warnings and erros were identified and addressed.
+
+   ![HTML Warnings](assets/readme-assets/Bugs/css/css-errors.png)
+
+   **Points 1 - 2:**
+   Removed unnessesary semi-colon.
+
+   **Warining Provided:** 'Imported style sheets are not checked in direct input and file upload modes'.
+
+   **Stack Overflow Response to Warning:** You're just trying to validate your CSS file using the W3C validator, and it's letting you know that it's not going to validate the imported style sheet (Google's). It's not an error, just some information for you.
+
+   ### Development Bugs
+
+   
+   </details>
+   
+
 
 </details>
 
