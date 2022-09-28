@@ -1,24 +1,24 @@
 To Do:
-2. proof readme doc
-3. spacing between sections
-6. check an ansered errros with mentor including "Error with Permissions-Policy header: Origin trial controlled feature not enabled: 'interest-cohort'."
-9. remove console log
-10. tidy js
+* proof readme doc
+* spacing between sections
+* check an ansered errros with mentor including "Error with Permissions-Policy header: Origin trial controlled feature not enabled: 'interest-cohort'."
+* remove console log
+* tidy js
+* API check - see email
+
 
 # Table Of Contents
 - [Hangman Website Overview](#hangman-website-overview)
    - [Live Project](#live-project-link-to-live-project)
    - [Project Introduction](#project-introduction)
 - [Responsive Review](#responsive-review)
-   - [Am I Responsive?](#am-i-responsive-link-to-repsonsive-review-website)
+   - [Am I Responsive?](#am-i-responsive-link-to-responsive-review-website)
 - [User Experience (UX)](#user-experience-ux)
    - [Website Objectives](#website-objectives)
    - [Website Design](#website-design)
    - [Structure Non-Linear Plane](#structure-non-linear-plane)
    - [Wireframes](#wireframes)
    - [Features](#features)
-      - [Features Planning](#features-planning)
-      - [Features Breakdown](#features-breakdown)
 - [Further Development](#further-development)
 - [Technologies Used](#technologies-used)
    - [Languages Used](#languages-used)
@@ -32,7 +32,7 @@ To Do:
    - [Further Testing](#further-testing)
    - [Development Bugs](#development-bugs)
    - [Key Learn](#key-learn)
-- [Depolyment](#deployment)
+- [Deployment](#deployment)
    - [Set Up Local GitHub Repository](#set-up-local-github-repository)
    - [Repository Framework](#repository-framework)
    - [Update Repository](#update-repository)
@@ -50,18 +50,18 @@ To Do:
    <br>
 
    ## Project Introduction
-   (**Note:** this is a fictitious client generated for the purpose of developing this project to test my HTML, CSS and javascript essentials.)
+   (**Note:** this is a fictitious client generated for the purpose of developing this project to test my HTML, CSS and JavaScript essentials.)
 
-   This website has been designed to provide users with simple yet fun Hangman game to play when bored. It hs been created with a number of different topics whch can be accessed via the the settings section of the website.
+   This website has been designed to provide users with simple yet fun Hangman game to play when bored. It has been created with several topics which can be accessed via the settings section of the website.
 
-   The client requesting this webite is using this as the first step in creating a site that will house a number of games and puzzles which he will later look to monitize through the use of advertisements.
+   The client requesting this website is using this as the first step in creating a site that will house a number of games and puzzles which he will later look to monetise through the use of advertisements.
 
    <br>
 
 
 # Responsive Review
 
-   ## Am I Responsive? [*(link to repsonsive review website)*](https://ui.dev/amiresponsive?url=https://joe-collins-1986.github.io/Hangman/)
+   ## Am I Responsive? [*(link to responsive review website)*](https://ui.dev/amiresponsive?url=https://joe-collins-1986.github.io/Hangman/)
    ![Responsive Review](assets/readme-assets/responsive-review/hangmanResponsiveReview.png)
    
    <br>
@@ -124,17 +124,17 @@ To Do:
   <details>
       <summary style="font-weight:bold">Colour Scheme</summary>
 
-   Client wished the game to feel as though it was written on a piece of paper. Therefore main colours where kept simple with black and white.
+   Client wished the game to feel as though it was written on a piece of paper. Therefore, main colours were kept simple with black and white.
    - Main colours: 
       - #000000 (Black)
       - #FFFFFF (White)
 
-   To add a bit of simple colour to the main page margin lines gernerated through repeating linear gradients used some lighter colours found of papper note pads.
+   To add a bit of simple colour to the main page margin lines generated through repeating linear gradients used some lighter colours found of paper note pads.
    - Margin lines on page:
-      - #ffc0cb (Pink) (This colour will also to be used in for the required button hover animation to keep deisgn consitancy) 
+      - #ffc0cb (Pink) (This colour will also to be used in for the required button hover animation to keep design consistency) 
       - #9198E5 (Maximum Blue Purple)
 
-   To make sure the menu content stands out this will be set in a new colour. This will be set it a light yellow to mirror a post-it note
+   To make sure the menu content stands out this will be set in a new colour. This will be set it a light yellow to mirror a post-it note.
    - Menu colour:
       - #E7E773 (Straw) (This colour will be tweaked slightly using linear gradients to give a more real, 3d faded effect.) 
 
@@ -147,7 +147,7 @@ To Do:
    <details>
       <summary style="font-weight:bold">Typography</summary>
 
-   For the typography the client wanted an easy to read text which looked handwritten. The ballance was to locate a font that gave this impression whilst still being clearly legible even on a small screen.
+   For the typography the client wanted an easy-to-read text which looked handwritten. The balance was to locate a font that gave this impression whilst still being clearly legible even on a small screen.
    - Font applied with backup options: 'Handlee', cursive, sans-serif
 
    ---
@@ -156,10 +156,10 @@ To Do:
    <details>
       <summary style="font-weight:bold">Imagery</summary>
 
-   The images used for development of this website were taken from Unsplash and Font Awesome. These were selected to be minimalist and not detract from the main content wich was styled through CSS to meet the clients specifications.
-   - Image for the backgound wood effect (jon-moore-5fIoyoKlz7A-unsplash.jpg).
+   The images used for development of this website were taken from Unsplash and Font Awesome. These were selected to be minimalist and not detract from the main content which was styled through CSS to meet the client's specifications.
+   - Image for the background wood effect (jon-moore-5fIoyoKlz7A-unsplash.jpg).
    - Image of the mountain doodle which shows on large screen viewings (nicolas-pinilla-GcDr6ZIzbIw-unsplash.jpg).
-   - Pins and paperclips where edited in photoshop from unsplash images.
+   - Pins and paperclips were edited in photoshop from Unsplash images.
    - the flavicon icon presented on the web tab was taken from Font Awesome (f43c).
 
    ---
@@ -168,9 +168,9 @@ To Do:
    <details>
       <summary style="font-weight:bold">Audio</summary>
 
-   Audio was selected on this project to enhance the user experience but as per best practice guidelines was defaulted to mute> This can be toggled on via the settings menu. <br>
-   The audio was selected from youtube clips which provided provided agreement for free usage. In several instances the audio clips where modified using Audacity to shorten them or remove background noise.
-   - Backgound music (opted not to apply this as it was likely to become menotonous and there would have been licencing issues to obtaining engaging music tracks).
+   Audio was selected on this project to enhance the user experience but as per best practice guidelines was defaulted to mute. This can be toggled on via the settings menu. <br>
+   The audio was selected from YouTube clips which provided agreement for free usage. In several instances the audio clips were modified using Audacity to shorten them or remove background noise.
+   - Background music (opted not to apply this as it was likely to become monotonous and there would have been licencing issues to obtaining engaging music tracks).
    - Sound on correct answer (https://www.youtube.com/watch?v=403gX7TnhTQ)
    - Sound on incorrect answer (https://www.youtube.com/watch?v=RZEsfS1rGyY) - modified using Audacity
    - Sound on getting word correct (https://www.youtube.com/watch?v=ytjxf9YNJ-0) - modified using Audacity
@@ -182,7 +182,7 @@ To Do:
    <br>
 
    ## Structure Non-Linear Plane
-   The entire website will be housed on a single index page. The menu navigation, change of topics and win/lose outcomes will be facilitated through the use of javascript animating relevent sections.
+   The entire website will be housed on a single index page. The menu navigation, change of topics and win/lose outcomes will be facilitated using JavaScript animating relevant sections.
 
    <br>
 
@@ -200,7 +200,7 @@ To Do:
 
    ### **Features Planning**
    ![Feature Mind Map](assets/readme-assets/features/mindmap%20-%20hangman.png)
-   The above provides an inital mind map into what features might be appropriate for the website given the clients specifications.
+   The above provides an initial mind map into what features might be appropriate for the website given the clients specifications.
 
    ### **Features Breakdown**
 
@@ -218,9 +218,9 @@ To Do:
    2. cars
    3. countries
    
-   Dependant on the topic selected the reandom word will be taken form the appropriate list. 
+   Dependant on the topic selected the random word will be taken form the appropriate list. 
    
-   If the user selects play again the word will be removed from the list so that it can not be duplicated.
+   If the user selects play again the word will be removed from the list so that it cannot be duplicated.
    <br>
 
    ---
@@ -250,7 +250,7 @@ To Do:
    #### Guessed Incorrect Letter
    If the user's guess is not in the randomly selected word the underscore will remain as well words informing the user the answer is incorrect.
    
-   It will also result in a hangman element being drawn and the potential winning score being reduced (this ill be explained in moore detail in the hangman and score functions section):
+   It will also result in a hangman element being drawn and the potential winning score being reduced.
 
    ![Start of game](assets/readme-assets/features/present-word/incorrect%20guess.png)
    <br>
@@ -263,13 +263,13 @@ To Do:
    <br>
 
    #### Letters selected are checked against word
-   The letter selected will be checked agaist the randomised word to see if it appears. If it does it will run success outcomes if it does not it will run fail outcomes. It will also update the presented word on the screen to incorporate correctly guessed letters.
+   The letter selected will be checked against the randomised word to see if it appears. If it does it will run success outcomes if it does not it will run fail outcomes. It will also update the presented word on the screen to incorporate correctly guessed letters.
    <br>
 
    ---
 
    #### Letters fade after use
-   After a letter is selected it will fade and be deaactivated.
+   After a letter is selected it will fade and be deactivated.
 
    ![Start of game](assets/readme-assets/features/select-letters/faded-letters.png)
    <br>
@@ -277,7 +277,7 @@ To Do:
    ---
 
    #### On game completion deactivate all letters
-   After the game is won or lost no letter buttons will be active. This is to stop any further amendments tot he score. <br>
+   After the game is won or lost no letter buttons will be active. This is to stop any further amendments to the score. <br>
    The letters will not fade, they will just be deactivated.
    <br>
 
@@ -290,7 +290,7 @@ To Do:
    <br>
 
    #### Incorrect answers draw hangman element
-   On incorrect guess a hangman element will be drawn. This is done using canvas in js.
+   On incorrect guess a hangman element will be drawn. This is done using canvas in JS.
 
    ![Start of game](assets/readme-assets/features/hangman-drawing/hangman-elements.png)
    <br>
@@ -309,7 +309,7 @@ To Do:
 
    If reset is selected the webpage will refresh which will reset all variable and the game will start again at a score of 0.
 
-   If play again is selected the required variable will be resent in js leaving the score to accumulate.
+   If play again is selected the required variable will be resent in JS leaving the score to accumulate.
    <br>
 
    ---
@@ -323,7 +323,7 @@ To Do:
    #### Rules held on index page
    The rules content will be kept on the same page at the rest of the web content. This is to ensure the score is retained as backend data storage is not in use for this project.
 
-   A scroll feature was added to the rules to post-it to keep the sizing consistant.
+   A scroll feature was added to the rules to post-it to keep the sizing consistent.
 
    ![Start of game](assets/readme-assets/features/rules/rules-top.png)
    <br>
@@ -342,7 +342,7 @@ To Do:
    #### Settings held on index page
    The settings content will be kept on the same page at the rest of the web content. This is to ensure the score is retained as backend data storage is not in use for this project.
 
-   A scroll feature was added to the settings to post-it to keep the sizing consistant. This will only appear if required on small screens.
+   A scroll feature was added to the settings to post-it to keep the sizing consistent. This will only appear if required on small screens.
 
    ![Start of game](assets/readme-assets/features/settings/settings.png)
    <br>
@@ -382,7 +382,7 @@ To Do:
    ---
 
    #### Score decrease
-   If the user does not guess the word in 10 attempts then their score will reduce by 5 points. This has the potential to take the users overall score into a negative figure.
+   If the user does not guess the word in 10 attempts, then their score will reduce by 5 points. This has the potential to take the users overall score into a negative figure.
 
    ![Start of game](assets/readme-assets/features/score/lose-5-points.png)
    <br>
@@ -390,7 +390,7 @@ To Do:
    ---
 
    #### Score accumulation
-   If the user opts to play again their score will be retained from the previous games witht he new score being added.
+   If the user opts to play again their score will be retained from the previous games with the new score being added.
 
    ![Start of game](assets/readme-assets/features/score/accumulate%20score.png)
    <br>
@@ -414,8 +414,8 @@ To Do:
    <br>
 
 # Further Development
-   * Add additonal catagories to the hangman game.
-   * Use web-scrapping to generate full word lists for future catagories.
+   * Add additional categories to the hangman game.
+   * Use web-scrapping to generate full word lists for future categories.
    * Add optional timer to game.
    * Provide language options to game.
    * Retain scores using back-end development to provide a scoreboard for users.
@@ -447,7 +447,7 @@ To Do:
    7. Web Developer:
       - Used to analyse HTML, CSS and JavaScript output and correct where required.
    8. Canvas:
-      - Used to draw the hangman on js.
+      - Used to draw the hangman on JS.
 
    <br>
 
@@ -456,10 +456,10 @@ To Do:
    - [HTML index page](https://validator.w3.org/nu/?showsource=yes&doc=https%3A%2F%2Fjoe-collins-1986.github.io%2FHangman%2F)
 
    <details>
-      <summary style="font-weight:bold">HTML Issue Resolution</summary>
+      <summary style="font-weight:bold">HTML Issue Resolutions</summary>
 
    ### Warnings
-   Following the HTML validation the following warnings were identified and addressed.
+   Following the HTML validation, the following warnings were identified and addressed.
 
    ![HTML Warnings](assets/readme-assets/Bugs/html/html-warinings.png)
 
@@ -477,12 +477,12 @@ To Do:
    ---
 
    **Points 8:**
-   Placed empty quotes into h2 space to remove error. This header is produced by js.
+   Placed empty quotes into h2 space to remove error. This header is produced by JS.
 
    ---
 
    ### Errors
-   Following the HTML validation the following errors were identified and addressed.
+   Following the HTML validation, the following errors were identified and addressed.
 
    ![HTML Warnings](assets/readme-assets/Bugs/html/html-errors.png)
 
@@ -496,13 +496,13 @@ To Do:
 
    **Points 2 - 6:**
    - Replace IDs with Classes and update CSS to .element as opposed to #element.
-   - Checked ID was not used in js.
-   - Removed duplicate class syntax e.g .class="settings-pin" class="pin-right". This was changed to class=”settings-pin pin-right”.
+   - Checked ID was not used in JS.
+   - Removed duplicate class syntax e.g. class="settings-pin" class="pin-right". This was changed to class=”settings-pin pin-right”.
 
    ---
 
    **Points 7 - 10:**
-   Mute is defaulted as true so no need to specify. Therefore reomoved = “true”.
+   Mute is defaulted as true so no need to specify. Therefore removed = “true”.
 
    </details>
    
@@ -515,21 +515,21 @@ To Do:
    - [CSS validator results](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fjoe-collins-1986.github.io%2FHangman%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
 
    <details>
-      <summary style="font-weight:bold">CSS Issue Resolution</summary>
+      <summary style="font-weight:bold">CSS Issue Resolutions</summary>
 
    ### Warnings & Errors
-   Following the CSS validation the following warnings and erros were identified and addressed.
+   Following the CSS validation, the following warnings and errors were identified and addressed.
 
    ![HTML Warnings](assets/readme-assets/Bugs/css/css-errors.png)
 
    ---
 
    **Points 1 - 2:**
-   Removed unnessesary semi-colon.
+   Removed unnecessary semi-colon.
 
    ---
 
-   **Warining Provided:** 'Imported style sheets are not checked in direct input and file upload modes'.
+   **Warning Provided:** 'Imported style sheets are not checked in direct input and file upload modes'.
 
    **Stack Overflow Response to Warning:** You're just trying to validate your CSS file using the W3C validator, and it's letting you know that it's not going to validate the imported style sheet (Google's). It's not an error, just some information for you.
 
@@ -543,7 +543,7 @@ To Do:
    ![JS validator results using https://beautifytools.com/javascript-validator.php](assets/readme-assets/validation/js-validation.png)
 
    <details>
-      <summary style="font-weight:bold">JS Issue Resolution</summary>
+      <summary style="font-weight:bold">JS Issue Resolutions</summary>
 
    ### Errors
    Following the JS validation the following errors were identified and addressed.
@@ -551,28 +551,28 @@ To Do:
    **Points - define variables:** <br>
    ![HTML Warnings](assets/readme-assets/Bugs/js/define%20variable.png)
 
-   Errors resolved by declaring i in the relevent for loops.
+   Errors resolved by declaring i in the relevant for loops.
 
    ---
 
    **Points - template literal syntax:** <br>
    ![HTML Warnings](assets/readme-assets/Bugs/js/esversion.png)
 
-   Cause by use of Font Awsome. no detriment to usage. Site functioning as expected, left unresolved.
+   Cause by use of Font Awesome. no detriment to usage. Site functioning as expected, left unresolved.
 
    ---
 
    **Points - functions declared within loops referencing an outer scoped variable:** <br>
    ![HTML Warnings](assets/readme-assets/Bugs/js/functions%20declared%20within%20loops.png)
 
-   Utilising outer scoped variables. No issues caused by this and maintainance is acceptable so left unresolved.
+   Utilising outer scoped variables. No issues caused by this, and maintenance is acceptable so left unresolved.
 
    ---
 
    **Points - expected a conditional expression and instead saw an assignment.:** <br>
    ![HTML Warnings](assets/readme-assets/Bugs/js/conditional%20not%20assignment.png)
 
-   Functions built with if statements, with no else option. No errors occuring as a result therefore left as is.
+   Functions built with if statements, with no else option. No errors occurring as a result therefore left as is.
 
    ---
 
@@ -614,7 +614,7 @@ To Do:
    * Links to the client's social network accounts to enhance their online presence.
       - **REVIEW - Social network links located in footer with clear recognisable images.**
    * Addictive gameplay to encourage return clients and drive positive word of mouth to encourage new users.
-      - **REVIEW - Used feedback from testers to build a game which has been well recieved with testers re-using for their own enjoyment.**
+      - **REVIEW - Used feedback from testers to build a game which has been well received with testers re-using for their own enjoyment.**
    
    ---
    </details>
@@ -718,7 +718,7 @@ To Do:
    
    When I initially drew the hangman on the canvas, I had an issue if the screen was re-sized. The image would not re-size along with it.
 
-   By implementing a event listener for window re-size and calculating the canvas images based on a percentage of the canvas height and width I was able to resolve this issue.
+   By implementing an event listener for window re-size and calculating the canvas images based on a percentage of the canvas height and width I was able to resolve this issue.
 
    ![Leave Settings Img](assets/readme-assets/Bugs/develoment/hangman-resize.png)
 
@@ -767,10 +767,10 @@ To Do:
    3. Add repository name within my GitHub. (This will generate a repository in my Git Hub with the appropriate files.)
 
    ## Repository Framework
-   1. Select the repository on GitHub and open with Gitpod (green button).
+   1. Select the repository on GitHub and open with GitPod (green button).
    2. Create required html page.
    3. Create assets folder.
-   4. Within assets folder create css folder, images folder, js folder & readme-assets folder.
+   4. Within assets folder create CSS folder, images folder, JS folder & readme-assets folder.
    5. Add required files to folders including style.css, images, script.js, etc.
 
    ## Update Repository
@@ -781,7 +781,7 @@ To Do:
    5. Commit the changes and add a useful explanation of what action was done to track the history in GitHub using "git commit -m 'explanation of update'".
    6. Once the feature is complete, fully tested, and ready to be added to the main branch first go to the main branch using "git checkout main".
    7. Merge the feature branch into the main using "git merge 'name of required feature/update'".
-   8. Confirm merge was successful and then if it is not going to be re-used delete the feature branch using "git branch -d 'name of required feature/update'". (if deleting a branch with commits not merged to main delete with -D instead of -d)
+   8. Confirm merge was successful and then if it is not going to be re-used delete the feature branch using "git branch -d 'name of required feature/update'". (If deleting a branch with commits not merged to main delete with -D instead of -d)
    9. Use "git push" to push the commits to GitHub. These will then appear in the live website if it has been set up in GitHub Pages.
 
    ## GitHub Pages
@@ -793,7 +793,7 @@ To Do:
    5. Set Branch to Main.
    6. Save.
    7. Give GitHub a few minutes and the live URL is provided at the top of the GutHub Pages section of settings.
-   8. Any Git Pushes from the terminal whilst working on the repository using Gitpod will now update in this live site.
+   8. Any Git Pushes from the terminal whilst working on the repository using GitPod will now update in this live site.
 
    <br>
 
@@ -804,21 +804,21 @@ To Do:
 
    * Learning how to use linear gradients. This was used to develop the look of a notepad with re-occurring lines. (https://www.w3schools.com/css/css3_gradients.asp), (https://codepen.io/ceg9498/post/creating-lined-paper)
    * FlexBox guidance/re-fresh. (https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
-   * Intro to canvas in js to create the hangman image. (https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial)
+   * Intro to canvas in JS to create the hangman image. (https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial)
    * Canvas responsive. (https://stackoverflow.com/questions/34772957/how-to-make-canvas-responsive)
    * Clearing the canvas. (https://stackoverflow.com/questions/2142535/how-to-clear-the-canvas-for-redrawing)
    * Understanding event listeners. (https://www.w3schools.com/js/js_htmldom_eventlistener.asp)
    * Change mouse pointer on hover for menu list items (https://www.w3schools.com/cssref/pr_class_cursor.asp)
    * Understand the toggle class method to utilise in menu activation. (https://www.w3schools.com/howto/howto_js_toggle_class.asp)
-   * Set js rules dependent on screen size. (https://www.w3schools.com/jsrEF/met_win_matchmedia.asp)
-   * Wrap entire game in a initialise function to eliminate glabal variables. (https://www.youtube.com/watch?v=_4V4yUxGng8)
-   * stackoverflow used for generalised queries during development.
+   * Set JS rules dependent on-screen size. (https://www.w3schools.com/jsrEF/met_win_matchmedia.asp)
+   * Wrap entire game in a initialise function to eliminate global variables. (https://www.youtube.com/watch?v=_4V4yUxGng8)
+   * Stack Overflow used for generalised queries during development.
 
 
 
    ## Media Resources
    * All images were obtained from Unsplash.
-      - Image for the backgound wood effect (jon-moore-5fIoyoKlz7A-unsplash.jpg).
+      - Image for the background wood effect (jon-moore-5fIoyoKlz7A-unsplash.jpg).
       - Image of the mountain doodle which shows on large screen viewings (nicolas-pinilla-GcDr6ZIzbIw-unsplash.jpg).
    * Audio was taken form YouTube videos
       - Sound on correct answer (https://www.youtube.com/watch?v=403gX7TnhTQ)
