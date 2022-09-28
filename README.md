@@ -199,11 +199,11 @@ To Do:
 
    ## Features
 
-   ### **Features Planning**
+   ### **Features planning**
    ![Feature Mind Map](assets/readme-assets/features/mindmap%20-%20hangman.png)
    The above provides an initial mind map into what features might be appropriate for the website given the clients specifications.
 
-   ### **Features Breakdown**
+   ### **Features breakdown**
 
    Each section below will detail their specific function.
    
@@ -232,7 +232,7 @@ To Do:
          <summary style="font-weight:bold">Present Word</summary>
    <br>
    
-   #### Empty Word
+   #### Empty word
    At the commencement of the game there is a function to locate a random word from a list (dependent on topic selected) and present as underscores.
 
    ![Start of game](assets/readme-assets/features/present-word/blank-word.png)
@@ -240,7 +240,7 @@ To Do:
 
    ---
 
-   #### Guessed Letter
+   #### Guessed letter
    If the user's guess is in the randomly selected word the letter will appear as well as encouraging words on the screen.
 
    ![Start of game](assets/readme-assets/features/present-word/correct%20guess.png)
@@ -248,7 +248,7 @@ To Do:
    
    ---
 
-   #### Guessed Incorrect Letter
+   #### Guessed incorrect letter
    If the user's guess is not in the randomly selected word the underscore will remain as well words informing the user the answer is incorrect.
    
    It will also result in a hangman element being drawn and the potential winning score being reduced.
@@ -518,7 +518,7 @@ To Do:
    <details>
       <summary style="font-weight:bold">CSS Issue Resolutions</summary>
 
-   ### Warnings & Errors
+   ### Warnings & errors
    Following the CSS validation, the following warnings and errors were identified and addressed.
 
    ![HTML Warnings](assets/readme-assets/Bugs/css/css-errors.png)
