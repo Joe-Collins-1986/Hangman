@@ -7,6 +7,8 @@ To Do:
 * API check - see email
 
 
+# HANGMAN GAME
+
 # Table Of Contents
 - [Hangman Website Overview](#hangman-website-overview)
    - [Live Project](#live-project-link-to-live-project)
