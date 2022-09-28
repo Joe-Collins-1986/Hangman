@@ -2,10 +2,10 @@ To Do:
 1. add subheadings to TOC
 2. proof readme doc
 3. spacing between sections
-4. revisit client goals
+
 5. development bugs (use commits)
 6. check an ansered errros with mentor including "Error with Permissions-Policy header: Origin trial controlled feature not enabled: 'interest-cohort'."
-7. Key Learns
+7. 
 8. credits - reference all sources
 9. remove console log
 10. tidy js
@@ -451,9 +451,9 @@ To Do:
    * Easy to use functionality.
       - **REVIEW - Simple intuitive buttons/functions. Built without overcomplicating and game requirements. All built on one page for simplicity.**
    * Responsive for any device size to encourage mobile use as well as desktop use.
-      - **REVIEW - Built with responsive design for all devices. Structure of page amended to best suit the appropriate device size..**
+      - **REVIEW - Built with responsive design for all devices. Structure of page amended to best suit the appropriate device size.**
    * Links to the client's social network accounts to enhance their online presence.
-      - **REVIEW - Social network links located in footer with clear recognisable images..**
+      - **REVIEW - Social network links located in footer with clear recognisable images.**
    * Addictive gameplay to encourage return clients and drive positive word of mouth to encourage new users.
       - **REVIEW - Used feedback from testers to build a game which has been well recieved with testers re-using for their own enjoyment.**
    
@@ -467,11 +467,11 @@ To Do:
    * Additional words and topics to be added to the hangman game.
       - **REVIEW - Option to add additional lists to the game and increase the existing lists. Code written to make this addition easy to implement.**
    * Allow for scores to be recorded and stored into a leader board.
-      - **REVIEW - For future enhancements utilising back-end development, it would be good to store user data and scores to generate a leader board encouraging re-use and competition between users..**
+      - **REVIEW - For future enhancements utilising back-end development, it would be good to store user data and scores to generate a leader board encouraging re-use and competition between users.**
    * Additional games and puzzles added to the site.
       - **REVIEW - Use the site to develop a range of similar games with a consistent aesthetic appeal.**
    * Generate advertisement revenue through the site.
-      - **REVIEW - Once web traffic is sufficient use the site to advertise products and services. This must be done in a way to minimise the negative impact on user experience..**
+      - **REVIEW - Once web traffic is sufficient use the site to advertise products and services. This must be done in a way to minimise the negative impact on user experience.**
 
    ---
    </details>
@@ -480,15 +480,15 @@ To Do:
       <summary style="font-weight:bold">First-Time Visitor Goals</summary>
 
    * Immediately engaged by the UX design.
-      - **REVIEW - aaaa.**
+      - **REVIEW - Engaging gameplay and visuals developed based on user feedback to ensure an immediate and continued interest in the game.**
    * Understand the purpose of the site.
-      - **REVIEW - aaaa.**
+      - **REVIEW - Very clear game purpose and easy to locate and read rules where required.**
    * Simple intuitive menu navigation.
-      - **REVIEW - aaaa.**
+      - **REVIEW - Menus built to stand out using colour differentiation. Always easily identified on the screen.**
    * Intuitive content and links to social media.
-      - **REVIEW - aaaa.**
+      - **REVIEW - Social Media links easily identifiable and located on the screen.**
    * Readable and aesthetically pleasing on all devices.
-      - **REVIEW - aaaa.**
+      - **REVIEW - Game structure amended to best present on each device size. Smooth responsive alterations on reducing screen size.**
 
    ---
    </details>
@@ -497,11 +497,11 @@ To Do:
       <summary style="font-weight:bold">Returning Visitor Goals</summary>
    
    * Revisit to replay game to try different topics.
-      - **REVIEW - aaaa.**
+      - **REVIEW - Multiple topics generated to keep people of different interests engaged. On completion of a topic, it will be unusable (until game reset) giving the user a feeling of accomplishment.**
    * Revisit to replay game to beat previous score.
-      - **REVIEW - aaaa.**
+      - **REVIEW - Accumulating score gives a challenge to users to see how high a score they can generate and try to beat this on re-visits.**
    * Revisit to locate social media links to client.
-      - **REVIEW - aaaa.**
+      - **REVIEW - Social Media links available for anyone trying to link in with the client (These are not set to real accounts for this project due to a fictional client).**
 
    ---
    </details>
@@ -645,11 +645,15 @@ To Do:
    
    <br>
 
-   ## Key Learns
-   * xxx
-   * xxx
-   * xxx
-   * xxx
+   ## Key Learn
+   The main key learn I took from this project was to build the readme file in conjunction with the website development.
+
+   I was not sure if the design and functionality were feasible for the development of this project given my limited experience in CSS and JS. Therefore, I spent a lot of time building it in a test environment before deciding I could accomplish the desired result.
+
+   By the time I had realised it was feasible I had completed a lot of the work. As a result of this I had to retrospectively complete sections of the readme file which would have been better suited to completing at the scoping, researching and initial build stages.
+
+   Despite this I feel that I did a good job recording my progress through easy-to-understand concise commits which made it easier to revisit certain elements of the project where necessary.
+
 
    <br>
 
@@ -692,20 +696,33 @@ To Do:
 
 # Credits
    ## Content
-   * Hamburger responsive nav-bar – Web Dev Simplified - https://www.youtube.com/watch?v=At4B7A4GOPg
-   * Outline border on call-to-action text - https://www.w3schools.com/css/css3_shadows.asp
-   * Structure of README.MD file - https://github.com/emilija-smitaite/milestone-project-1/blob/main/README.md
+   The following sources acted as guidance for understanding. No code was taken directly for use in this project.
+
+
+   * Learning how to use linear gradients. This was used to develop the look of a notepad with re-occurring lines. (https://www.w3schools.com/css/css3_gradients.asp), (https://codepen.io/ceg9498/post/creating-lined-paper)
+   * FlexBox guidance/re-fresh. (https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+   * Intro to canvas in js to create the hangman image. (https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial)
+   * Canvas responsive. (https://stackoverflow.com/questions/34772957/how-to-make-canvas-responsive)
+   * Clearing the canvas. (https://stackoverflow.com/questions/2142535/how-to-clear-the-canvas-for-redrawing)
+   * Understanding event listeners. (https://www.w3schools.com/js/js_htmldom_eventlistener.asp)
+   * Change mouse pointer on hover for menu list items (https://www.w3schools.com/cssref/pr_class_cursor.asp)
+   * Understand the toggle class method to utilise in menu activation. (https://www.w3schools.com/howto/howto_js_toggle_class.asp)
+   * Set js rules dependent on screen size. (https://www.w3schools.com/jsrEF/met_win_matchmedia.asp)
+   * Wrap entire game in a initialise function to eliminate glabal variables. (https://www.youtube.com/watch?v=_4V4yUxGng8)
+   * stackoverflow used for generalised queries during development.
+
+
 
    ## Media 
    * All images were obtained from Unsplash.
-   * Videos were all from Youtube - ScottHermanFitness
-   * Links to external websites
-      - https://8fit.com/fitness/compound-vs-isolation-exercises-benefits-and-differences/#what-are-isolation-exercises
-      - https://www.verywellfit.com/abdominal-muscles-anatomy-3120072#mntl-sc-block_1-0-6
-      - https://en.wikipedia.org/
-   * Excerpts from external links  
-      - https://www.verywellhealth.com/
-      - https://my.clevelandclinic.org/
+      - Image for the backgound wood effect (jon-moore-5fIoyoKlz7A-unsplash.jpg).
+      - Image of the mountain doodle which shows on large screen viewings (nicolas-pinilla-GcDr6ZIzbIw-unsplash.jpg).
+   * Audio was taken form YouTube videos
+      - Sound on correct answer (https://www.youtube.com/watch?v=403gX7TnhTQ)
+      - Sound on incorrect answer (https://www.youtube.com/watch?v=RZEsfS1rGyY) - modified using Audacity
+      - Sound on getting word correct (https://www.youtube.com/watch?v=ytjxf9YNJ-0) - modified using Audacity
+      - Sound on getting word correct (https://www.youtube.com/watch?v=na-a3lLB13Q&t=16s) - modified using Audacity
+
 
    ## Acknowledgements
    * Thank to my Mentor (Spencer Barriball) for his feedback and guidance.
