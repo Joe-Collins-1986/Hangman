@@ -3,7 +3,7 @@ To Do:
 2. proof readme doc
 3. spacing between sections
 
-5. development bugs (use commits)
+5. 
 6. check an ansered errros with mentor including "Error with Permissions-Policy header: Origin trial controlled feature not enabled: 'interest-cohort'."
 7. 
 8. 
@@ -651,9 +651,8 @@ To Do:
 
    <br>
 
-   ## Bugs
+   ## Development Bugs
 
-   
    <details>
       <summary style="font-weight:bold">Menu toggle not presenting as indented</summary>
    
@@ -688,11 +687,38 @@ To Do:
 
    ___
 
+   </details>
 
+   <details>
+      <summary style="font-weight:bold">Canvas resize required</summary>
+   
+   When I initially drew the hangman on the canvas, I had an issue if the screen was re-sized. The image would not re-size along with it.
 
+   By implementing a event listener for window re-size and calculating the canvas images based on a percentage of the canvas height and width I was able to resolve this issue.
 
+   ![Leave Settings Img](assets/readme-assets/Bugs/develoment/hangman-resize.png)
 
+   Image shows canvas not re-sizing to match screen change.
+  
+   <br>
 
+   **Code block to resolve:**
+
+      window.addEventListener("resize", function() {
+        canvas.width = canvasSize.clientWidth;
+        canvas.height = canvasSize.clientHeight;
+        hangmanDraw();
+      });
+
+   The above image shows how when the screen size is changed the canvas re-sizes and redraws the required elements.
+
+      function drawBase() {
+        ctx.fillRect(canvas.width * 0.2, canvas.height * 0.9, canvas.width * 0.6, 5);
+      }
+   
+   The above code block shows a canvas element calculated based on canvas dimensions.
+
+   ___
 
    </details>
    
