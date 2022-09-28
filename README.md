@@ -5,6 +5,7 @@ To Do:
 * remove console log
 * tidy js
 * API check - see email
+* surface plane footer
 
 
 # Table Of Contents
@@ -129,7 +130,7 @@ To Do:
       - #000000 (Black)
       - #FFFFFF (White)
 
-   To add a bit of simple colour to the main page margin lines generated through repeating linear gradients used some lighter colours found of paper note pads.
+   To add a bit of simple colour to the main page margin lines generated through repeating linear gradients used some lighter colours found on paper note pads.
    - Margin lines on page:
       - #ffc0cb (Pink) (This colour will also to be used in for the required button hover animation to keep design consistency) 
       - #9198E5 (Maximum Blue Purple)
@@ -171,10 +172,10 @@ To Do:
    Audio was selected on this project to enhance the user experience but as per best practice guidelines was defaulted to mute. This can be toggled on via the settings menu. <br>
    The audio was selected from YouTube clips which provided agreement for free usage. In several instances the audio clips were modified using Audacity to shorten them or remove background noise.
    - Background music (opted not to apply this as it was likely to become monotonous and there would have been licencing issues to obtaining engaging music tracks).
-   - Sound on correct answer (https://www.youtube.com/watch?v=403gX7TnhTQ)
-   - Sound on incorrect answer (https://www.youtube.com/watch?v=RZEsfS1rGyY) - modified using Audacity
-   - Sound on getting word correct (https://www.youtube.com/watch?v=ytjxf9YNJ-0) - modified using Audacity
-   - Sound on getting word correct (https://www.youtube.com/watch?v=na-a3lLB13Q&t=16s) - modified using Audacity
+   - Sound on correct answer. (https://www.youtube.com/watch?v=403gX7TnhTQ)
+   - Sound on incorrect answer.(https://www.youtube.com/watch?v=RZEsfS1rGyY) - modified using Audacity
+   - Sound on getting word correct. (https://www.youtube.com/watch?v=ytjxf9YNJ-0) - modified using Audacity
+   - Sound on getting word incorrect. (https://www.youtube.com/watch?v=na-a3lLB13Q&t=16s) - modified using Audacity
 
    ---
    </details>
@@ -211,14 +212,14 @@ To Do:
       <summary style="font-weight:bold">Random Word</summary>
    <br>
 
-   #### Random word selected form list
+   #### Random word selected from list
    There will be 3 lists in this game:
 
    1. animals
    2. cars
    3. countries
    
-   Dependant on the topic selected the random word will be taken form the appropriate list. 
+   Dependent on the topic selected the random word will be taken from the appropriate list. 
    
    If the user selects play again the word will be removed from the list so that it cannot be duplicated.
    <br>
@@ -357,7 +358,7 @@ To Do:
 
    ---
 
-   #### Allow change in topic
+   #### Toggle audio
    Within settings it will be possible to toggle the audio on and off. As per best practice this will be set to mute as default.
 
    (See screenshot above)
@@ -372,7 +373,7 @@ To Do:
    <br>
 
    #### Score increase
-   Set to increase the score dependant on how many incorrect answers the user makes.
+   Set to increase the score dependent on how many incorrect answers the user makes.
 
    Potential score starts at 10 each game and reduces by 1 for each incorrect letter guessed.
 
@@ -415,7 +416,7 @@ To Do:
 
 # Further Development
    * Add additional categories to the hangman game.
-   * Use web-scrapping to generate full word lists for future categories.
+   * Use web scraping to generate full word lists for future categories.
    * Add optional timer to game.
    * Provide language options to game.
    * Retain scores using back-end development to provide a scoreboard for users.
@@ -467,7 +468,7 @@ To Do:
 
    #### **Resolutions**
    **Points 1 - 2:**
-   These were initially implemented as li items acting a menu option directing to additional content. However, removed aria-label following best practice due to no href.
+   These were initially implemented as li items acting as a menu option directing to additional content. However, removed aria-label following best practice due to no href.
 
    ---
 
@@ -671,14 +672,14 @@ To Do:
    * Tested across Google Chrome, Safari, Microsoft Edge, Fire Fox browsers on both Mac and Windows.
    * Viewed on a variety of devices using Web Developer Tools as well as several live desktop, iPad and mobile devices. 
    * Each page tested by developer and friends to ensure functionality worked as expected.
-   * Issued to Slack community to review and feedback on.
+   * Issued to Slack community to review and provide feedback on.
 
    <br>
 
    ## Development Bugs
 
    <details>
-      <summary style="font-weight:bold">Menu toggle not presenting as indented</summary>
+      <summary style="font-weight:bold">Menu toggle not presenting as intended</summary>
    
    On closing settings or rules using the close button on a small screen the menu remains open. I want this to close to improve aesthetics and reduce required button clicks when returning to game.
 
@@ -714,7 +715,7 @@ To Do:
    </details>
 
    <details>
-      <summary style="font-weight:bold">Canvas resize required</summary>
+      <summary style="font-weight:bold">Canvas re-size required</summary>
    
    When I initially drew the hangman on the canvas, I had an issue if the screen was re-sized. The image would not re-size along with it.
 
@@ -734,7 +735,7 @@ To Do:
         hangmanDraw();
       });
 
-   The above image shows how when the screen size is changed the canvas re-sizes and redraws the required elements.
+   The above code block shows how when the screen size is changed the canvas re-sizes and redraws the required elements.
 
       function drawBase() {
         ctx.fillRect(canvas.width * 0.2, canvas.height * 0.9, canvas.width * 0.6, 5);
@@ -811,9 +812,8 @@ To Do:
    * Change mouse pointer on hover for menu list items (https://www.w3schools.com/cssref/pr_class_cursor.asp)
    * Understand the toggle class method to utilise in menu activation. (https://www.w3schools.com/howto/howto_js_toggle_class.asp)
    * Set JS rules dependent on-screen size. (https://www.w3schools.com/jsrEF/met_win_matchmedia.asp)
-   * Wrap entire game in a initialise function to eliminate global variables. (https://www.youtube.com/watch?v=_4V4yUxGng8)
+   * Wrap entire game in an initialise function to eliminate global variables. (https://www.youtube.com/watch?v=_4V4yUxGng8)
    * Stack Overflow used for generalised queries during development.
-
 
 
    ## Media Resources
@@ -821,10 +821,10 @@ To Do:
       - Image for the background wood effect (jon-moore-5fIoyoKlz7A-unsplash.jpg).
       - Image of the mountain doodle which shows on large screen viewings (nicolas-pinilla-GcDr6ZIzbIw-unsplash.jpg).
    * Audio was taken form YouTube videos
-      - Sound on correct answer (https://www.youtube.com/watch?v=403gX7TnhTQ)
-      - Sound on incorrect answer (https://www.youtube.com/watch?v=RZEsfS1rGyY) - modified using Audacity
-      - Sound on getting word correct (https://www.youtube.com/watch?v=ytjxf9YNJ-0) - modified using Audacity
-      - Sound on getting word correct (https://www.youtube.com/watch?v=na-a3lLB13Q&t=16s) - modified using Audacity
+      - Sound on correct answer. (https://www.youtube.com/watch?v=403gX7TnhTQ)
+      - Sound on incorrect answer. (https://www.youtube.com/watch?v=RZEsfS1rGyY) - modified using Audacity
+      - Sound on getting word correct. (https://www.youtube.com/watch?v=ytjxf9YNJ-0) - modified using Audacity
+      - Sound on getting word incorrect. (https://www.youtube.com/watch?v=na-a3lLB13Q&t=16s) - modified using Audacity
 
 
    ## Acknowledgements
