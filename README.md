@@ -6,7 +6,7 @@ To Do:
 5. development bugs (use commits)
 6. check an ansered errros with mentor including "Error with Permissions-Policy header: Origin trial controlled feature not enabled: 'interest-cohort'."
 7. 
-8. credits - reference all sources
+8. 
 9. remove console log
 10. tidy js
 
@@ -431,12 +431,147 @@ To Do:
    ## HTML Validator Results: 
    - [HTML index page](https://validator.w3.org/nu/?showsource=yes&doc=https%3A%2F%2Fjoe-collins-1986.github.io%2FHangman%2F)
 
+   <details>
+      <summary style="font-weight:bold">HTML Issue Resolution</summary>
+
+   ### Warnings
+   Following the HTML validation the following warnings were identified and addressed.
+
+   ![HTML Warnings](assets/readme-assets/Bugs/html/html-warinings.png)
+
+   ---
+
+   #### **Resolutions**
+   **Points 1 - 2:**
+   These were initially implemented as li items acting a menu option directing to additional content. However, removed aria-label following best practice due to no href.
+
+   ---
+
+   **Points 3 - 7:**
+   All ID first occurrences were addressed by changing duplicate IDs to classes.
+
+   ---
+
+   **Points 8:**
+   Placed empty quotes into h2 space to remove error. This header is produced by js.
+
+   ---
+
+   ### Errors
+   Following the HTML validation the following errors were identified and addressed.
+
+   ![HTML Warnings](assets/readme-assets/Bugs/html/html-errors.png)
+
+   ---
+
+   #### **Resolutions**
+   **Point 1:**
+   Delete stray div tag.
+
+   ---
+
+   **Points 2 - 6:**
+   - Replace IDs with Classes and update CSS to .element as opposed to #element.
+   - Checked ID was not used in js.
+   - Removed duplicate class syntax e.g .class="settings-pin" class="pin-right". This was changed to class=”settings-pin pin-right”.
+
+   ---
+
+   **Points 7 - 10:**
+   Mute is defaulted as true so no need to specify. Therefore reomoved = “true”.
+
+   </details>
+   
+   ___
+
+   <br>
+
 
    ## CSS Validator Results
    - [CSS validator results](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fjoe-collins-1986.github.io%2FHangman%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
 
+   <details>
+      <summary style="font-weight:bold">CSS Issue Resolution</summary>
+
+   ### Warnings & Errors
+   Following the CSS validation the following warnings and erros were identified and addressed.
+
+   ![HTML Warnings](assets/readme-assets/Bugs/css/css-errors.png)
+
+   ---
+
+   **Points 1 - 2:**
+   Removed unnessesary semi-colon.
+
+   ---
+
+   **Warining Provided:** 'Imported style sheets are not checked in direct input and file upload modes'.
+
+   **Stack Overflow Response to Warning:** You're just trying to validate your CSS file using the W3C validator, and it's letting you know that it's not going to validate the imported style sheet (Google's). It's not an error, just some information for you.
+
+   </details>
+
+   ___
+
+   <br>
+
+   ## JS Validator Results
+   ![JS validator results using https://beautifytools.com/javascript-validator.php](assets/readme-assets/validation/js-validation.png)
+
+   <details>
+      <summary style="font-weight:bold">JS Issue Resolution</summary>
+
+   ### Errors
+   Following the JS validation the following errors were identified and addressed.
+
+   **Points - define variables:** <br>
+   ![HTML Warnings](assets/readme-assets/Bugs/js/define%20variable.png)
+
+   Errors resolved by declaring i in the relevent for loops.
+
+   ---
+
+   **Points - template literal syntax:** <br>
+   ![HTML Warnings](assets/readme-assets/Bugs/js/esversion.png)
+
+   Cause by use of Font Awsome. no detriment to usage. Site functioning as expected, left unresolved.
+
+   ---
+
+   **Points - functions declared within loops referencing an outer scoped variable:** <br>
+   ![HTML Warnings](assets/readme-assets/Bugs/js/functions%20declared%20within%20loops.png)
+
+   Utilising outer scoped variables. No issues caused by this and maintainance is acceptable so left unresolved.
+
+   ---
+
+   **Points - expected a conditional expression and instead saw an assignment.:** <br>
+   ![HTML Warnings](assets/readme-assets/Bugs/js/conditional%20not%20assignment.png)
+
+   Functions built with if statements, with no else option. No errors occuring as a result therefore left as is.
+
+   ---
+
+   **Points - level not defined.:** <br>
+   ![HTML Warnings](assets/readme-assets/Bugs/js/level%20not%20defined.png)
+
+   HTML ID not defined as a variable. Created a variable for this and stored as level.
+
+   ---
+
+   **Points - 	'i' is not defined.:** <br>
+   ![HTML Warnings](assets/readme-assets/Bugs/js/i%20not%20defined.png)
+
+   Declare i as a variable.
+
+   </details>
+   
+   ___
+
+   <br>
+
    ## Lighthouse Accessibility Results:
-   ![Accessibility Review](assets/readme-assets/accessibility/Accessibility.png)
+   ![Accessibility Review](assets/readme-assets/validation/Accessibility.png)
 
    <br>
 
@@ -518,128 +653,46 @@ To Do:
 
    ## Bugs
 
+   
    <details>
-      <summary style="font-weight:bold">HTML</summary>
+      <summary style="font-weight:bold">Menu toggle not presenting as indented</summary>
+   
+   On closing settings or rules using the close button on a small screen the menu remains open. I want this to close to improve aesthetics and reduce required button clicks when returning to game.
 
-   ### Warnings
-   Following the HTML validation the following warnings were identified and addressed.
+   ![Leave Settings Img](assets/readme-assets/Bugs/develoment/leave-settings.png)
 
-   ![HTML Warnings](assets/readme-assets/Bugs/html/html-warinings.png)
+   ![Leave Settings Img](assets/readme-assets/Bugs/develoment/small-menu.png)
+
+   Image shows that after ‘Leave Settings’ is selected the menu remains on screen until the ? icon is selected again.
+
+   Another issue this caused was that if the rules or settings content were opened on a small screen and the ? icon was clicked it would toggle the menu off and need to be clicked again to open the menu options.
+
+   The final issue with the toggle option on the ? icon was that when it was set to on and the screen size was changed to large, when rules or settings were opened and the screen was returned to small the menu overlapped the rules or settings content.
+
+   ![Leave Settings Img](assets/readme-assets/Bugs/develoment/overlap-menu.png)
+
+   Image shows the menu overlapping rules and settings content.
+
+   By adding the matchMedia code and moving the rules and settings in front of the small screen menu with a CSS z-index of 2 the functionality works as intended.
+   
+   <br>
+
+   **Code block to resolve:**
+
+      if (matchMedia("(min-width: 821px)").matches) {
+            postIt.className = "post-it-contents";
+      }
+      else {
+            postIt.classList.toggle("select");
+      }
+
+   ___
 
 
-   ---
 
-   #### **Resolutions**
-   **Points 1 - 2:**
-   These were initially implemented as li items acting a menu option directing to additional content. However, removed aria-label following best practice due to no href.
 
-   ---
 
-   **Points 3 - 7:**
-   All ID first occurrences were addressed by changing duplicate IDs to classes.
 
-   ---
-
-   **Points 8:**
-   Placed empty quotes into h2 space to remove error. This header is produced by js.
-
-   ---
-
-   ### Errors
-   Following the HTML validation the following errors were identified and addressed.
-
-   ![HTML Warnings](assets/readme-assets/Bugs/html/html-errors.png)
-
-   ---
-
-   #### **Resolutions**
-   **Point 1:**
-   Delete stray div tag.
-
-   ---
-
-   **Points 2 - 6:**
-   - Replace IDs with Classes and update CSS to .element as opposed to #element.
-   - Checked ID was not used in js.
-   - Removed duplicate class syntax e.g .class="settings-pin" class="pin-right". This was changed to class=”settings-pin pin-right”.
-
-   ---
-
-   **Points 7 - 10:**
-   Mute is defaulted as true so no need to specify. Therefore reomoved = “true”.
-
-   ---
-
-   </details>
-
-   <details>
-      <summary style="font-weight:bold">CSS</summary>
-
-   ### Warnings & Errors
-   Following the CSS validation the following warnings and erros were identified and addressed.
-
-   ![HTML Warnings](assets/readme-assets/Bugs/css/css-errors.png)
-
-   ---
-
-   **Points 1 - 2:**
-   Removed unnessesary semi-colon.
-
-   ---
-
-   **Warining Provided:** 'Imported style sheets are not checked in direct input and file upload modes'.
-
-   **Stack Overflow Response to Warning:** You're just trying to validate your CSS file using the W3C validator, and it's letting you know that it's not going to validate the imported style sheet (Google's). It's not an error, just some information for you.
-
-   ---
-
-   </details>
-
-   <details>
-      <summary style="font-weight:bold">JS</summary>
-
-   ### Errors
-   Following the JS validation the following errors were identified and addressed.
-
-   **Points - define variables:** <br>
-   ![HTML Warnings](assets/readme-assets/Bugs/js/define%20variable.png)
-
-   Errors resolved by declaring i in the relevent for loops.
-
-   ---
-
-   **Points - template literal syntax:** <br>
-   ![HTML Warnings](assets/readme-assets/Bugs/js/esversion.png)
-
-   Cause by use of Font Awsome. no detriment to usage. Site functioning as expected, left unresolved.
-
-   ---
-
-   **Points - functions declared within loops referencing an outer scoped variable:** <br>
-   ![HTML Warnings](assets/readme-assets/Bugs/js/functions%20declared%20within%20loops.png)
-
-   Utilising outer scoped variables. No issues caused by this and maintainance is acceptable so left unresolved.
-
-   ---
-
-   **Points - expected a conditional expression and instead saw an assignment.:** <br>
-   ![HTML Warnings](assets/readme-assets/Bugs/js/conditional%20not%20assignment.png)
-
-   Functions built with if statements, with no else option. No errors occuring as a result therefore left as is.
-
-   ---
-
-   **Points - level not defined.:** <br>
-   ![HTML Warnings](assets/readme-assets/Bugs/js/level%20not%20defined.png)
-
-   HTML ID not defined as a variable. Created a variable for this and stored as level.
-
-   ---
-
-   **Points - 	'i' is not defined.:** <br>
-   ![HTML Warnings](assets/readme-assets/Bugs/js/i%20not%20defined.png)
-
-   Declare i as a variable.
 
    </details>
    

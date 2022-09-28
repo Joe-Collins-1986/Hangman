@@ -221,7 +221,7 @@
     * update drawing,
     * update score tally
     */
-    function hangmanDraw() { // must be a better way of doin this. - MENTOR
+    function hangmanDraw() { 
         if (wrongAnswers == 10) {
             scoreTally = 10;
         }
@@ -410,8 +410,8 @@
     /* toggle bar button event listener */
     toggleBar.addEventListener("click", function() {
         postIt.classList.toggle("select");
-        rulesPostIt.className = "rules"; // added to remove post-it when rules shows.
-        settingsPostIt.className = "settings";
+        rulesPostIt.className = "rules"; // added to remove rules if open when post-it clicked.
+        settingsPostIt.className = "settings"; // added to remove rules if open when post-it clicked.
     });
 
     /* Canvas-rezize on resize of window */
@@ -474,7 +474,7 @@
             settingsPostIt.className = "settings";
         }
 
-        // ADD RULE TO CHECK IF SETTINGS ARE OPEN AND CLOSE IF IT IS
+        // ADD RULE TO CHECK IF RULES ARE OPEN AND CLOSE IF IT IS
         if (matchMedia("(min-width: 821px)").matches) {
             postIt.className = "post-it-contents";
         }
