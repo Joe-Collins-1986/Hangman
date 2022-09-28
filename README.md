@@ -1,31 +1,55 @@
 To Do:
-1. add subheadings to TOC
 2. proof readme doc
 3. spacing between sections
-
-5. 
 6. check an ansered errros with mentor including "Error with Permissions-Policy header: Origin trial controlled feature not enabled: 'interest-cohort'."
-7. 
-8. 
 9. remove console log
 10. tidy js
 
 # Table Of Contents
 - [Hangman Website Overview](#hangman-website-overview)
+   - [Live Project](#live-project-link-to-live-project)
+   - [Project Introduction](#project-introduction)
 - [Responsive Review](#responsive-review)
+   - [Am I Responsive?](#am-i-responsive-link-to-repsonsive-review-website)
 - [User Experience (UX)](#user-experience-ux)
+   - [Website Objectives](#website-objectives)
+   - [Website Design](#website-design)
+   - [Structure Non-Linear Plane](#structure-non-linear-plane)
+   - [Wireframes](#wireframes)
+   - [Features](#features)
+      - [Features Planning](#features-planning)
+      - [Features Breakdown](#features-breakdown)
 - [Further Development](#further-development)
 - [Technologies Used](#technologies-used)
+   - [Languages Used](#languages-used)
+   - [Frameworks, Libraries & Programs Used](#frameworks-libraries-and-programs-used)
 - [Testing](#testing)
+   - [HTML Validator Results](#html-validator-results)
+   - [CSS Validator Results](#css-validator-results)
+   - [JS Validator Results](#js-validator-results)
+   - [Lighthouse Accessibility Results](#lighthouse-accessibility-results)
+   - [Testing User Stories from User Experience (UX) Section](#testing-user-stories-from-user-experience-ux-section)
+   - [Further Testing](#further-testing)
+   - [Development Bugs](#development-bugs)
+   - [Key Learn](#key-learn)
 - [Depolyment](#deployment)
+   - [Set Up Local GitHub Repository](#set-up-local-github-repository)
+   - [Repository Framework](#repository-framework)
+   - [Update Repository](#update-repository)
+   - [GitHub Pages](#github-pages)
 - [Credits](#credits)
+   - [Development Resources](#development-resources)
+   - [Media Resources](#media-resources)
+   - [Acknowledgements](#acknowledgements)
 
 <br>
 
 
 # Hangman Website Overview
-   ## Live project [*(link to live project)*](https://joe-collins-1986.github.io/Hangman/)
+   ## Live Project [*(link to live project)*](https://joe-collins-1986.github.io/Hangman/)
+   <br>
 
+   ## Project Introduction
    (**Note:** this is a fictitious client generated for the purpose of developing this project to test my HTML, CSS and javascript essentials.)
 
    This website has been designed to provide users with simple yet fun Hangman game to play when bored. It hs been created with a number of different topics whch can be accessed via the the settings section of the website.
@@ -174,7 +198,7 @@ To Do:
 
    ## Features
 
-
+   ### **Features Planning**
    ![Feature Mind Map](assets/readme-assets/features/mindmap%20-%20hangman.png)
    The above provides an inital mind map into what features might be appropriate for the website given the clients specifications.
 
@@ -408,7 +432,7 @@ To Do:
    - CSS
    - JavaScript
 
-   ## Frameworks, Libraries & Programs Used
+   ## Frameworks, Libraries and Programs Used
 
    1. Google Fonts:
       - Used to obtain appropriate fonts to use in website not held as standard.
@@ -575,7 +599,7 @@ To Do:
 
    <br>
 
-   ## Testing User Stories from User Experience (UX) Section
+   ## Testing User Stories From User Experience (UX) Section
 
    <details>
       <summary style="font-weight:bold">Client Goals</summary>
@@ -737,7 +761,7 @@ To Do:
    <br>
 
 # Deployment
-   ## Set up Local GitHub Repository
+   ## Set Up Local GitHub Repository
    1. Go to https://github.com/Code-Institute-Org/gitpod-full-template.
    2. Select use this template.
    3. Add repository name within my GitHub. (This will generate a repository in my Git Hub with the appropriate files.)
@@ -774,7 +798,7 @@ To Do:
    <br>
 
 # Credits
-   ## Content
+   ## Development Resources
    The following sources acted as guidance for understanding. No code was taken directly for use in this project.
 
 
@@ -792,7 +816,7 @@ To Do:
 
 
 
-   ## Media 
+   ## Media Resources
    * All images were obtained from Unsplash.
       - Image for the backgound wood effect (jon-moore-5fIoyoKlz7A-unsplash.jpg).
       - Image of the mountain doodle which shows on large screen viewings (nicolas-pinilla-GcDr6ZIzbIw-unsplash.jpg).
