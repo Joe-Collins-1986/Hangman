@@ -1,7 +1,4 @@
 
-// REPLACE SOUND ICON WITH IMAGES
-
-
 /**
 * Wrap game in function to avoid global variables.
 * This function will initiallise with the loading of the page.
@@ -30,7 +27,7 @@
     let resultHeaderText = "";
     let resultText = "";
 
-    // CREATE SECTION FOR ALL HTML ELEMENTS ID's
+    // Create variables for HTML emelment ID's
     const score = document.getElementById("score");
     const level = document.getElementById("level");
     const wordOutput = document.getElementById("word-output");
@@ -45,12 +42,12 @@
     const carsButton = document.getElementById("cars");
     const countriesButton = document.getElementById("countries");
 
-    // CREATE SECTION FOR ALL HTML ELEMENTS CLASS's
+    // Create variables for HTML element Class's
     const catButtons = document.getElementsByClassName("catagoryButon");
     const alphButtons = document.getElementsByClassName("alph-button");
     const selectedButtons = document.getElementsByTagName("button");
 
-    /* SOUND EFFECTS */
+    /* Sound effects */
     const penSound = document.getElementById("penSound");
     const winSound = document.getElementById("winSound");
     const loseSound = document.getElementById("loseSound");
@@ -58,14 +55,14 @@
     const soundEffects = document.getElementsByClassName("soundEffects");
     const toggleMute = document.getElementById("muteButton");
 
-    /* CANVAS */
+    /* Canvas */
     let canvas = document.getElementById("canvas");
     let canvasSize = document.getElementById("size-canvas");
     const ctx = canvas.getContext("2d");
     canvas.width = canvasSize.clientWidth;
     canvas.height = canvasSize.clientHeight;
 
-    /* PRESENT INFO AT START OF THE GAME */
+    /* Present info at the start of the game */
     console.log(selectedWord); // REMOVE AFTER TESTING
     checkCatagory();
     underscoreWord();
@@ -78,7 +75,7 @@
      * Validates the catagory/topic current selected and pushes it to inner html
     */
     function checkCatagory() {
-        if (catagory == animals) { // must be a better way of doin this. - MENTOR
+        if (catagory == animals) {
             levelOutput = "Animals";}
         else if (catagory == countries) {
             levelOutput = "Countries";}
@@ -101,7 +98,7 @@
     }
 
     /**
-    * Check for letter in word and update shownWord.
+    * Checks for letter in word and update shownWord.
     * Run required outcomes dependant on if letter is located.
     */
     function updateWord() {
@@ -119,6 +116,7 @@
     }}
 
     /* Functions for drawing hangman parts */
+
     /**
     * Draw hangman base (part1)
     */
@@ -370,7 +368,7 @@
     }
 
     /**
-    * Turns on or off all sound effects
+    * Toggle sound effects
     */
     function muteButton() {
         for (let i of soundEffects) {
@@ -473,8 +471,6 @@
         if (settingsPostIt.className = "open") {
             settingsPostIt.className = "settings";
         }
-
-        // ADD RULE TO CHECK IF RULES ARE OPEN AND CLOSE IF IT IS
         if (matchMedia("(min-width: 821px)").matches) {
             postIt.className = "post-it-contents";
         }
@@ -484,7 +480,7 @@
     });
 
     /* settings event listener */
-    openSettings.addEventListener("click", function() { // MUST BE A BETTE WAY ASK MENTOR
+    openSettings.addEventListener("click", function() {
         if (catagory == animals || animals.length == 0) {
             animalButton.style.opacity = 0.3;
             animalButton.disabled = true;
@@ -500,8 +496,6 @@
         if (rulesPostIt.className = "open") {
             rulesPostIt.className = "rules";
         }
-
-        // ADD RULE TO CHECK IF SETTINGS ARE OPEN AND CLOSE IF IT IS
         if (matchMedia("(min-width: 821px)").matches) {
             postIt.className = "post-it-contents";
         }

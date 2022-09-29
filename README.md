@@ -1,6 +1,5 @@
 To Do:
 
-* Check "Error with Permissions-Policy header: Origin trial controlled feature not enabled: 'interest-cohort'." with Mentor
 * remove console log
 * tidy js
 
