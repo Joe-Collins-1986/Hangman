@@ -1,11 +1,11 @@
 To Do:
 
-* spacing between sections
-* check an ansered errros with mentor including "Error with Permissions-Policy header: Origin trial controlled feature not enabled: 'interest-cohort'."
+* check validation errros with mentor including 
+* Check "Error with Permissions-Policy header: Origin trial controlled feature not enabled: 'interest-cohort'." with Mentor
 * remove console log
 * tidy js
 * API check - see email
-* surface plane footer
+* add final bug fix
 
 
 # HANGMAN GAME
@@ -728,6 +728,57 @@ To Do:
    The above code block shows a canvas element calculated based on canvas dimensions.
 
    ___
+
+   </details>
+
+   <details>
+      <summary style="font-weight:bold">Underscore Overlap</summary>
+   
+   When testing the game, it was identified that for long words the underscores overlapped the word output container.
+
+   ![Leave Settings Img](assets/readme-assets/Bugs/develoment/underscores-overlap.jpg)
+
+   However, when some of the letters were presented as text it did not.
+
+   ![Leave Settings Img](assets/readme-assets/Bugs/develoment/word-fits.jpg)
+
+   I identified that this was because in the JS code I had put spaces around the underscores. However, I had also set the CSS word output to have a letter spacing of 0.8rem.
+  
+   <br>
+
+   **Code blocks detailing issue:**
+
+   JS code:
+
+      function underscoreWord() {
+         for (let i = 0; i < selectedWord.length; i++) { 
+            shownWord[i] = " _ "; //remove spaces from around the underscore
+            }
+        
+            wordOutput.innerHTML = shownWord.join(" ");
+         }
+   
+   CSS code:
+
+      #word-output {
+         height: 54px;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         font-size: 2rem;
+         font-weight: bold;
+         letter-spacing: .8rem; // already has spacing between letters
+         background-color: white;
+         border: 2px solid black;
+         border-radius: 1.2rem;
+         margin-bottom: 27px;
+      }
+
+   By removing the spacing from the underscore in the JS code, it resolved the issue. 
+
+   Despite this I later decided to make the maximum word length 6 letters. This was because when the text size was reduced to fit the output container for a small screen it was becoming challenging to read the letters.
+
+   In future developments the word output container could be increased to allow for longer words and potentially sentences. 
 
    </details>
    
