@@ -56,7 +56,7 @@
 # Responsive Review
 
    ## Am I Responsive? [*(link to responsive review website)*](https://ui.dev/amiresponsive?url=https://joe-collins-1986.github.io/Hangman/)
-   ![Responsive Review](assets/readme-assets/responsive-review/hangmanResponsiveReview.png)
+   ![Responsive Review](assets/readme-assets/responsive-review/hangman-responsive-review.png)
    
    <br>
 
@@ -189,7 +189,7 @@
    ## Features
 
    ### **Features planning**
-   ![Feature Mind Map](assets/readme-assets/features/mindmap%20-%20hangman.png)
+   ![Feature Mind Map](assets/readme-assets/features/mindmap-hangman.png)
    The above provides an initial mind map into what features might be appropriate for the website given the clients specifications.
 
    ### **Features breakdown**
@@ -232,7 +232,7 @@
    #### Guessed letter
    If the user's guess is in the randomly selected word the letter will appear as well as encouraging words on the screen.
 
-   ![Start of game](assets/readme-assets/features/present-word/correct%20guess.png)
+   ![Start of game](assets/readme-assets/features/present-word/correct-guess.png)
    <br>
    
    ---
@@ -242,7 +242,7 @@
    
    It will also result in a hangman element being drawn and the potential winning score being reduced.
 
-   ![Start of game](assets/readme-assets/features/present-word/incorrect%20guess.png)
+   ![Start of game](assets/readme-assets/features/present-word/incorrect-guess.png)
    <br>
    
    ---
@@ -366,7 +366,7 @@
 
    Potential score starts at 10 each game and reduces by 1 for each incorrect letter guessed.
 
-   ![Start of game](assets/readme-assets/features/score/increase%20score.png)
+   ![Start of game](assets/readme-assets/features/score/increase-score.png)
    <br>
 
    ---
@@ -382,7 +382,7 @@
    #### Score accumulation
    If the user opts to play again their score will be retained from the previous games with the new score being added.
 
-   ![Start of game](assets/readme-assets/features/score/accumulate%20score.png)
+   ![Start of game](assets/readme-assets/features/score/accumulate-score.png)
    <br>
 
    ---
@@ -452,7 +452,7 @@
    ### Warnings
    Following the HTML validation, the following warnings were identified and addressed.
 
-   ![HTML Warnings](assets/readme-assets/Bugs/html/html-warinings.png)
+   ![HTML Warnings](assets/readme-assets/bugs/html/html-warinings.png)
 
    ---
 
@@ -475,7 +475,7 @@
    ### Errors
    Following the HTML validation, the following errors were identified and addressed.
 
-   ![HTML Warnings](assets/readme-assets/Bugs/html/html-errors.png)
+   ![HTML Warnings](assets/readme-assets/bugs/html/html-errors.png)
 
    ---
 
@@ -508,7 +508,7 @@
    ### Warnings & errors
    Following the CSS validation, the following warnings and errors were identified and addressed.
 
-   ![CSS Warnings](assets/readme-assets/Bugs/css/css-errors.png)
+   ![CSS Warnings](assets/readme-assets/bugs/css/css-errors.png)
 
    ---
 
@@ -535,42 +535,42 @@
    Following the JS validation the following errors were identified and addressed.
 
    **Points - define variables:** <br>
-   ![JS Errors](assets/readme-assets/Bugs/js/define%20variable.png)
+   ![JS Errors](assets/readme-assets/bugs/js/define-variable.png)
 
    Errors resolved by declaring i in the relevant for loops.
 
    ---
 
    **Points - template literal syntax:** <br>
-   ![JS Errors](assets/readme-assets/Bugs/js/esversion.png)
+   ![JS Errors](assets/readme-assets/bugs/js/esversion.png)
 
    Cause by use of Font Awesome. no detriment to usage. Site functioning as expected. Following consultation with my mentor no action was required.
 
    ---
 
    **Points - functions declared within loops referencing an outer scoped variable:** <br>
-   ![JS Errors](assets/readme-assets/Bugs/js/functions%20declared%20within%20loops.png)
+   ![JS Errors](assets/readme-assets/bugs/js/functions-declared-within-loops.png)
 
    Utilising outer scoped variables. No issues caused by this, and maintenance is acceptable. Following consultation with my mentor no action was required.
 
    ---
 
    **Points - expected a conditional expression and instead saw an assignment.:** <br>
-   ![JS Errors](assets/readme-assets/Bugs/js/conditional%20not%20assignment.png)
+   ![JS Errors](assets/readme-assets/bugs/js/conditional-not-assignment.png)
 
    Functions built with if statements, with no else option. No errors occurring. Following consultation with my mentor no action was required.
 
    ---
 
    **Points - level not defined.:** <br>
-   ![JS Errors](assets/readme-assets/Bugs/js/level%20not%20defined.png)
+   ![JS Errors](assets/readme-assets/bugs/js/level-not-defined.png)
 
    HTML ID not defined as a variable. Created a variable for this and stored as level.
 
    ---
 
    **Points - 	'i' is not defined.:** <br>
-   ![JS Errors](assets/readme-assets/Bugs/js/i%20not%20defined.png)
+   ![JS Errors](assets/readme-assets/bugs/js/i-not-defined.png)
 
    Declare i as a variable.
 
@@ -595,7 +595,7 @@
    
 
    ## Lighthouse Accessibility Results:
-   ![Accessibility Review](assets/readme-assets/validation/Accessibility.png)
+   ![Accessibility Review](assets/readme-assets/validation/accessibility.png)
 
 
    ## Testing User Stories From User Experience (UX) Section
@@ -678,9 +678,9 @@
    
    On closing settings or rules using the close button on a small screen the menu remains open. I want this to close to improve aesthetics and reduce required button clicks when returning to game.
 
-   ![Leave Settings Img](assets/readme-assets/Bugs/develoment/leave-settings.png)
+   ![Leave Settings Img](assets/readme-assets/bugs/develoment/leave-settings.png)
 
-   ![Leave Settings Img](assets/readme-assets/Bugs/develoment/small-menu.png)
+   ![Leave Settings Img](assets/readme-assets/bugs/develoment/small-menu.png)
 
    Image shows that after ‘Leave Settings’ is selected the menu remains on screen until the ? icon is selected again.
 
@@ -688,7 +688,7 @@
 
    The final issue with the toggle option on the ? icon was that when it was set to on and the screen size was changed to large, when rules or settings were opened and the screen was returned to small the menu overlapped the rules or settings content.
 
-   ![Leave Settings Img](assets/readme-assets/Bugs/develoment/overlap-menu.png)
+   ![Leave Settings Img](assets/readme-assets/bugs/develoment/overlap-menu.png)
 
    Image shows the menu overlapping rules and settings content.
 
@@ -716,7 +716,7 @@
 
    By implementing an event listener for window re-size and calculating the canvas images based on a percentage of the canvas height and width I was able to resolve this issue.
 
-   ![Leave Settings Img](assets/readme-assets/Bugs/develoment/hangman-resize.png)
+   ![Leave Settings Img](assets/readme-assets/bugs/develoment/hangman-resize.png)
 
    Image shows canvas not re-sizing to match screen change.
   
@@ -747,11 +747,11 @@
    
    When testing the game, it was identified that for long words the underscores overlapped the word output container.
 
-   ![Leave Settings Img](assets/readme-assets/Bugs/develoment/underscores-overlap.jpg)
+   ![Leave Settings Img](assets/readme-assets/bugs/develoment/underscores-overlap.jpg)
 
    However, when some of the letters were presented as text it did not.
 
-   ![Leave Settings Img](assets/readme-assets/Bugs/develoment/word-fits.jpg)
+   ![Leave Settings Img](assets/readme-assets/bugs/develoment/word-fits.jpg)
 
    I identified that this was because in the JS code I had put spaces around the underscores. However, I had also set the CSS word output to have a letter spacing of 0.8rem.
   

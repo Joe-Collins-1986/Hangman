@@ -67,7 +67,6 @@
     underscoreWord();
     score.innerHTML = endGameTally;
 
-
     /********* FUNCTIONS **********/
 
     /**
@@ -343,7 +342,6 @@
             resultHeader.innerHTML = (resultHeaderText);
             result.innerHTML = (resultText);
         }
-
     }
 
     /**
@@ -399,7 +397,6 @@
             resetButtons.style.display = "flex";
         }
     }
-
 
     /********* EVENT LISTENERS **********/
     
@@ -457,8 +454,7 @@
 
                 } else if (this.getAttribute("data-type") === "soundToggle") {
                     muteButton();   
-                }
-                
+                }            
             });
         }
     });
@@ -500,7 +496,5 @@
         else {
             postIt.classList.toggle("select");
         }
-
     });
-
 }()); 
