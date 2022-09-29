@@ -1,11 +1,8 @@
 To Do:
 
-* check validation errros with mentor including 
 * Check "Error with Permissions-Policy header: Origin trial controlled feature not enabled: 'interest-cohort'." with Mentor
 * remove console log
 * tidy js
-* API check - see email
-* add final bug fix
 
 
 # HANGMAN GAME
@@ -503,6 +500,7 @@ To Do:
    **Points 7 - 10:**
    Mute is defaulted as true so no need to specify. Therefore removed = “true”.
 
+   ---
    </details>
 
 
@@ -515,7 +513,7 @@ To Do:
    ### Warnings & errors
    Following the CSS validation, the following warnings and errors were identified and addressed.
 
-   ![HTML Warnings](assets/readme-assets/Bugs/css/css-errors.png)
+   ![CSS Warnings](assets/readme-assets/Bugs/css/css-errors.png)
 
    ---
 
@@ -528,6 +526,7 @@ To Do:
 
    **Stack Overflow Response to Warning:** You're just trying to validate your CSS file using the W3C validator, and it's letting you know that it's not going to validate the imported style sheet (Google's). It's not an error, just some information for you.
 
+   ---
    </details>
 
 
@@ -541,44 +540,61 @@ To Do:
    Following the JS validation the following errors were identified and addressed.
 
    **Points - define variables:** <br>
-   ![HTML Warnings](assets/readme-assets/Bugs/js/define%20variable.png)
+   ![JS Errors](assets/readme-assets/Bugs/js/define%20variable.png)
 
    Errors resolved by declaring i in the relevant for loops.
 
    ---
 
    **Points - template literal syntax:** <br>
-   ![HTML Warnings](assets/readme-assets/Bugs/js/esversion.png)
+   ![JS Errors](assets/readme-assets/Bugs/js/esversion.png)
 
-   Cause by use of Font Awesome. no detriment to usage. Site functioning as expected, left unresolved.
+   Cause by use of Font Awesome. no detriment to usage. Site functioning as expected. Following consultation with my mentor no action was required.
 
    ---
 
    **Points - functions declared within loops referencing an outer scoped variable:** <br>
-   ![HTML Warnings](assets/readme-assets/Bugs/js/functions%20declared%20within%20loops.png)
+   ![JS Errors](assets/readme-assets/Bugs/js/functions%20declared%20within%20loops.png)
 
-   Utilising outer scoped variables. No issues caused by this, and maintenance is acceptable so left unresolved.
+   Utilising outer scoped variables. No issues caused by this, and maintenance is acceptable. Following consultation with my mentor no action was required.
 
    ---
 
    **Points - expected a conditional expression and instead saw an assignment.:** <br>
-   ![HTML Warnings](assets/readme-assets/Bugs/js/conditional%20not%20assignment.png)
+   ![JS Errors](assets/readme-assets/Bugs/js/conditional%20not%20assignment.png)
 
-   Functions built with if statements, with no else option. No errors occurring as a result therefore left as is.
+   Functions built with if statements, with no else option. No errors occurring. Following consultation with my mentor no action was required.
 
    ---
 
    **Points - level not defined.:** <br>
-   ![HTML Warnings](assets/readme-assets/Bugs/js/level%20not%20defined.png)
+   ![JS Errors](assets/readme-assets/Bugs/js/level%20not%20defined.png)
 
    HTML ID not defined as a variable. Created a variable for this and stored as level.
 
    ---
 
    **Points - 	'i' is not defined.:** <br>
-   ![HTML Warnings](assets/readme-assets/Bugs/js/i%20not%20defined.png)
+   ![JS Errors](assets/readme-assets/Bugs/js/i%20not%20defined.png)
 
    Declare i as a variable.
+
+   </details>
+
+
+   ## Console Log Warning
+   ![Console Log Warning](assets/readme-assets/validation/console-log-warning.png)
+
+   <details>
+      <summary style="font-weight:bold">Console Log Warning Review</summary>
+
+   On refreshing the page a warning was highlighted on the console log. I used Stack Overflow to investigate the potential impact of this warning.
+
+   Stack Overflow findings:
+
+      Basically you can ignore it. GitHub hosted pages disable FLoC, which is Google's 3rd party cookie alternative. GitHub, Microsoft, doesn't seems to like it.
+
+   Following this review and consultation with my mentor no action was required for this warning.
 
    </details>
    
@@ -663,7 +679,7 @@ To Do:
    ## Development Bugs
 
    <details>
-      <summary style="font-weight:bold">Menu toggle not presenting as intended</summary>
+      <summary style="font-weight:bold">Menu Toggle Issue</summary>
    
    On closing settings or rules using the close button on a small screen the menu remains open. I want this to close to improve aesthetics and reduce required button clicks when returning to game.
 
@@ -699,7 +715,7 @@ To Do:
    </details>
 
    <details>
-      <summary style="font-weight:bold">Canvas re-size required</summary>
+      <summary style="font-weight:bold">Canvas Re-Size</summary>
    
    When I initially drew the hangman on the canvas, I had an issue if the screen was re-sized. The image would not re-size along with it.
 
