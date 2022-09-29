@@ -1,8 +1,3 @@
-To Do:
-
-* remove console log
-* tidy js
-
 
 # HANGMAN GAME
 

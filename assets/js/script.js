@@ -63,7 +63,6 @@
     canvas.height = canvasSize.clientHeight;
 
     /* Present info at the start of the game */
-    console.log(selectedWord); // REMOVE AFTER TESTING
     checkCatagory();
     underscoreWord();
     score.innerHTML = endGameTally;
