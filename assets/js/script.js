@@ -335,7 +335,6 @@
                 i.disabled = false;
             }
             underscoreWord();
-            console.log(selectedWord); // REMOVE AFTER TESTING
             hideReset();
         } else {
             resultHeaderText = "Wow!";
