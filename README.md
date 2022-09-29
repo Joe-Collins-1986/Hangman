@@ -21,6 +21,7 @@
    - [HTML Validator Results](#html-validator-results)
    - [CSS Validator Results](#css-validator-results)
    - [JS Validator Results](#js-validator-results)
+   - [Console Log Warning](#console-log-warning)
    - [Lighthouse Accessibility Results](#lighthouse-accessibility-results)
    - [Testing User Stories from User Experience (UX) Section](#testing-user-stories-from-user-experience-ux-section)
    - [Further Testing](#further-testing)
