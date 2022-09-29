@@ -1,5 +1,5 @@
 To Do:
-* proof readme doc
+
 * spacing between sections
 * check an ansered errros with mentor including "Error with Permissions-Policy header: Origin trial controlled feature not enabled: 'interest-cohort'."
 * remove console log
@@ -50,7 +50,6 @@ To Do:
 
 # Hangman Website Overview
    ## Live Project [*(link to live project)*](https://joe-collins-1986.github.io/Hangman/)
-   <br>
 
    ## Project Introduction
    (**Note:** this is a fictitious client generated for the purpose of developing this project to test my HTML, CSS and JavaScript essentials.)
@@ -120,7 +119,6 @@ To Do:
    ---
    </details>
 
-   <br>
 
    ## Website Design
 
@@ -182,12 +180,10 @@ To Do:
    ---
    </details>
 
-   <br>
 
    ## Structure Non-Linear Plane
    The entire website will be housed on a single index page. The menu navigation, change of topics and win/lose outcomes will be facilitated using JavaScript animating relevant sections.
 
-   <br>
 
    ## Wireframes
 
@@ -197,7 +193,6 @@ To Do:
 
    **Note:** The structure and wireframes are only to act as a concept and are subject to change as the website development evolves in collaboration with the client.
 
-   <br>
 
    ## Features
 
@@ -435,6 +430,7 @@ To Do:
    - CSS
    - JavaScript
 
+
    ## Frameworks, Libraries and Programs Used
 
    1. Google Fonts:
@@ -508,10 +504,6 @@ To Do:
    Mute is defaulted as true so no need to specify. Therefore removed = “true”.
 
    </details>
-   
-   ___
-
-   <br>
 
 
    ## CSS Validator Results
@@ -538,9 +530,6 @@ To Do:
 
    </details>
 
-   ___
-
-   <br>
 
    ## JS Validator Results
    ![JS validator results using https://beautifytools.com/javascript-validator.php](assets/readme-assets/validation/js-validation.png)
@@ -593,14 +582,10 @@ To Do:
 
    </details>
    
-   ___
-
-   <br>
 
    ## Lighthouse Accessibility Results:
    ![Accessibility Review](assets/readme-assets/validation/Accessibility.png)
 
-   <br>
 
    ## Testing User Stories From User Experience (UX) Section
 
@@ -665,10 +650,8 @@ To Do:
    * Revisit to locate social media links to client.
       - **REVIEW - Social Media links available for anyone trying to link in with the client (These are not set to real accounts for this project due to a fictional client).**
 
-   ---
    </details>
 
-   <br>
 
    ## Further Testing
    * Tested across Google Chrome, Safari, Microsoft Edge, Fire Fox browsers on both Mac and Windows.
@@ -676,7 +659,6 @@ To Do:
    * Each page tested by developer and friends to ensure functionality worked as expected.
    * Issued to Slack community to review and provide feedback on.
 
-   <br>
 
    ## Development Bugs
 
@@ -749,7 +731,6 @@ To Do:
 
    </details>
    
-   <br>
 
    ## Key Learn
    The main key learn I took from this project was to build the readme file in conjunction with the website development.
@@ -760,8 +741,8 @@ To Do:
 
    Despite this I feel that I did a good job recording my progress through easy-to-understand concise commits which made it easier to revisit certain elements of the project where necessary.
 
-
    <br>
+
 
 # Deployment
    ## Set Up Local GitHub Repository
@@ -769,12 +750,14 @@ To Do:
    2. Select use this template.
    3. Add repository name within my GitHub. (This will generate a repository in my Git Hub with the appropriate files.)
 
+
    ## Repository Framework
    1. Select the repository on GitHub and open with GitPod (green button).
    2. Create required html page.
    3. Create assets folder.
    4. Within assets folder create CSS folder, images folder, JS folder & readme-assets folder.
    5. Add required files to folders including style.css, images, script.js, etc.
+
 
    ## Update Repository
    1. When adding a new feature create a separate branch to work in safely typing into the terminal "git branch 'name of required feature/update'".
@@ -786,6 +769,7 @@ To Do:
    7. Merge the feature branch into the main using "git merge 'name of required feature/update'".
    8. Confirm merge was successful and then if it is not going to be re-used delete the feature branch using "git branch -d 'name of required feature/update'". (If deleting a branch with commits not merged to main delete with -D instead of -d)
    9. Use "git push" to push the commits to GitHub. These will then appear in the live website if it has been set up in GitHub Pages.
+
 
    ## GitHub Pages
    Deploy in GitHub Pages:
@@ -799,6 +783,7 @@ To Do:
    8. Any Git Pushes from the terminal whilst working on the repository using GitPod will now update in this live site.
 
    <br>
+
 
 # Credits
    ## Development Resources
